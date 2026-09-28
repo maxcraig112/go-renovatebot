@@ -3214,7 +3214,6 @@ FileMatch: []interface {}{
   "\\.tf$",
 },
 PinDigests: false,
-Versioning: "hashicorp",
 }
 	}
 	if v, ok := raw["terraform-version"]; !ok || v == nil {
