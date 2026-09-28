@@ -1376,6 +1376,10 @@ type ConfigHostRulesElem struct {
 	// If enabled, Renovate aborts its run when HTTP request errors occur.
 	AbortOnError bool `json:"abortOnError,omitempty,omitzero"`
 
+	// A list of package managers to enable artifact auth. Only managers on the list
+	// are enabled. All are enabled if `null`
+	ArtifactAuth []ConfigHostRulesElemArtifactAuthElem `json:"artifactAuth,omitempty,omitzero"`
+
 	// Authentication type for HTTP header. e.g. `"Bearer"` or `"Basic"`. Use
 	// `"Token-Only"` to use only the token without an authorization type.
 	AuthType string `json:"authType,omitempty,omitzero"`
@@ -1407,6 +1411,29 @@ type ConfigHostRulesElem struct {
 	// Timeout (in milliseconds) for queries to external endpoints.
 	Timeout *int `json:"timeout,omitempty,omitzero"`
 }
+
+type ConfigHostRulesElemArtifactAuthElem string
+
+const ConfigHostRulesElemArtifactAuthElemComposer ConfigHostRulesElemArtifactAuthElem = "composer"
+var enumValues_ConfigHostRulesElemArtifactAuthElem  = []interface {}{
+  "composer",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigHostRulesElemArtifactAuthElem) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigHostRulesElemArtifactAuthElem {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigHostRulesElemArtifactAuthElem, v)
+	}
+	*j = ConfigHostRulesElemArtifactAuthElem(v)
+	return nil
+}
+
 
 
 // UnmarshalJSON implements json.Unmarshaler.
