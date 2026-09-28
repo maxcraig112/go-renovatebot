@@ -2207,6 +2207,7 @@ type ConfigVersioning string
 
 const ConfigVersioningAwsMachineImage ConfigVersioning = "aws-machine-image"
 const ConfigVersioningAzureRestApi ConfigVersioning = "azure-rest-api"
+const ConfigVersioningBazelModule ConfigVersioning = "bazel-module"
 const ConfigVersioningCargo ConfigVersioning = "cargo"
 const ConfigVersioningComposer ConfigVersioning = "composer"
 const ConfigVersioningConan ConfigVersioning = "conan"
@@ -2243,6 +2244,7 @@ const ConfigVersioningUbuntu ConfigVersioning = "ubuntu"
 var enumValues_ConfigVersioning  = []interface {}{
   "aws-machine-image",
   "azure-rest-api",
+  "bazel-module",
   "cargo",
   "composer",
   "conan",
