@@ -220,6 +220,10 @@ type Config struct {
 	// Configuration object to define language or manager version constraints.
 	Constraints ConfigConstraints `json:"constraints,omitempty,omitzero"`
 
+	// The directory where Renovate stores its containerbase cache. If left empty,
+	// Renovate creates a subdirectory within the `cacheDir`.
+	ContainerbaseDir *string `json:"containerbaseDir,omitempty,omitzero"`
+
 	// Custom environment variables for child processes and sidecar Docker containers.
 	CustomEnvVariables ConfigCustomEnvVariables `json:"customEnvVariables,omitempty,omitzero"`
 
