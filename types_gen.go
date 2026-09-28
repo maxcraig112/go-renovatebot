@@ -226,6 +226,9 @@ type Config struct {
 	// Configuration object to define language or manager version constraints.
 	Constraints ConfigConstraints `json:"constraints,omitempty,omitzero"`
 
+	// Perform release filtering based on language constraints.
+	ConstraintsFiltering ConfigConstraintsFiltering `json:"constraintsFiltering,omitempty,omitzero"`
+
 	// The directory where Renovate stores its containerbase cache. If left empty,
 	// Renovate creates a subdirectory within the `cacheDir`.
 	ContainerbaseDir *string `json:"containerbaseDir,omitempty,omitzero"`
@@ -369,6 +372,10 @@ type Config struct {
 	// mode.
 	ForkModeDisallowMaintainerEdits bool `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
 
+	// Whether to process forked repositories. By default, all forked repositories are
+	// skipped when in autodiscover mode.
+	ForkProcessing ConfigForkProcessing `json:"forkProcessing,omitempty,omitzero"`
+
 	// Set a personal access token here to enable "fork mode".
 	ForkToken *string `json:"forkToken,omitempty,omitzero"`
 
@@ -507,12 +514,12 @@ type Config struct {
 	// Ignore versions with unstable SemVer.
 	IgnoreUnstable *bool `json:"ignoreUnstable,omitempty,omitzero"`
 
-	// Whether to process forked repositories. By default, all forked repositories are
-	// skipped.
-	IncludeForks bool `json:"includeForks,omitempty,omitzero"`
-
 	// Include package files only within these defined paths.
 	IncludePaths []string `json:"includePaths,omitempty,omitzero"`
+
+	// Whether to consider passing internal checks such as stabilityDays when
+	// determining branch status.
+	InternalChecksAsSuccess bool `json:"internalChecksAsSuccess,omitempty,omitzero"`
 
 	// When and how to filter based on internal checks.
 	InternalChecksFilter ConfigInternalChecksFilter `json:"internalChecksFilter,omitempty,omitzero"`
@@ -712,7 +719,7 @@ type Config struct {
 	// limit.
 	PrCommitsPerRunLimit int `json:"prCommitsPerRunLimit,omitempty,omitzero"`
 
-	// Limit to a maximum of x concurrent branches/PRs. 0 (default) means no limit.
+	// Limit to a maximum of x concurrent branches/PRs. 0 means no limit.
 	PrConcurrentLimit int `json:"prConcurrentLimit,omitempty,omitzero"`
 
 	// When to create the PR for a branch.
@@ -725,7 +732,7 @@ type Config struct {
 	// Text added here will be placed first in the PR body.
 	PrHeader *string `json:"prHeader,omitempty,omitzero"`
 
-	// Rate limit PRs to maximum x created per hour. 0 (default) means no limit.
+	// Rate limit PRs to maximum x created per hour. 0 means no limit.
 	PrHourlyLimit int `json:"prHourlyLimit,omitempty,omitzero"`
 
 	// Timeout in hours for when `prCreation=not-pending`.
@@ -1153,6 +1160,31 @@ type ConfigConan map[string]interface{}
 // Configuration object to define language or manager version constraints.
 type ConfigConstraints map[string]interface{}
 
+type ConfigConstraintsFiltering string
+
+const ConfigConstraintsFilteringNone ConfigConstraintsFiltering = "none"
+const ConfigConstraintsFilteringStrict ConfigConstraintsFiltering = "strict"
+var enumValues_ConfigConstraintsFiltering  = []interface {}{
+  "none",
+  "strict",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigConstraintsFiltering) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigConstraintsFiltering {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigConstraintsFiltering, v)
+	}
+	*j = ConfigConstraintsFiltering(v)
+	return nil
+}
+
+
 // Custom environment variables for child processes and sidecar Docker containers.
 type ConfigCustomEnvVariables map[string]interface{}
 
@@ -1215,6 +1247,33 @@ type ConfigFlux map[string]interface{}
 
 // Any configuration set in this object will force override existing settings.
 type ConfigForce map[string]interface{}
+
+type ConfigForkProcessing string
+
+const ConfigForkProcessingAuto ConfigForkProcessing = "auto"
+const ConfigForkProcessingDisabled ConfigForkProcessing = "disabled"
+const ConfigForkProcessingEnabled ConfigForkProcessing = "enabled"
+var enumValues_ConfigForkProcessing  = []interface {}{
+  "auto",
+  "enabled",
+  "disabled",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigForkProcessing) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigForkProcessing {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigForkProcessing, v)
+	}
+	*j = ConfigForkProcessing(v)
+	return nil
+}
+
 
 // Configuration object for the fvm manager
 type ConfigFvm map[string]interface{}
@@ -1494,7 +1553,7 @@ type ConfigPackageRulesElem struct {
 	ExcludePackagePrefixes interface{} `json:"excludePackagePrefixes,omitempty,omitzero"`
 
 	// List of strings containing exact matches (e.g. `["main"]`) and/or regex
-	// expressions (e.g. `["/^release\/.*/"]`). Valid only within a `packageRules`
+	// expressions (e.g. `["/^release/.*/"]`). Valid only within a `packageRules`
 	// object.
 	MatchBaseBranches interface{} `json:"matchBaseBranches,omitempty,omitzero"`
 
@@ -2248,7 +2307,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["bazelisk"]; !ok || v == nil {
 		plain.Bazelisk = ConfigBazelisk{
 FileMatch: []interface {}{
-  "(^|\\/)\\.bazelversion$",
+  "(^|/)\\.bazelversion$",
 },
 PinDigests: false,
 }
@@ -2300,7 +2359,7 @@ Versioning: "ruby",
 }
 	}
 	if v, ok := raw["cacheHardTtlMinutes"]; !ok || v == nil {
-		plain.CacheHardTtlMinutes = 0
+		plain.CacheHardTtlMinutes = 1440
 	}
 	if v, ok := raw["cake"]; !ok || v == nil {
 		plain.Cake = ConfigCake{
@@ -2315,7 +2374,6 @@ CommitMessageTopic: "Rust crate {{depName}}",
 FileMatch: []interface {}{
   "(^|/)Cargo\\.toml$",
 },
-RangeStrategy: "bump",
 Versioning: "cargo",
 }
 	}
@@ -2384,7 +2442,6 @@ Enabled: false,
 FileMatch: []interface {}{
   "(^|/)conanfile\\.(txt|py)$",
 },
-RangeStrategy: "bump",
 Versioning: "conan",
 }
 	}
@@ -2400,6 +2457,9 @@ Versioning: "conan",
 	if v, ok := raw["constraints"]; !ok || v == nil {
 		plain.Constraints = ConfigConstraints{
 }
+	}
+	if v, ok := raw["constraintsFiltering"]; !ok || v == nil {
+		plain.ConstraintsFiltering = "none"
 	}
 	if v, ok := raw["customEnvVariables"]; !ok || v == nil {
 		plain.CustomEnvVariables = ConfigCustomEnvVariables{
@@ -2457,7 +2517,7 @@ FileMatch: []interface {}{
 		plain.DockerChildPrefix = "renovate_"
 	}
 	if v, ok := raw["dockerImagePrefix"]; !ok || v == nil {
-		plain.DockerImagePrefix = "docker.io/renovate"
+		plain.DockerImagePrefix = "docker.io/containerbase"
 	}
 	if v, ok := raw["dockerfile"]; !ok || v == nil {
 		plain.Dockerfile = ConfigDockerfile{
@@ -2507,7 +2567,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["flux"]; !ok || v == nil {
 		plain.Flux = ConfigFlux{
 FileMatch: []interface {}{
-  "(^|\\/)flux-system\\/(?:.+\\/)?gotk-components\\.yaml$",
+  "(^|/)flux-system/(?:.+/)?gotk-components\\.yaml$",
 },
 }
 	}
@@ -2517,10 +2577,13 @@ FileMatch: []interface {}{
 	if v, ok := raw["forkModeDisallowMaintainerEdits"]; !ok || v == nil {
 		plain.ForkModeDisallowMaintainerEdits = false
 	}
+	if v, ok := raw["forkProcessing"]; !ok || v == nil {
+		plain.ForkProcessing = "auto"
+	}
 	if v, ok := raw["fvm"]; !ok || v == nil {
 		plain.Fvm = ConfigFvm{
 FileMatch: []interface {}{
-  "(^|\\/)\\.fvm\\/fvm_config\\.json$",
+  "(^|/)\\.fvm/fvm_config\\.json$",
 },
 Versioning: "semver",
 }
@@ -2552,8 +2615,8 @@ Versioning: "git",
 	if v, ok := raw["github-actions"]; !ok || v == nil {
 		plain.GithubActions = ConfigGithubActions{
 FileMatch: []interface {}{
-  "^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$",
-  "(^|\\/)action\\.ya?ml$",
+  "^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$",
+  "(^|/)action\\.ya?ml$",
 },
 }
 	}
@@ -2590,11 +2653,11 @@ FileMatch: []interface {}{
 		plain.Gradle = ConfigGradle{
 FileMatch: []interface {}{
   "\\.gradle(\\.kts)?$",
-  "(^|\\/)gradle\\.properties$",
-  "(^|\\/)gradle\\/.+\\.toml$",
+  "(^|/)gradle\\.properties$",
+  "(^|/)gradle/.+\\.toml$",
   "\\.versions\\.toml$",
-  "(^|\\/)versions.props$",
-  "(^|\\/)versions.lock$",
+  "(^|/)versions.props$",
+  "(^|/)versions.lock$",
 },
 Timeout: 600.0,
 Versioning: "gradle",
@@ -2720,12 +2783,12 @@ Versioning: "semver",
 	if v, ok := raw["ignoreTests"]; !ok || v == nil {
 		plain.IgnoreTests = false
 	}
-	if v, ok := raw["includeForks"]; !ok || v == nil {
-		plain.IncludeForks = false
-	}
 	if v, ok := raw["includePaths"]; !ok || v == nil {
 		plain.IncludePaths = []string{
 }
+	}
+	if v, ok := raw["internalChecksAsSuccess"]; !ok || v == nil {
+		plain.InternalChecksAsSuccess = false
 	}
 	if v, ok := raw["internalChecksFilter"]; !ok || v == nil {
 		plain.InternalChecksFilter = "strict"
@@ -2840,7 +2903,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["mint"]; !ok || v == nil {
 		plain.Mint = ConfigMint{
 FileMatch: []interface {}{
-  "(^|\\/)Mintfile$",
+  "(^|/)Mintfile$",
 },
 }
 	}
@@ -2858,7 +2921,7 @@ CommitMessageExtra: "to {{newValue}}",
 CommitMessageTopic: "nixpkgs",
 Enabled: false,
 FileMatch: []interface {}{
-  "(^|\\/)flake\\.nix$",
+  "(^|/)flake\\.nix$",
 },
 }
 	}
@@ -2900,8 +2963,8 @@ Versioning: "npm",
 FileMatch: []interface {}{
   "\\.(?:cs|fs|vb)proj$",
   "\\.(?:props|targets)$",
-  "(^|\\/)dotnet-tools\\.json$",
-  "(^|\\/)global\\.json$",
+  "(^|/)dotnet-tools\\.json$",
+  "(^|/)global\\.json$",
 },
 }
 	}
@@ -3075,7 +3138,7 @@ Update: "{{{updateType}}}",
 		plain.PrCommitsPerRunLimit = 0
 	}
 	if v, ok := raw["prConcurrentLimit"]; !ok || v == nil {
-		plain.PrConcurrentLimit = 0
+		plain.PrConcurrentLimit = 10
 	}
 	if v, ok := raw["prCreation"]; !ok || v == nil {
 		plain.PrCreation = "immediate"
@@ -3084,7 +3147,7 @@ Update: "{{{updateType}}}",
 		plain.PrFooter = "This PR has been generated by [Renovate Bot](https://github.com/renovatebot/renovate)."
 	}
 	if v, ok := raw["prHourlyLimit"]; !ok || v == nil {
-		plain.PrHourlyLimit = 0
+		plain.PrHourlyLimit = 2
 	}
 	if v, ok := raw["prNotPendingHours"]; !ok || v == nil {
 		plain.PrNotPendingHours = 25
@@ -3127,7 +3190,7 @@ Versioning: "npm",
 	if v, ok := raw["puppet"]; !ok || v == nil {
 		plain.Puppet = ConfigPuppet{
 FileMatch: []interface {}{
-  "(^|\\/)Puppetfile$",
+  "(^|/)Puppetfile$",
 },
 }
 	}
@@ -3144,7 +3207,7 @@ Versioning: "docker",
 }
 	}
 	if v, ok := raw["rangeStrategy"]; !ok || v == nil {
-		plain.RangeStrategy = "replace"
+		plain.RangeStrategy = "auto"
 	}
 	if v, ok := raw["rebaseLabel"]; !ok || v == nil {
 		plain.RebaseLabel = "rebase"
@@ -3273,7 +3336,6 @@ FileMatch: []interface {}{
   "(^|/)Package\\.swift",
 },
 PinDigests: false,
-RangeStrategy: "bump",
 Versioning: "swift",
 }
 	}
@@ -3382,7 +3444,7 @@ StabilityDays: 0.0,
 	if v, ok := raw["woodpecker"]; !ok || v == nil {
 		plain.Woodpecker = ConfigWoodpecker{
 FileMatch: []interface {}{
-  "^\\.woodpecker(?:\\/[^/]+)?\\.ya?ml$",
+  "^\\.woodpecker(?:/[^/]+)?\\.ya?ml$",
 },
 }
 	}
