@@ -724,7 +724,8 @@ type Config struct {
 	// List of additional notes/templates to include in the Pull Request body.
 	PrBodyNotes interface{} `json:"prBodyNotes,omitempty,omitzero"`
 
-	// Pull Request body template. Controls which sections are rendered in the body.
+	// Pull Request body template. Controls which sections are rendered in the body of
+	// the pull request.
 	PrBodyTemplate string `json:"prBodyTemplate,omitempty,omitzero"`
 
 	// Set the maximum number of commits per Renovate run. By default there is no
