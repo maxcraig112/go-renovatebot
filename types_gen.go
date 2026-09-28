@@ -56,6 +56,10 @@ type Config struct {
 	// Take a random sample of given size from `assignees`.
 	AssigneesSampleSize *int `json:"assigneesSampleSize,omitempty,omitzero"`
 
+	// Control whether replacement regular expressions are global matches or only the
+	// first match.
+	AutoReplaceGlobalMatch bool `json:"autoReplaceGlobalMatch,omitempty,omitzero"`
+
 	// Autodiscover all repositories.
 	Autodiscover bool `json:"autodiscover,omitempty,omitzero"`
 
@@ -2259,6 +2263,9 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["assigneesFromCodeOwners"]; !ok || v == nil {
 		plain.AssigneesFromCodeOwners = false
+	}
+	if v, ok := raw["autoReplaceGlobalMatch"]; !ok || v == nil {
+		plain.AutoReplaceGlobalMatch = true
 	}
 	if v, ok := raw["autodiscover"]; !ok || v == nil {
 		plain.Autodiscover = false
