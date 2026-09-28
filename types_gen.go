@@ -176,6 +176,10 @@ type Config struct {
 	// Configuration object for the cdnurl manager
 	Cdnurl ConfigCdnurl `json:"cdnurl,omitempty,omitzero"`
 
+	// A list of branch names to mark for creation or rebasing as if it was selected
+	// in the Dependency Dashboard issue.
+	CheckedBranches []string `json:"checkedBranches,omitempty,omitzero"`
+
 	// Configuration object for the circleci manager
 	Circleci ConfigCircleci `json:"circleci,omitempty,omitzero"`
 
@@ -2513,6 +2517,10 @@ Versioning: "cargo",
 		plain.Cdnurl = ConfigCdnurl{
 FileMatch: []interface {}{},
 Versioning: "semver",
+}
+	}
+	if v, ok := raw["checkedBranches"]; !ok || v == nil {
+		plain.CheckedBranches = []string{
 }
 	}
 	if v, ok := raw["circleci"]; !ok || v == nil {
