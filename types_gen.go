@@ -117,6 +117,9 @@ type Config struct {
 	// as the repository's default branch.
 	BbUseDevelopmentBranch bool `json:"bbUseDevelopmentBranch,omitempty,omitzero"`
 
+	// Configuration object for the bicep manager
+	Bicep ConfigBicep `json:"bicep,omitempty,omitzero"`
+
 	// Controls how third-party tools like npm or Gradle are called: directly, via
 	// Docker sidecar containers, or via dynamic install.
 	BinarySource ConfigBinarySource `json:"binarySource,omitempty,omitzero"`
@@ -1070,6 +1073,9 @@ type ConfigBazel map[string]interface{}
 
 // Configuration object for the bazelisk manager
 type ConfigBazelisk map[string]interface{}
+
+// Configuration object for the bicep manager
+type ConfigBicep map[string]interface{}
 
 type ConfigBinarySource string
 
@@ -2099,6 +2105,7 @@ type ConfigVelaci map[string]interface{}
 type ConfigVersioning string
 
 const ConfigVersioningAwsMachineImage ConfigVersioning = "aws-machine-image"
+const ConfigVersioningAzureRestApi ConfigVersioning = "azure-rest-api"
 const ConfigVersioningCargo ConfigVersioning = "cargo"
 const ConfigVersioningComposer ConfigVersioning = "composer"
 const ConfigVersioningConan ConfigVersioning = "conan"
@@ -2134,6 +2141,7 @@ const ConfigVersioningSwift ConfigVersioning = "swift"
 const ConfigVersioningUbuntu ConfigVersioning = "ubuntu"
 var enumValues_ConfigVersioning  = []interface {}{
   "aws-machine-image",
+  "azure-rest-api",
   "cargo",
   "composer",
   "conan",
@@ -2322,6 +2330,13 @@ PinDigests: false,
 	}
 	if v, ok := raw["bbUseDevelopmentBranch"]; !ok || v == nil {
 		plain.BbUseDevelopmentBranch = false
+	}
+	if v, ok := raw["bicep"]; !ok || v == nil {
+		plain.Bicep = ConfigBicep{
+FileMatch: []interface {}{
+  "\\.bicep$",
+},
+}
 	}
 	if v, ok := raw["binarySource"]; !ok || v == nil {
 		plain.BinarySource = "install"
