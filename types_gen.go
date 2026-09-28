@@ -2462,8 +2462,8 @@ FileMatch: []interface {}{
 	if v, ok := raw["dockerfile"]; !ok || v == nil {
 		plain.Dockerfile = ConfigDockerfile{
 FileMatch: []interface {}{
-  "(^|/|\\.)Dockerfile$",
-  "(^|/)Dockerfile[^/]*$",
+  "(^|/|\\.)(Docker|Container)file$",
+  "(^|/)(Docker|Container)file[^/]*$",
 },
 }
 	}
