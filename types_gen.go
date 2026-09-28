@@ -1633,9 +1633,28 @@ type ConfigPackageRulesElem struct {
 	// The name of the new dependency that replaces the old deprecated dependency.
 	ReplacementName *string `json:"replacementName,omitempty,omitzero"`
 
+	// Controls what the replacement package name.
+	ReplacementNameTemplate string `json:"replacementNameTemplate,omitempty,omitzero"`
+
 	// The version of the new dependency that replaces the old deprecated dependency.
 	ReplacementVersion *string `json:"replacementVersion,omitempty,omitzero"`
 }
+
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigPackageRulesElem) UnmarshalJSON(value []byte) error {
+	var raw map[string]interface{}
+	if err := json.Unmarshal(value, &raw); err != nil { return err }
+	type Plain ConfigPackageRulesElem
+	var plain Plain
+	if err := json.Unmarshal(value, &plain); err != nil { return err }
+	if v, ok := raw["replacementNameTemplate"]; !ok || v == nil {
+		plain.ReplacementNameTemplate = "{{{packageName}}}"
+	}
+	*j = ConfigPackageRulesElem(plain)
+	return nil
+}
+
 
 // Configuration to apply when an update type is `patch`.
 type ConfigPatch map[string]interface{}
