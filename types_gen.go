@@ -563,6 +563,9 @@ type Config struct {
 	// Configuration to apply when an update type is `minor`.
 	Minor ConfigMinor `json:"minor,omitempty,omitzero"`
 
+	// Configuration object for the mint manager
+	Mint ConfigMint `json:"mint,omitempty,omitzero"`
+
 	// Configuration object for the mix manager
 	Mix ConfigMix `json:"mix,omitempty,omitzero"`
 
@@ -1390,6 +1393,9 @@ type ConfigMigratePresets map[string]string
 
 // Configuration to apply when an update type is `minor`.
 type ConfigMinor map[string]interface{}
+
+// Configuration object for the mint manager
+type ConfigMint map[string]interface{}
 
 // Configuration object for the mix manager
 type ConfigMix map[string]interface{}
@@ -2724,6 +2730,13 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["minor"]; !ok || v == nil {
 		plain.Minor = ConfigMinor{
+}
+	}
+	if v, ok := raw["mint"]; !ok || v == nil {
+		plain.Mint = ConfigMint{
+FileMatch: []interface {}{
+  "(^|\\/)Mintfile$",
+},
 }
 	}
 	if v, ok := raw["mix"]; !ok || v == nil {
