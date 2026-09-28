@@ -2802,6 +2802,7 @@ FileMatch: []interface {}{
   "\\.gradle(\\.kts)?$",
   "(^|/)gradle\\.properties$",
   "(^|/)gradle/.+\\.toml$",
+  "(^|/)buildSrc/.+\\.kt$",
   "\\.versions\\.toml$",
   "(^|/)versions.props$",
   "(^|/)versions.lock$",
