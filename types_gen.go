@@ -3266,7 +3266,6 @@ CommitMessageTopic: "Terragrunt dependency {{depName}}",
 FileMatch: []interface {}{
   "(^|/)terragrunt\\.hcl$",
 },
-Versioning: "hashicorp",
 }
 	}
 	if v, ok := raw["terragrunt-version"]; !ok || v == nil {
