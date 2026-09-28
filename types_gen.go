@@ -893,6 +893,9 @@ type Config struct {
 	// Configuration object for the terragrunt-version manager
 	TerragruntVersion ConfigTerragruntVersion `json:"terragrunt-version,omitempty,omitzero"`
 
+	// Configuration object for the tflint-plugin manager
+	TflintPlugin ConfigTflintPlugin `json:"tflint-plugin,omitempty,omitzero"`
+
 	// [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 	Timezone *string `json:"timezone,omitempty,omitzero"`
 
@@ -1938,6 +1941,9 @@ type ConfigTerragrunt map[string]interface{}
 
 // Configuration object for the terragrunt-version manager
 type ConfigTerragruntVersion map[string]interface{}
+
+// Configuration object for the tflint-plugin manager
+type ConfigTflintPlugin map[string]interface{}
 
 // Configuration object for the travis manager
 type ConfigTravis map[string]interface{}
@@ -3217,6 +3223,15 @@ FileMatch: []interface {}{
   "(^|/)\\.terragrunt-version$",
 },
 Versioning: "hashicorp",
+}
+	}
+	if v, ok := raw["tflint-plugin"]; !ok || v == nil {
+		plain.TflintPlugin = ConfigTflintPlugin{
+CommitMessageTopic: "TFLint plugin {{depName}}",
+ExtractVersion: "^v(?<version>.*)$",
+FileMatch: []interface {}{
+  "\\.tflint\\.hcl$",
+},
 }
 	}
 	if v, ok := raw["transitiveRemediation"]; !ok || v == nil {
