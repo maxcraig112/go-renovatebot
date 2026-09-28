@@ -2238,6 +2238,7 @@ type ConfigSuppressNotificationsElem string
 const ConfigSuppressNotificationsElemArtifactErrors ConfigSuppressNotificationsElem = "artifactErrors"
 const ConfigSuppressNotificationsElemBranchAutomergeFailure ConfigSuppressNotificationsElem = "branchAutomergeFailure"
 const ConfigSuppressNotificationsElemConfigErrorIssue ConfigSuppressNotificationsElem = "configErrorIssue"
+const ConfigSuppressNotificationsElemDependencyLookupWarnings ConfigSuppressNotificationsElem = "dependencyLookupWarnings"
 const ConfigSuppressNotificationsElemDeprecationWarningIssues ConfigSuppressNotificationsElem = "deprecationWarningIssues"
 const ConfigSuppressNotificationsElemLockFileErrors ConfigSuppressNotificationsElem = "lockFileErrors"
 const ConfigSuppressNotificationsElemMissingCredentialsError ConfigSuppressNotificationsElem = "missingCredentialsError"
@@ -2248,6 +2249,7 @@ var enumValues_ConfigSuppressNotificationsElem  = []interface {}{
   "artifactErrors",
   "branchAutomergeFailure",
   "configErrorIssue",
+  "dependencyLookupWarnings",
   "deprecationWarningIssues",
   "lockFileErrors",
   "missingCredentialsError",
