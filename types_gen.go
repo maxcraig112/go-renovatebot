@@ -323,6 +323,9 @@ type Config struct {
 	// names and labels.
 	DockerChildPrefix string `json:"dockerChildPrefix,omitempty,omitzero"`
 
+	// Pass CLI flags to `docker run` command when `binarySource=docker`.
+	DockerCliOptions *string `json:"dockerCliOptions,omitempty,omitzero"`
+
 	// Change this value to override the default Renovate Docker sidecar image name
 	// prefix.
 	DockerImagePrefix string `json:"dockerImagePrefix,omitempty,omitzero"`
