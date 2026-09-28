@@ -1300,6 +1300,9 @@ type ConfigHostRulesElem struct {
 	// A domain name, host name or base URL to match against.
 	MatchHost *string `json:"matchHost,omitempty,omitzero"`
 
+	// Limit requests rate per host.
+	MaxRequestsPerSecond int `json:"maxRequestsPerSecond,omitempty,omitzero"`
+
 	// Timeout (in milliseconds) for queries to external endpoints.
 	Timeout *int `json:"timeout,omitempty,omitzero"`
 }
@@ -1326,6 +1329,9 @@ func (j *ConfigHostRulesElem) UnmarshalJSON(value []byte) error {
 	}
 	if v, ok := raw["keepalive"]; !ok || v == nil {
 		plain.Keepalive = false
+	}
+	if v, ok := raw["maxRequestsPerSecond"]; !ok || v == nil {
+		plain.MaxRequestsPerSecond = 0
 	}
 	*j = ConfigHostRulesElem(plain)
 	return nil
