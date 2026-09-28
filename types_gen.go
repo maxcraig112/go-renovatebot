@@ -437,6 +437,9 @@ type Config struct {
 	// Configuration presets to use or extend for a self-hosted config.
 	GlobalExtends []string `json:"globalExtends,omitempty,omitzero"`
 
+	// Directory pattern to run `go get` on
+	GoGetDirs []string `json:"goGetDirs,omitempty,omitzero"`
+
 	// Configuration object for Go language.
 	Golang ConfigGolang `json:"golang,omitempty,omitzero"`
 
@@ -2759,6 +2762,11 @@ FileMatch: []interface {}{
 FileMatch: []interface {}{
   "\\.gitlab-ci\\.yml$",
 },
+}
+	}
+	if v, ok := raw["goGetDirs"]; !ok || v == nil {
+		plain.GoGetDirs = []string{
+"./...",
 }
 	}
 	if v, ok := raw["golang"]; !ok || v == nil {
