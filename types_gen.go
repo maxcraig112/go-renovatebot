@@ -615,6 +615,9 @@ type Config struct {
 	// Change this value to override the default onboarding PR title.
 	OnboardingPrTitle string `json:"onboardingPrTitle,omitempty,omitzero"`
 
+	// Set to enable rebase/retry markdown checkbox for onboarding PRs.
+	OnboardingRebaseCheckbox bool `json:"onboardingRebaseCheckbox,omitempty,omitzero"`
+
 	// Set to `true` to perform a check for disabled config prior to cloning.
 	OptimizeForDisabled bool `json:"optimizeForDisabled,omitempty,omitzero"`
 
@@ -2891,6 +2894,9 @@ $schema: "https://docs.renovatebot.com/renovate-schema.json",
 	}
 	if v, ok := raw["onboardingPrTitle"]; !ok || v == nil {
 		plain.OnboardingPrTitle = "Configure Renovate"
+	}
+	if v, ok := raw["onboardingRebaseCheckbox"]; !ok || v == nil {
+		plain.OnboardingRebaseCheckbox = false
 	}
 	if v, ok := raw["optimizeForDisabled"]; !ok || v == nil {
 		plain.OptimizeForDisabled = false
