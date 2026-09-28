@@ -618,6 +618,9 @@ type Config struct {
 	// Set to `true` to perform a check for disabled config prior to cloning.
 	OptimizeForDisabled bool `json:"optimizeForDisabled,omitempty,omitzero"`
 
+	// Configuration object for the osgi manager
+	Osgi ConfigOsgi `json:"osgi,omitempty,omitzero"`
+
 	// Rules for matching package names.
 	PackageRules []ConfigPackageRulesElem `json:"packageRules,omitempty,omitzero"`
 
@@ -1440,6 +1443,9 @@ type ConfigNvm map[string]interface{}
 
 // Configuration to use for onboarding PRs.
 type ConfigOnboardingConfig map[string]interface{}
+
+// Configuration object for the osgi manager
+type ConfigOsgi map[string]interface{}
 
 type ConfigPackageRulesElem struct {
 	// A version range or regex pattern capturing allowed versions for dependencies.
@@ -2876,6 +2882,13 @@ $schema: "https://docs.renovatebot.com/renovate-schema.json",
 	}
 	if v, ok := raw["optimizeForDisabled"]; !ok || v == nil {
 		plain.OptimizeForDisabled = false
+	}
+	if v, ok := raw["osgi"]; !ok || v == nil {
+		plain.Osgi = ConfigOsgi{
+FileMatch: []interface {}{
+  "(^|/)src/main/features/.+\\.json$",
+},
+}
 	}
 	if v, ok := raw["patch"]; !ok || v == nil {
 		plain.Patch = ConfigPatch{
