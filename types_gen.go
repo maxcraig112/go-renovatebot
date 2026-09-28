@@ -554,6 +554,9 @@ type Config struct {
 	// Configuration object for the maven manager
 	Maven ConfigMaven `json:"maven,omitempty,omitzero"`
 
+	// Configuration object for the maven-wrapper manager
+	MavenWrapper ConfigMavenWrapper `json:"maven-wrapper,omitempty,omitzero"`
+
 	// Configuration object for the meteor manager
 	Meteor ConfigMeteor `json:"meteor,omitempty,omitzero"`
 
@@ -1412,6 +1415,9 @@ type ConfigMajor map[string]interface{}
 
 // Configuration object for the maven manager
 type ConfigMaven map[string]interface{}
+
+// Configuration object for the maven-wrapper manager
+type ConfigMavenWrapper map[string]interface{}
 
 // Configuration object for the meteor manager
 type ConfigMeteor map[string]interface{}
@@ -2789,6 +2795,14 @@ Schedule: []interface {}{
 FileMatch: []interface {}{
   "(^|/|\\.)pom\\.xml$",
   "^(((\\.mvn)|(\\.m2))/)?settings\\.xml$",
+},
+Versioning: "maven",
+}
+	}
+	if v, ok := raw["maven-wrapper"]; !ok || v == nil {
+		plain.MavenWrapper = ConfigMavenWrapper{
+FileMatch: []interface {}{
+  "(^|\\/).mvn/wrapper/maven-wrapper.properties$",
 },
 Versioning: "maven",
 }
