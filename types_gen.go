@@ -3022,7 +3022,7 @@ PrBodyDefinitions: map[string]interface {}{
 RebaseStalePrs: true,
 RecreateClosed: true,
 Schedule: []interface {}{
-  "before 5am on monday",
+  "before 4am on monday",
 },
 }
 	}
