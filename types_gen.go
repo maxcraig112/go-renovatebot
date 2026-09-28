@@ -401,6 +401,10 @@ type Config struct {
 	// mode.
 	ForkModeDisallowMaintainerEdits bool `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
 
+	// The preferred organization to create or find forked repositories, when in fork
+	// mode.
+	ForkOrg *string `json:"forkOrg,omitempty,omitzero"`
+
 	// Whether to process forked repositories. By default, all forked repositories are
 	// skipped when in `autodiscover` mode.
 	ForkProcessing ConfigForkProcessing `json:"forkProcessing,omitempty,omitzero"`
