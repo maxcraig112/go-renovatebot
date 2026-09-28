@@ -1731,6 +1731,7 @@ const ConfigPlatformCodecommit ConfigPlatform = "codecommit"
 const ConfigPlatformGitea ConfigPlatform = "gitea"
 const ConfigPlatformGithub ConfigPlatform = "github"
 const ConfigPlatformGitlab ConfigPlatform = "gitlab"
+const ConfigPlatformLocal ConfigPlatform = "local"
 var enumValues_ConfigPlatform  = []interface {}{
   "azure",
   "bitbucket",
@@ -1739,6 +1740,7 @@ var enumValues_ConfigPlatform  = []interface {}{
   "gitea",
   "github",
   "gitlab",
+  "local",
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
