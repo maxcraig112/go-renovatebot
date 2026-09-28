@@ -2449,7 +2449,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["flux"]; !ok || v == nil {
 		plain.Flux = ConfigFlux{
 FileMatch: []interface {}{
-  "(^|/)flux-system/gotk-components\\.yaml$",
+  "(^|\\/)flux-system\\/(?:.+\\/)?gotk-components\\.yaml$",
 },
 }
 	}
