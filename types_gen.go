@@ -385,7 +385,7 @@ type Config struct {
 	ForkModeDisallowMaintainerEdits bool `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
 
 	// Whether to process forked repositories. By default, all forked repositories are
-	// skipped when in autodiscover mode.
+	// skipped when in `autodiscover` mode.
 	ForkProcessing ConfigForkProcessing `json:"forkProcessing,omitempty,omitzero"`
 
 	// Set a personal access token here to enable "fork mode".
