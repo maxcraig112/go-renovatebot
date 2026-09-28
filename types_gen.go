@@ -2458,7 +2458,6 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["bazel-module"]; !ok || v == nil {
 		plain.BazelModule = ConfigBazelModule{
-Enabled: false,
 FileMatch: []interface {}{
   "(^|/)MODULE\\.bazel$",
 },
