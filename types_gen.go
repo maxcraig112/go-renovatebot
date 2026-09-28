@@ -838,7 +838,7 @@ type Config struct {
 	RebaseWhen ConfigRebaseWhen `json:"rebaseWhen,omitempty,omitzero"`
 
 	// Recreate PRs even if same ones were closed previously.
-	RecreateClosed bool `json:"recreateClosed,omitempty,omitzero"`
+	RecreateWhen ConfigRecreateWhen `json:"recreateWhen,omitempty,omitzero"`
 
 	// If set, this Redis URL will be used for caching instead of the file system.
 	RedisUrl *string `json:"redisUrl,omitempty,omitzero"`
@@ -2005,6 +2005,33 @@ func (j *ConfigRebaseWhen) UnmarshalJSON(value []byte) error {
 }
 
 
+type ConfigRecreateWhen string
+
+const ConfigRecreateWhenAlways ConfigRecreateWhen = "always"
+const ConfigRecreateWhenAuto ConfigRecreateWhen = "auto"
+const ConfigRecreateWhenNever ConfigRecreateWhen = "never"
+var enumValues_ConfigRecreateWhen  = []interface {}{
+  "auto",
+  "always",
+  "never",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigRecreateWhen) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigRecreateWhen {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigRecreateWhen, v)
+	}
+	*j = ConfigRecreateWhen(v)
+	return nil
+}
+
+
 // Configuration object for the regex manager
 type ConfigRegex map[string]interface{}
 
@@ -3021,7 +3048,7 @@ PrBodyDefinitions: map[string]interface {}{
   "Change": "All locks refreshed",
 },
 RebaseStalePrs: true,
-RecreateClosed: true,
+RecreateWhen: "always",
 Schedule: []interface {}{
   "before 4am on monday",
 },
@@ -3390,8 +3417,8 @@ Versioning: "docker",
 	if v, ok := raw["rebaseWhen"]; !ok || v == nil {
 		plain.RebaseWhen = "auto"
 	}
-	if v, ok := raw["recreateClosed"]; !ok || v == nil {
-		plain.RecreateClosed = false
+	if v, ok := raw["recreateWhen"]; !ok || v == nil {
+		plain.RecreateWhen = "auto"
 	}
 	if v, ok := raw["regex"]; !ok || v == nil {
 		plain.Regex = ConfigRegex{
