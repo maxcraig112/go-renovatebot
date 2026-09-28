@@ -1,0 +1,39 @@
+name: Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "Skip versions before this npm version (inclusive), e.g. 44.0.0"
+        required: false
+        default: ""
+      to:
+        description: "Skip versions after this npm version (inclusive), e.g. 44.116.0"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    # backfill walks thousands of npm releases against the GitHub API and can
+    # run well past the API's per-hour rate limit. It is resumable: it skips
+    # versions that already have a matching tag, so if this run times out,
+    # just re-dispatch the workflow to pick up where it left off.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+
+      - name: Install Task
+        run: go install github.com/go-task/task/v3/cmd/task@latest
+
+      - name: Backfill every past Renovate release with a published schema
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: task backfill -- --from "${{ inputs.from }}" --to "${{ inputs.to }}"

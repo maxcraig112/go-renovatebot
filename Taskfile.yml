@@ -1,0 +1,28 @@
+version: "3"
+
+vars:
+  BIN: bin/renovate-schema-gen
+
+includes:
+  ci:
+    taskfile: ./taskfiles/CI.yml
+    flatten: true
+  cd:
+    taskfile: ./taskfiles/CD.yml
+    flatten: true
+
+tasks:
+  build:
+    desc: Build the renovate-schema-gen CLI
+    cmds:
+      - go build -o {{.BIN}} ./cmd/renovate-schema-gen
+
+  run:
+    desc: "Run the CLI, e.g. task run -- generate --version 44.116.0"
+    cmds:
+      - go run ./cmd/renovate-schema-gen {{.CLI_ARGS}}
+
+  test:
+    desc: Run the test suite
+    cmds:
+      - go test ./...

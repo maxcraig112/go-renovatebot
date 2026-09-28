@@ -1,0 +1,19 @@
+version: "3"
+
+tasks:
+  generate:
+    desc: "Regenerate the renovatebot package locally for one release, no git changes"
+    cmds:
+      - go run ./cmd/renovate-schema-gen generate --version {{.VERSION}}
+    vars:
+      VERSION: '{{.VERSION | default "latest"}}'
+
+  release:
+    desc: "Publish structs for one Renovate release as a tagged commit (needs GITHUB_TOKEN)"
+    cmds:
+      - go run ./cmd/renovate-schema-gen release {{.CLI_ARGS}}
+
+  backfill:
+    desc: "Generate and tag every past Renovate release with a published schema (needs GITHUB_TOKEN)"
+    cmds:
+      - go run ./cmd/renovate-schema-gen backfill {{.CLI_ARGS}}
