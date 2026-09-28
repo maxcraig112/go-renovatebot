@@ -397,16 +397,9 @@ type Config struct {
 	// Decides if CLI configuration options are moved to the `force` config section.
 	ForceCli bool `json:"forceCli,omitempty,omitzero"`
 
-	// Decide if Renovate creates a fork at runtime when in fork mode.
-	ForkCreate bool `json:"forkCreate,omitempty,omitzero"`
-
 	// Disallow maintainers to push to Renovate pull requests when running in fork
 	// mode.
 	ForkModeDisallowMaintainerEdits bool `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
-
-	// The preferred organizations to create or find forked repositories, when in fork
-	// mode.
-	ForkOrgs []string `json:"forkOrgs,omitempty,omitzero"`
 
 	// Whether to process forked repositories. By default, all forked repositories are
 	// skipped when in `autodiscover` mode.
@@ -2766,9 +2759,6 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["forceCli"]; !ok || v == nil {
 		plain.ForceCli = true
-	}
-	if v, ok := raw["forkCreate"]; !ok || v == nil {
-		plain.ForkCreate = true
 	}
 	if v, ok := raw["forkModeDisallowMaintainerEdits"]; !ok || v == nil {
 		plain.ForkModeDisallowMaintainerEdits = false
