@@ -1907,15 +1907,17 @@ const ConfigSuppressNotificationsElemConfigErrorIssue ConfigSuppressNotification
 const ConfigSuppressNotificationsElemDeprecationWarningIssues ConfigSuppressNotificationsElem = "deprecationWarningIssues"
 const ConfigSuppressNotificationsElemLockFileErrors ConfigSuppressNotificationsElem = "lockFileErrors"
 const ConfigSuppressNotificationsElemOnboardingClose ConfigSuppressNotificationsElem = "onboardingClose"
+const ConfigSuppressNotificationsElemPrEditedNotification ConfigSuppressNotificationsElem = "prEditedNotification"
 const ConfigSuppressNotificationsElemPrIgnoreNotification ConfigSuppressNotificationsElem = "prIgnoreNotification"
 var enumValues_ConfigSuppressNotificationsElem  = []interface {}{
-  "prIgnoreNotification",
-  "branchAutomergeFailure",
-  "lockFileErrors",
   "artifactErrors",
-  "deprecationWarningIssues",
-  "onboardingClose",
+  "branchAutomergeFailure",
   "configErrorIssue",
+  "deprecationWarningIssues",
+  "lockFileErrors",
+  "onboardingClose",
+  "prEditedNotification",
+  "prIgnoreNotification",
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
