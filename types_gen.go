@@ -630,6 +630,9 @@ type Config struct {
 	// Configuration object for the osgi manager
 	Osgi ConfigOsgi `json:"osgi,omitempty,omitzero"`
 
+	// Use vulnerability alerts from `osv.dev`.
+	OsvVulnerabilityAlerts bool `json:"osvVulnerabilityAlerts,omitempty,omitzero"`
+
 	// Rules for matching package names.
 	PackageRules []ConfigPackageRulesElem `json:"packageRules,omitempty,omitzero"`
 
@@ -2927,6 +2930,9 @@ FileMatch: []interface {}{
   "(^|/)src/main/features/.+\\.json$",
 },
 }
+	}
+	if v, ok := raw["osvVulnerabilityAlerts"]; !ok || v == nil {
+		plain.OsvVulnerabilityAlerts = false
 	}
 	if v, ok := raw["patch"]; !ok || v == nil {
 		plain.Patch = ConfigPatch{
