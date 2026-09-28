@@ -40,6 +40,9 @@ type Config struct {
 	// Configuration object for the argocd manager
 	Argocd ConfigArgocd `json:"argocd,omitempty,omitzero"`
 
+	// Configuration object for the asdf manager
+	Asdf ConfigAsdf `json:"asdf,omitempty,omitzero"`
+
 	// Assign reviewers and assignees even if the PR is to be automerged.
 	AssignAutomerge bool `json:"assignAutomerge,omitempty,omitzero"`
 
@@ -954,6 +957,9 @@ type ConfigAnsibleGalaxy map[string]interface{}
 
 // Configuration object for the argocd manager
 type ConfigArgocd map[string]interface{}
+
+// Configuration object for the asdf manager
+type ConfigAsdf map[string]interface{}
 
 type ConfigAutomergeStrategy string
 
@@ -2098,6 +2104,13 @@ FileMatch: []interface {}{
 	if v, ok := raw["argocd"]; !ok || v == nil {
 		plain.Argocd = ConfigArgocd{
 FileMatch: []interface {}{},
+}
+	}
+	if v, ok := raw["asdf"]; !ok || v == nil {
+		plain.Asdf = ConfigAsdf{
+FileMatch: []interface {}{
+  "(^|/)\\.tools-versions$",
+},
 }
 	}
 	if v, ok := raw["assignAutomerge"]; !ok || v == nil {
