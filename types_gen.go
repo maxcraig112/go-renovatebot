@@ -1455,6 +1455,12 @@ type ConfigPackageRulesElem struct {
 	// dependency. Valid only within a `packageRules` object.
 	CustomChangelogUrl *string `json:"customChangelogUrl,omitempty,omitzero"`
 
+	// Dep names to exclude. Valid only within a `packageRules` object.
+	ExcludeDepNames interface{} `json:"excludeDepNames,omitempty,omitzero"`
+
+	// Dep name patterns to exclude. Valid only within a `packageRules` object.
+	ExcludeDepPatterns interface{} `json:"excludeDepPatterns,omitempty,omitzero"`
+
 	// Package names to exclude. Valid only within a `packageRules` object.
 	ExcludePackageNames interface{} `json:"excludePackageNames,omitempty,omitzero"`
 
@@ -1480,6 +1486,12 @@ type ConfigPackageRulesElem struct {
 	// List of datasources to match (e.g. `["orb"]`). Valid only within a
 	// `packageRules` object.
 	MatchDatasources interface{} `json:"matchDatasources,omitempty,omitzero"`
+
+	// Dep names to match. Valid only within a `packageRules` object.
+	MatchDepNames interface{} `json:"matchDepNames,omitempty,omitzero"`
+
+	// Dep name patterns to match. Valid only within a `packageRules` object.
+	MatchDepPatterns interface{} `json:"matchDepPatterns,omitempty,omitzero"`
 
 	// List of depTypes to match (e.g. [`peerDependencies`]). Valid only within
 	// `packageRules` object.
