@@ -1870,12 +1870,12 @@ const ConfigPostUpdateOptionsElemYarnDedupeFewer ConfigPostUpdateOptionsElem = "
 const ConfigPostUpdateOptionsElemYarnDedupeHighest ConfigPostUpdateOptionsElem = "yarnDedupeHighest"
 var enumValues_ConfigPostUpdateOptionsElem  = []interface {}{
   "bundlerConservative",
-  "helmUpdateSubChartArchives",
   "gomodMassage",
-  "gomodUpdateImportPaths",
   "gomodTidy",
   "gomodTidy1.17",
   "gomodTidyE",
+  "gomodUpdateImportPaths",
+  "helmUpdateSubChartArchives",
   "npmDedupe",
   "pnpmDedupe",
   "yarnDedupeFewer",
