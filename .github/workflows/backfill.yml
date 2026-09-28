@@ -35,5 +35,5 @@ jobs:
 
       - name: Backfill every past Renovate release with a published schema
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: task backfill -- --from "${{ inputs.from }}" --to "${{ inputs.to }}"

@@ -42,8 +42,9 @@ type versionMetadata struct {
 	} `json:"dist"`
 }
 
-// Versions returns every published version of the given npm package, sorted
-// ascending by semver.
+// Versions returns every published stable release version of the given npm
+// package, sorted ascending by semver. Prerelease versions (e.g.
+// "40.0.0-next.1") are excluded.
 func (c *Client) Versions(ctx context.Context, packageName string) ([]string, error) {
 	meta, err := c.fetchMetadata(ctx, packageName)
 	if err != nil {
@@ -52,7 +53,7 @@ func (c *Client) Versions(ctx context.Context, packageName string) ([]string, er
 
 	versions := make([]string, 0, len(meta.Versions))
 	for v := range meta.Versions {
-		if !versiontag.IsValid(v) {
+		if !versiontag.IsValid(v) || versiontag.IsPrerelease(v) {
 			continue
 		}
 		versions = append(versions, v)

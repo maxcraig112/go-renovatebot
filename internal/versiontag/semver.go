@@ -33,6 +33,12 @@ func IsValid(npmVersion string) bool {
 	return semver.IsValid(Tag(npmVersion))
 }
 
+// IsPrerelease reports whether the npm version string has a semver
+// prerelease component, e.g. "40.0.0-next.1".
+func IsPrerelease(npmVersion string) bool {
+	return semver.Prerelease(Tag(npmVersion)) != ""
+}
+
 // SortAscending sorts npm version strings in place, ascending.
 func SortAscending(versions []string) {
 	sort.Slice(versions, func(i, j int) bool {
