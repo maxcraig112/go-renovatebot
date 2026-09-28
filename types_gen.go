@@ -783,6 +783,9 @@ type Config struct {
 	// This option decides if Renovate uses a JSON cache to speed up extractions.
 	RepositoryCache ConfigRepositoryCache `json:"repositoryCache,omitempty,omitzero"`
 
+	// Set the type of renovate repository cache if repositoryCache is not disabled.
+	RepositoryCacheType string `json:"repositoryCacheType,omitempty,omitzero"`
+
 	// Controls Renovate's behavior regarding repository config files such as
 	// `renovate.json`.
 	RequireConfig ConfigRequireConfig `json:"requireConfig,omitempty,omitzero"`
@@ -3013,6 +3016,9 @@ PrBodyNotes: []interface {}{
 	}
 	if v, ok := raw["repositoryCache"]; !ok || v == nil {
 		plain.RepositoryCache = "disabled"
+	}
+	if v, ok := raw["repositoryCacheType"]; !ok || v == nil {
+		plain.RepositoryCacheType = "local"
 	}
 	if v, ok := raw["requireConfig"]; !ok || v == nil {
 		plain.RequireConfig = "required"
