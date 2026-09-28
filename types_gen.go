@@ -152,6 +152,9 @@ type Config struct {
 	// a subdirectory within the `baseDir`.
 	CacheDir *string `json:"cacheDir,omitempty,omitzero"`
 
+	// Maximum duration in minutes to keep datasource cache entries.
+	CacheHardTtlMinutes int `json:"cacheHardTtlMinutes,omitempty,omitzero"`
+
 	// Configuration object for the cake manager
 	Cake ConfigCake `json:"cake,omitempty,omitzero"`
 
@@ -2276,6 +2279,9 @@ FileMatch: []interface {}{
 },
 Versioning: "ruby",
 }
+	}
+	if v, ok := raw["cacheHardTtlMinutes"]; !ok || v == nil {
+		plain.CacheHardTtlMinutes = 0
 	}
 	if v, ok := raw["cake"]; !ok || v == nil {
 		plain.Cake = ConfigCake{
