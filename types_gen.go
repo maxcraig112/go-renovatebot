@@ -16,7 +16,7 @@ type Config struct {
 	// adds to the existing reviewer list, rather than replacing it).
 	AdditionalReviewers []string `json:"additionalReviewers,omitempty,omitzero"`
 
-	// Set this to `true` if custom crate registries are allowed.
+	// Set this to `true` to allow custom crate registries.
 	AllowCustomCrateRegistries bool `json:"allowCustomCrateRegistries,omitempty,omitzero"`
 
 	// Set this to `true` if repositories are allowed to run install plugins.
@@ -53,7 +53,7 @@ type Config struct {
 	// Determine assignees based on configured code owners and changes in PR.
 	AssigneesFromCodeOwners bool `json:"assigneesFromCodeOwners,omitempty,omitzero"`
 
-	// Take a random sample of given size from assignees.
+	// Take a random sample of given size from `assignees`.
 	AssigneesSampleSize *int `json:"assigneesSampleSize,omitempty,omitzero"`
 
 	// Autodiscover all repositories.
@@ -82,7 +82,7 @@ type Config struct {
 	// Configuration object for the azure-pipelines manager
 	AzurePipelines ConfigAzurePipelines `json:"azure-pipelines,omitempty,omitzero"`
 
-	// If set to `true`, Azure DevOps PRs will be automatically approved.
+	// Set to `true` to automatically approve Azure DevOps PRs.
 	AzureAutoApprove bool `json:"azureAutoApprove,omitempty,omitzero"`
 
 	// The id of an existing work item on Azure Boards to link to each PR.
@@ -133,7 +133,7 @@ type Config struct {
 	// Prefix to use for all branch names.
 	BranchPrefix string `json:"branchPrefix,omitempty,omitzero"`
 
-	// Old Prefix to check for existing PRs.
+	// Old branchPrefix value to check for existing PRs.
 	BranchPrefixOld string `json:"branchPrefixOld,omitempty,omitzero"`
 
 	// Branch topic.
@@ -164,7 +164,7 @@ type Config struct {
 	// Configuration object for the circleci manager
 	Circleci ConfigCircleci `json:"circleci,omitempty,omitzero"`
 
-	// Set to `true` to enable initialization of submodules during repository clone.
+	// Set to `true` to initialize submodules during repository clone.
 	CloneSubmodules bool `json:"cloneSubmodules,omitempty,omitzero"`
 
 	// Configuration object for the cloudbuild manager
@@ -256,7 +256,7 @@ type Config struct {
 	// when they have been removed manually.
 	DependencyDashboardLabels []string `json:"dependencyDashboardLabels,omitempty,omitzero"`
 
-	// Title to use for the Dependency Dashboard issue.
+	// Title for the Dependency Dashboard issue.
 	DependencyDashboardTitle string `json:"dependencyDashboardTitle,omitempty,omitzero"`
 
 	// Configuration object for the deps-edn manager
@@ -265,11 +265,11 @@ type Config struct {
 	// Plain text description for a config or preset.
 	Description interface{} `json:"description,omitempty,omitzero"`
 
-	// If `true`, Renovate will try to detect global manager configuration from the
-	// file system.
+	// If `true`, Renovate tries to detect global manager configuration from the file
+	// system.
 	DetectGlobalManagerConfig bool `json:"detectGlobalManagerConfig,omitempty,omitzero"`
 
-	// If `true`, Renovate will try to detect host rules from environment variables.
+	// If `true`, Renovate tries to detect host rules from environment variables.
 	DetectHostRulesFromEnv bool `json:"detectHostRulesFromEnv,omitempty,omitzero"`
 
 	// Configuration to apply when updating a digest (no change in tag/version).
@@ -312,8 +312,7 @@ type Config struct {
 	// Enable or disable Renovate bot.
 	Enabled *bool `json:"enabled,omitempty,omitzero"`
 
-	// A list of package managers to enable. If defined, then all managers not on the
-	// list are disabled.
+	// A list of package managers to enable. Only managers on the list are enabled.
 	EnabledManagers []interface{} `json:"enabledManagers,omitempty,omitzero"`
 
 	// An object containing configuration encrypted with project key.
@@ -322,8 +321,8 @@ type Config struct {
 	// Custom endpoint to use.
 	Endpoint *string `json:"endpoint,omitempty,omitzero"`
 
-	// A file that matches any of these glob patterns will not be committed, even if
-	// it has been updated.
+	// A file matching any of these glob patterns will not be committed, even if the
+	// file has been updated.
 	ExcludeCommitPaths []string `json:"excludeCommitPaths,omitempty,omitzero"`
 
 	// Default execution timeout in minutes for child processes Renovate creates.
@@ -430,7 +429,7 @@ type Config struct {
 	// Human understandable name for the dependency group.
 	GroupName *string `json:"groupName,omitempty,omitzero"`
 
-	// Slug to use for group (e.g. in branch name). Will be calculated from
+	// Slug to use for group (e.g. in branch name). Slug is calculated from
 	// `groupName` if `null`.
 	GroupSlug *string `json:"groupSlug,omitempty,omitzero"`
 
@@ -616,7 +615,7 @@ type Config struct {
 	// Change this value to override the default onboarding PR title.
 	OnboardingPrTitle string `json:"onboardingPrTitle,omitempty,omitzero"`
 
-	// Set to `true` to first check for disabling in config before cloning.
+	// Set to `true` to perform a check for disabled config prior to cloning.
 	OptimizeForDisabled bool `json:"optimizeForDisabled,omitempty,omitzero"`
 
 	// Rules for matching package names.
@@ -628,7 +627,8 @@ type Config struct {
 	// Configuration to apply when an update type is `patch`.
 	Patch ConfigPatch `json:"patch,omitempty,omitzero"`
 
-	// If set to `true`, repository data is kept between runs instead of deleted.
+	// If set to `true`: keep repository data between runs instead of deleting the
+	// data.
 	PersistRepoData bool `json:"persistRepoData,omitempty,omitzero"`
 
 	// Configuration object for PHP.
@@ -676,10 +676,10 @@ type Config struct {
 	// List of columns to use in PR bodies.
 	PrBodyColumns []string `json:"prBodyColumns,omitempty,omitzero"`
 
-	// Table column definitions for use in PR tables.
+	// Table column definitions to use in PR tables.
 	PrBodyDefinitions ConfigPrBodyDefinitions `json:"prBodyDefinitions,omitempty,omitzero"`
 
-	// List of additional notes/templates to be included in the Pull Request bodies.
+	// List of additional notes/templates to include in the Pull Request body.
 	PrBodyNotes interface{} `json:"prBodyNotes,omitempty,omitzero"`
 
 	// Pull Request body template. Controls which sections are rendered in the body.
@@ -719,8 +719,8 @@ type Config struct {
 	// Configuration object for the pre-commit manager
 	PreCommit ConfigPreCommit `json:"pre-commit,omitempty,omitzero"`
 
-	// If enabled, Renovate logs the fully resolved config for each repo, plus the
-	// fully resolved presets.
+	// If enabled, Renovate logs the fully resolved config for each repository, plus
+	// the fully resolved presets.
 	PrintConfig bool `json:"printConfig,omitempty,omitzero"`
 
 	// Server-side private key.
@@ -792,7 +792,7 @@ type Config struct {
 	// This option decides if Renovate uses a JSON cache to speed up extractions.
 	RepositoryCache ConfigRepositoryCache `json:"repositoryCache,omitempty,omitzero"`
 
-	// Set the type of renovate repository cache if repositoryCache is not disabled.
+	// Set the type of renovate repository cache if `repositoryCache` is enabled.
 	RepositoryCacheType string `json:"repositoryCacheType,omitempty,omitzero"`
 
 	// Controls Renovate's behavior regarding repository config files such as
@@ -809,7 +809,7 @@ type Config struct {
 	// Determine reviewers based on configured code owners and changes in PR.
 	ReviewersFromCodeOwners bool `json:"reviewersFromCodeOwners,omitempty,omitzero"`
 
-	// Take a random sample of given size from reviewers.
+	// Take a random sample of given size from `reviewers`.
 	ReviewersSampleSize *int `json:"reviewersSampleSize,omitempty,omitzero"`
 
 	// Configuration to apply when rolling back a version.
@@ -1275,7 +1275,7 @@ type ConfigHostRulesElem struct {
 	// A list of HTTP status codes safe to ignore even when `abortOnError=true`.
 	AbortIgnoreStatusCodes []float64 `json:"abortIgnoreStatusCodes,omitempty,omitzero"`
 
-	// If enabled, Renovate will abort its run when HTTP request errors occur.
+	// If enabled, Renovate aborts its run when HTTP request errors occur.
 	AbortOnError bool `json:"abortOnError,omitempty,omitzero"`
 
 	// Authentication type for HTTP header. e.g. `"Bearer"` or `"Basic"`. Use
@@ -1463,7 +1463,7 @@ type ConfigPackageRulesElem struct {
 	// object.
 	MatchBaseBranches interface{} `json:"matchBaseBranches,omitempty,omitzero"`
 
-	// A regex to match against the raw currentValue string of a dependency. Valid
+	// A regex to match against the raw `currentValue` string of a dependency. Valid
 	// only within a `packageRules` object.
 	MatchCurrentValue *string `json:"matchCurrentValue,omitempty,omitzero"`
 
@@ -1479,8 +1479,8 @@ type ConfigPackageRulesElem struct {
 	// `packageRules` object.
 	MatchDepTypes interface{} `json:"matchDepTypes,omitempty,omitzero"`
 
-	// List of strings to do an exact match against package files with full path. Will
-	// only work inside a `packageRules` object.
+	// List of strings to do an exact match against package files with full path. Only
+	// works inside a `packageRules` object.
 	MatchFiles []string `json:"matchFiles,omitempty,omitzero"`
 
 	// List of languages to match (e.g. `["python"]`). Valid only within a
@@ -1500,7 +1500,7 @@ type ConfigPackageRulesElem struct {
 	// Package name prefixes to match. Valid only within a `packageRules` object.
 	MatchPackagePrefixes interface{} `json:"matchPackagePrefixes,omitempty,omitzero"`
 
-	// List of strings or glob patterns to match against package files. Will only work
+	// List of strings or glob patterns to match against package files. Only works
 	// inside a `packageRules` object.
 	MatchPaths []string `json:"matchPaths,omitempty,omitzero"`
 
@@ -1587,7 +1587,7 @@ type ConfigPoetry map[string]interface{}
 // Post-upgrade tasks that are executed before a commit is made by Renovate.
 type ConfigPostUpgradeTasks map[string]interface{}
 
-// Table column definitions for use in PR tables.
+// Table column definitions to use in PR tables.
 type ConfigPrBodyDefinitions map[string]interface{}
 
 type ConfigPrCreation string
