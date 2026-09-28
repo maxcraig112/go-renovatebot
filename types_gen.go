@@ -1261,14 +1261,14 @@ type ConfigHostRulesElem struct {
 	// If enabled, Renovate will abort its run when HTTP request errors occur.
 	AbortOnError bool `json:"abortOnError,omitempty,omitzero"`
 
-	// Authentication type for http header. e.g. `"Bearer"` or `"Basic"`. Use
+	// Authentication type for HTTP header. e.g. `"Bearer"` or `"Basic"`. Use
 	// `"Token-Only"` to use only the token without an authorization type.
 	AuthType string `json:"authType,omitempty,omitzero"`
 
 	// Limit concurrent requests per host.
 	ConcurrentRequestLimit *int `json:"concurrentRequestLimit,omitempty,omitzero"`
 
-	// Enable got dns cache
+	// Enable got DNS cache.
 	DnsCache bool `json:"dnsCache,omitempty,omitzero"`
 
 	// Enable got HTTP/2 support.
@@ -1280,7 +1280,7 @@ type ConfigHostRulesElem struct {
 	// Explicitly turn on insecure Docker registry access (HTTP).
 	InsecureRegistry *bool `json:"insecureRegistry,omitempty,omitzero"`
 
-	// Enable http keepalives for hosts
+	// Enable HTTP keepalives for hosts.
 	Keepalive bool `json:"keepalive,omitempty,omitzero"`
 
 	// A domain name, host name or base URL to match against.
