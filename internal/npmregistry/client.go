@@ -11,6 +11,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"sync"
 
 	"github.com/maxcraig112/go-renovatebot/internal/versiontag"
 )
@@ -21,13 +22,22 @@ const registryBaseURL = "https://registry.npmjs.org"
 type Client struct {
 	httpClient *http.Client
 	baseURL    string
+
+	// metadataCache holds one npm packument per package name for the
+	// lifetime of the Client. A package's packument (renovate's is around
+	// 70MB) is fetched at most once per Client, since every method that
+	// needs it, including per-version tarball lookups, shares this cache
+	// rather than re-downloading and re-parsing it on every call.
+	metadataCache   map[string]*packageMetadata
+	metadataCacheMu sync.Mutex
 }
 
 // NewClient returns a Client using http.DefaultClient.
 func NewClient() *Client {
 	return &Client{
-		httpClient: http.DefaultClient,
-		baseURL:    registryBaseURL,
+		httpClient:    http.DefaultClient,
+		baseURL:       registryBaseURL,
+		metadataCache: map[string]*packageMetadata{},
 	}
 }
 
@@ -76,11 +86,21 @@ func (c *Client) LatestVersion(ctx context.Context, packageName string) (string,
 }
 
 func (c *Client) fetchMetadata(ctx context.Context, packageName string) (*packageMetadata, error) {
+	c.metadataCacheMu.Lock()
+	cached, ok := c.metadataCache[packageName]
+	c.metadataCacheMu.Unlock()
+	if ok {
+		return cached, nil
+	}
+
 	url := fmt.Sprintf("%s/%s", c.baseURL, packageName)
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
 	}
+	// The abbreviated format strips fields we don't use (readme, full
+	// dependency manifests, etc), roughly halving the response size.
+	req.Header.Set("Accept", "application/vnd.npm.install-v1+json")
 
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
@@ -96,6 +116,11 @@ func (c *Client) fetchMetadata(ctx context.Context, packageName string) (*packag
 	if err := json.NewDecoder(resp.Body).Decode(&meta); err != nil {
 		return nil, fmt.Errorf("npmregistry: decoding metadata for %s: %w", packageName, err)
 	}
+
+	c.metadataCacheMu.Lock()
+	c.metadataCache[packageName] = &meta
+	c.metadataCacheMu.Unlock()
+
 	return &meta, nil
 }
 
