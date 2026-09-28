@@ -123,6 +123,10 @@ type Config struct {
 	// Branch name template.
 	BranchName string `json:"branchName,omitempty,omitzero"`
 
+	// Whether to be strict about the use of special characters within the branch
+	// name.
+	BranchNameStrict bool `json:"branchNameStrict,omitempty,omitzero"`
+
 	// Prefix to use for all branch names.
 	BranchPrefix string `json:"branchPrefix,omitempty,omitzero"`
 
@@ -2138,6 +2142,9 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["branchName"]; !ok || v == nil {
 		plain.BranchName = "{{{branchPrefix}}}{{{additionalBranchPrefix}}}{{{branchTopic}}}"
+	}
+	if v, ok := raw["branchNameStrict"]; !ok || v == nil {
+		plain.BranchNameStrict = false
 	}
 	if v, ok := raw["branchPrefix"]; !ok || v == nil {
 		plain.BranchPrefix = "renovate/"
