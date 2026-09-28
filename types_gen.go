@@ -88,9 +88,9 @@ type Config struct {
 	// The id of an existing work item on Azure Boards to link to each PR.
 	AzureWorkItemId int `json:"azureWorkItemId,omitempty,omitzero"`
 
-	// An array of one or more custom base branches to be processed. If left empty,
-	// the default branch will be chosen.
-	BaseBranches []interface{} `json:"baseBranches,omitempty,omitzero"`
+	// List of one or more custom base branches defined as exact strings and/or via
+	// regex expressions.
+	BaseBranches []string `json:"baseBranches,omitempty,omitzero"`
 
 	// The base directory for Renovate to store local files, including repository
 	// files and cache. If left empty, Renovate will create its own temporary
