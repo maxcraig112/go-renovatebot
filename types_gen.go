@@ -56,6 +56,9 @@ type Config struct {
 	// Take a random sample of given size from `assignees`.
 	AssigneesSampleSize *int `json:"assigneesSampleSize,omitempty,omitzero"`
 
+	// Set to `true` to automatically approve PRs.
+	AutoApprove bool `json:"autoApprove,omitempty,omitzero"`
+
 	// Control whether replacement regular expressions are global matches or only the
 	// first match.
 	AutoReplaceGlobalMatch bool `json:"autoReplaceGlobalMatch,omitempty,omitzero"`
@@ -85,9 +88,6 @@ type Config struct {
 
 	// Configuration object for the azure-pipelines manager
 	AzurePipelines ConfigAzurePipelines `json:"azure-pipelines,omitempty,omitzero"`
-
-	// Set to `true` to automatically approve Azure DevOps PRs.
-	AzureAutoApprove bool `json:"azureAutoApprove,omitempty,omitzero"`
 
 	// The id of an existing work item on Azure Boards to link to each PR.
 	AzureWorkItemId int `json:"azureWorkItemId,omitempty,omitzero"`
@@ -2361,6 +2361,9 @@ FileMatch: []interface {}{
 	if v, ok := raw["assigneesFromCodeOwners"]; !ok || v == nil {
 		plain.AssigneesFromCodeOwners = false
 	}
+	if v, ok := raw["autoApprove"]; !ok || v == nil {
+		plain.AutoApprove = false
+	}
 	if v, ok := raw["autoReplaceGlobalMatch"]; !ok || v == nil {
 		plain.AutoReplaceGlobalMatch = true
 	}
@@ -2391,9 +2394,6 @@ FileMatch: []interface {}{
   "azure.*pipelines?.*\\.ya?ml$",
 },
 }
-	}
-	if v, ok := raw["azureAutoApprove"]; !ok || v == nil {
-		plain.AzureAutoApprove = false
 	}
 	if v, ok := raw["azureWorkItemId"]; !ok || v == nil {
 		plain.AzureWorkItemId = 0
