@@ -2109,7 +2109,7 @@ FileMatch: []interface {}{},
 	if v, ok := raw["asdf"]; !ok || v == nil {
 		plain.Asdf = ConfigAsdf{
 FileMatch: []interface {}{
-  "(^|/)\\.tools-versions$",
+  "(^|/)\\.tool-versions$",
 },
 }
 	}
