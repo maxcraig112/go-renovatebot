@@ -112,6 +112,11 @@ type Config struct {
 	// Use the default reviewers (Bitbucket only).
 	BbUseDefaultReviewers bool `json:"bbUseDefaultReviewers,omitempty,omitzero"`
 
+	// Use the repository's [development
+	// branch](https://support.atlassian.com/bitbucket-cloud/docs/branch-a-repository/#The-branching-model)
+	// as the repository's default branch.
+	BbUseDevelopmentBranch bool `json:"bbUseDevelopmentBranch,omitempty,omitzero"`
+
 	// Controls how third-party tools like npm or Gradle are called: directly, via
 	// Docker sidecar containers, or via dynamic install.
 	BinarySource ConfigBinarySource `json:"binarySource,omitempty,omitzero"`
@@ -2314,6 +2319,9 @@ PinDigests: false,
 	}
 	if v, ok := raw["bbUseDefaultReviewers"]; !ok || v == nil {
 		plain.BbUseDefaultReviewers = true
+	}
+	if v, ok := raw["bbUseDevelopmentBranch"]; !ok || v == nil {
+		plain.BbUseDevelopmentBranch = false
 	}
 	if v, ok := raw["binarySource"]; !ok || v == nil {
 		plain.BinarySource = "install"
