@@ -252,6 +252,9 @@ type Config struct {
 	// Renovate creates a subdirectory within the `cacheDir`.
 	ContainerbaseDir *string `json:"containerbaseDir,omitempty,omitzero"`
 
+	// Configuration object for the cpanfile manager
+	Cpanfile ConfigCpanfile `json:"cpanfile,omitempty,omitzero"`
+
 	// Custom environment variables for child processes and sidecar Docker containers.
 	CustomEnvVariables ConfigCustomEnvVariables `json:"customEnvVariables,omitempty,omitzero"`
 
@@ -681,6 +684,9 @@ type Config struct {
 
 	// Configuration to apply when an update type is `patch`.
 	Patch ConfigPatch `json:"patch,omitempty,omitzero"`
+
+	// Configuration object for the pep621 manager
+	Pep621 ConfigPep621 `json:"pep621,omitempty,omitzero"`
 
 	// If set to `true`: keep repository data between runs instead of deleting the
 	// data.
@@ -1239,6 +1245,9 @@ func (j *ConfigConstraintsFiltering) UnmarshalJSON(value []byte) error {
 }
 
 
+// Configuration object for the cpanfile manager
+type ConfigCpanfile map[string]interface{}
+
 // Custom environment variables for child processes and sidecar Docker containers.
 type ConfigCustomEnvVariables map[string]interface{}
 
@@ -1728,6 +1737,9 @@ func (j *ConfigPackageRulesElem) UnmarshalJSON(value []byte) error {
 
 // Configuration to apply when an update type is `patch`.
 type ConfigPatch map[string]interface{}
+
+// Configuration object for the pep621 manager
+type ConfigPep621 map[string]interface{}
 
 // Configuration object for PHP.
 type ConfigPhp map[string]interface{}
@@ -2634,6 +2646,13 @@ Versioning: "conan",
 	if v, ok := raw["constraintsFiltering"]; !ok || v == nil {
 		plain.ConstraintsFiltering = "none"
 	}
+	if v, ok := raw["cpanfile"]; !ok || v == nil {
+		plain.Cpanfile = ConfigCpanfile{
+FileMatch: []interface {}{
+  "(^|/)cpanfile$",
+},
+}
+	}
 	if v, ok := raw["customEnvVariables"]; !ok || v == nil {
 		plain.CustomEnvVariables = ConfigCustomEnvVariables{
 }
@@ -3191,6 +3210,13 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["patch"]; !ok || v == nil {
 		plain.Patch = ConfigPatch{
+}
+	}
+	if v, ok := raw["pep621"]; !ok || v == nil {
+		plain.Pep621 = ConfigPep621{
+FileMatch: []interface {}{
+  "(^|/)pyproject\\.toml$",
+},
 }
 	}
 	if v, ok := raw["persistRepoData"]; !ok || v == nil {
