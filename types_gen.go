@@ -110,6 +110,9 @@ type Config struct {
 	// Configuration object for the bazel manager
 	Bazel ConfigBazel `json:"bazel,omitempty,omitzero"`
 
+	// Configuration object for the bazel-module manager
+	BazelModule ConfigBazelModule `json:"bazel-module,omitempty,omitzero"`
+
 	// Configuration object for the bazelisk manager
 	Bazelisk ConfigBazelisk `json:"bazelisk,omitempty,omitzero"`
 
@@ -1098,6 +1101,9 @@ type ConfigBatectWrapper map[string]interface{}
 
 // Configuration object for the bazel manager
 type ConfigBazel map[string]interface{}
+
+// Configuration object for the bazel-module manager
+type ConfigBazelModule map[string]interface{}
 
 // Configuration object for the bazelisk manager
 type ConfigBazelisk map[string]interface{}
@@ -2418,6 +2424,14 @@ Versioning: "semver",
 FileMatch: []interface {}{
   "(^|/)WORKSPACE(|\\.bazel)$",
   "\\.bzl$",
+},
+}
+	}
+	if v, ok := raw["bazel-module"]; !ok || v == nil {
+		plain.BazelModule = ConfigBazelModule{
+Enabled: false,
+FileMatch: []interface {}{
+  "(^|/)MODULE\\.bazel$",
 },
 }
 	}
