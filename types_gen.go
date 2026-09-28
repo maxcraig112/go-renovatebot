@@ -2810,6 +2810,7 @@ CommitMessageTopic: "module {{depName}}",
 FileMatch: []interface {}{
   "(^|/)go\\.mod$",
 },
+PinDigests: false,
 }
 	}
 	if v, ok := raw["gradle"]; !ok || v == nil {
