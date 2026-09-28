@@ -2209,7 +2209,7 @@ FileMatch: []interface {}{
 		plain.BranchName = "{{{branchPrefix}}}{{{additionalBranchPrefix}}}{{{branchTopic}}}"
 	}
 	if v, ok := raw["branchNameStrict"]; !ok || v == nil {
-		plain.BranchNameStrict = true
+		plain.BranchNameStrict = false
 	}
 	if v, ok := raw["branchPrefix"]; !ok || v == nil {
 		plain.BranchPrefix = "renovate/"
