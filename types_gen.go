@@ -209,6 +209,9 @@ type Config struct {
 	// Extra description used after the commit message topic - typically the version.
 	CommitMessageExtra string `json:"commitMessageExtra,omitempty,omitzero"`
 
+	// Lowercase PR- and commit titles.
+	CommitMessageLowerCase ConfigCommitMessageLowerCase `json:"commitMessageLowerCase,omitempty,omitzero"`
+
 	// Prefix to add to start of commit messages and PR titles. Uses a semantic prefix
 	// if `semanticCommits` is enabled.
 	CommitMessagePrefix *string `json:"commitMessagePrefix,omitempty,omitzero"`
@@ -1176,6 +1179,31 @@ type ConfigCloudbuild map[string]interface{}
 
 // Configuration object for the cocoapods manager
 type ConfigCocoapods map[string]interface{}
+
+type ConfigCommitMessageLowerCase string
+
+const ConfigCommitMessageLowerCaseAuto ConfigCommitMessageLowerCase = "auto"
+const ConfigCommitMessageLowerCaseNever ConfigCommitMessageLowerCase = "never"
+var enumValues_ConfigCommitMessageLowerCase  = []interface {}{
+  "auto",
+  "never",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigCommitMessageLowerCase) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigCommitMessageLowerCase {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigCommitMessageLowerCase, v)
+	}
+	*j = ConfigCommitMessageLowerCase(v)
+	return nil
+}
+
 
 // Configuration object for the composer manager
 type ConfigComposer map[string]interface{}
@@ -2561,6 +2589,9 @@ Versioning: "ruby",
 	}
 	if v, ok := raw["commitMessageExtra"]; !ok || v == nil {
 		plain.CommitMessageExtra = "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
+	}
+	if v, ok := raw["commitMessageLowerCase"]; !ok || v == nil {
+		plain.CommitMessageLowerCase = "auto"
 	}
 	if v, ok := raw["commitMessageTopic"]; !ok || v == nil {
 		plain.CommitMessageTopic = "dependency {{depName}}"
