@@ -568,6 +568,9 @@ type Config struct {
 	// Configuration object for the mix manager
 	Mix ConfigMix `json:"mix,omitempty,omitzero"`
 
+	// Configuration object for the nix manager
+	Nix ConfigNix `json:"nix,omitempty,omitzero"`
+
 	// Configuration object for Node version renovation.
 	Node ConfigNode `json:"node,omitempty,omitzero"`
 
@@ -1416,6 +1419,9 @@ type ConfigMint map[string]interface{}
 
 // Configuration object for the mix manager
 type ConfigMix map[string]interface{}
+
+// Configuration object for the nix manager
+type ConfigNix map[string]interface{}
 
 // Configuration object for Node version renovation.
 type ConfigNode map[string]interface{}
@@ -2781,6 +2787,16 @@ FileMatch: []interface {}{
   "(^|/)mix\\.exs$",
 },
 Versioning: "hex",
+}
+	}
+	if v, ok := raw["nix"]; !ok || v == nil {
+		plain.Nix = ConfigNix{
+CommitMessageExtra: "to {{newValue}}",
+CommitMessageTopic: "nixpkgs",
+Enabled: false,
+FileMatch: []interface {}{
+  "(^|\\/)flake\\.nix$",
+},
 }
 	}
 	if v, ok := raw["node"]; !ok || v == nil {
