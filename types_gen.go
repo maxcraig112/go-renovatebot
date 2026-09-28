@@ -2000,6 +2000,7 @@ const ConfigVersioningConan ConfigVersioning = "conan"
 const ConfigVersioningDebian ConfigVersioning = "debian"
 const ConfigVersioningDocker ConfigVersioning = "docker"
 const ConfigVersioningGit ConfigVersioning = "git"
+const ConfigVersioningGoModDirective ConfigVersioning = "go-mod-directive"
 const ConfigVersioningGradle ConfigVersioning = "gradle"
 const ConfigVersioningHashicorp ConfigVersioning = "hashicorp"
 const ConfigVersioningHelm ConfigVersioning = "helm"
@@ -2033,6 +2034,7 @@ var enumValues_ConfigVersioning  = []interface {}{
   "debian",
   "docker",
   "git",
+  "go-mod-directive",
   "gradle",
   "hashicorp",
   "helm",
