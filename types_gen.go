@@ -3168,6 +3168,7 @@ Versioning: "pep440",
 FileMatch: []interface {}{
   "(^|/)Package\\.swift",
 },
+PinDigests: false,
 RangeStrategy: "bump",
 Versioning: "swift",
 }
