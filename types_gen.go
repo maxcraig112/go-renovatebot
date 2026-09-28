@@ -1268,6 +1268,9 @@ type ConfigHostRulesElem struct {
 	// Limit concurrent requests per host.
 	ConcurrentRequestLimit *int `json:"concurrentRequestLimit,omitempty,omitzero"`
 
+	// Enable got dns cache
+	DnsCache bool `json:"dnsCache,omitempty,omitzero"`
+
 	// Enable got HTTP/2 support.
 	EnableHttp2 bool `json:"enableHttp2,omitempty,omitzero"`
 
@@ -1297,6 +1300,9 @@ func (j *ConfigHostRulesElem) UnmarshalJSON(value []byte) error {
 	}
 	if v, ok := raw["authType"]; !ok || v == nil {
 		plain.AuthType = "Bearer"
+	}
+	if v, ok := raw["dnsCache"]; !ok || v == nil {
+		plain.DnsCache = false
 	}
 	if v, ok := raw["enableHttp2"]; !ok || v == nil {
 		plain.EnableHttp2 = false
