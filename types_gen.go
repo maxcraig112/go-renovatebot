@@ -3553,9 +3553,9 @@ Versioning: "node",
 	}
 	if v, ok := raw["userStrings"]; !ok || v == nil {
 		plain.UserStrings = ConfigUserStrings{
-IgnoreDigest: "As this PR has been closed unmerged, Renovate will ignore this upgrade and you will not receive PRs for the `{{{depName}}}` `{{{newDigestShort}}}` update again.",
-IgnoreMajor: "As this PR has been closed unmerged, Renovate will ignore this upgrade and you will not receive PRs for *any* future {{{newMajor}}}.x releases. However, if you upgrade to {{{newMajor}}}.x manually then Renovate will reenable minor and patch updates automatically.",
-IgnoreOther: "As this PR has been closed unmerged, Renovate will now ignore this update ({{{newValue}}}). You will still receive a PR once a newer version is released, so if you wish to permanently ignore this dependency, please add it to the `ignoreDeps` array of your renovate config.",
+IgnoreDigest: "Because you closed this PR without merging, Renovate will ignore this update. You will not get PRs for the `{{{depName}}}` `{{{newDigestShort}}}` update again.",
+IgnoreMajor: "Because you closed this PR without merging, Renovate will ignore this update. You will not get PRs for *any* future {{{newMajor}}}.x releases. But if you manually upgrade to {{{newMajor}}}.x then Renovate will re-enable `minor` and `patch` updates automatically.",
+IgnoreOther: "Because you closed this PR without merging, Renovate will ignore this update ({{{newValue}}}). You will get a PR once a newer version is released. To ignore this dependency forever, add it to the `ignoreDeps` array of your Renovate config.",
 IgnoreTopic: "Renovate Ignore Notification",
 }
 	}
