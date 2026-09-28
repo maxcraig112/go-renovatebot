@@ -1572,6 +1572,10 @@ type ConfigPackageRulesElem struct {
 	// object.
 	MatchBaseBranches interface{} `json:"matchBaseBranches,omitempty,omitzero"`
 
+	// Merge confidence levels to match against (`low`, `neutral`, `high`, `very
+	// high`). Valid only within `packageRules` object.
+	MatchConfidence interface{} `json:"matchConfidence,omitempty,omitzero"`
+
 	// A regex to match against the raw `currentValue` string of a dependency. Valid
 	// only within a `packageRules` object.
 	MatchCurrentValue *string `json:"matchCurrentValue,omitempty,omitzero"`
