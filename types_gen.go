@@ -69,6 +69,9 @@ type Config struct {
 	// Filter the list of autodiscovered repositories.
 	AutodiscoverFilter interface{} `json:"autodiscoverFilter,omitempty,omitzero"`
 
+	// AutodiscoverTopics corresponds to the JSON schema field "autodiscoverTopics".
+	AutodiscoverTopics []string `json:"autodiscoverTopics,omitempty,omitzero"`
+
 	// Whether to automerge branches/PRs automatically, without human intervention.
 	Automerge bool `json:"automerge,omitempty,omitzero"`
 
