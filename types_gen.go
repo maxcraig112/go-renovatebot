@@ -2407,7 +2407,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["batect"]; !ok || v == nil {
 		plain.Batect = ConfigBatect{
 FileMatch: []interface {}{
-  "(^|/)batect(-bundle)?\\.yml$",
+  "(^|/)batect(-bundle)?\\.ya?ml$",
 },
 }
 	}
@@ -2531,7 +2531,7 @@ Versioning: "semver",
 	if v, ok := raw["circleci"]; !ok || v == nil {
 		plain.Circleci = ConfigCircleci{
 FileMatch: []interface {}{
-  "(^|/)\\.circleci/config\\.yml$",
+  "(^|/)\\.circleci/config\\.ya?ml$",
 },
 }
 	}
@@ -2725,7 +2725,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["flux"]; !ok || v == nil {
 		plain.Flux = ConfigFlux{
 FileMatch: []interface {}{
-  "(^|/)flux-system/(?:.+/)?gotk-components\\.yaml$",
+  "(^|/)flux-system/(?:.+/)?gotk-components\\.ya?ml$",
 },
 }
 	}
@@ -2784,14 +2784,14 @@ FileMatch: []interface {}{
 	if v, ok := raw["gitlabci"]; !ok || v == nil {
 		plain.Gitlabci = ConfigGitlabci{
 FileMatch: []interface {}{
-  "\\.gitlab-ci\\.yml$",
+  "\\.gitlab-ci\\.ya?ml$",
 },
 }
 	}
 	if v, ok := raw["gitlabci-include"]; !ok || v == nil {
 		plain.GitlabciInclude = ConfigGitlabciInclude{
 FileMatch: []interface {}{
-  "\\.gitlab-ci\\.yml$",
+  "\\.gitlab-ci\\.ya?ml$",
 },
 }
 	}
@@ -2845,7 +2845,7 @@ CommitMessageTopic: "{{{groupName}}}",
 		plain.HelmRequirements = ConfigHelmRequirements{
 CommitMessageTopic: "helm chart {{depName}}",
 FileMatch: []interface {}{
-  "(^|/)requirements\\.yaml$",
+  "(^|/)requirements\\.ya?ml$",
 },
 RegistryAliases: map[string]interface {}{
   "stable": "https://charts.helm.sh/stable",
@@ -2856,7 +2856,7 @@ RegistryAliases: map[string]interface {}{
 		plain.HelmValues = ConfigHelmValues{
 CommitMessageTopic: "helm values {{depName}}",
 FileMatch: []interface {}{
-  "(^|/)values\\.yaml$",
+  "(^|/)values\\.ya?ml$",
 },
 PinDigests: false,
 }
@@ -2865,7 +2865,7 @@ PinDigests: false,
 		plain.Helmfile = ConfigHelmfile{
 CommitMessageTopic: "helm chart {{depName}}",
 FileMatch: []interface {}{
-  "(^|/)helmfile\\.yaml$",
+  "(^|/)helmfile\\.ya?ml$",
 },
 RegistryAliases: map[string]interface {}{
   "stable": "https://charts.helm.sh/stable",
@@ -2881,7 +2881,7 @@ FileMatch: []interface {}{},
 		plain.Helmv3 = ConfigHelmv3{
 CommitMessageTopic: "helm chart {{depName}}",
 FileMatch: []interface {}{
-  "(^|/)Chart\\.yaml$",
+  "(^|/)Chart\\.ya?ml$",
 },
 RegistryAliases: map[string]interface {}{
   "stable": "https://charts.helm.sh/stable",
@@ -3334,7 +3334,7 @@ Update: "{{{updateType}}}",
 CommitMessageTopic: "pre-commit hook {{depName}}",
 Enabled: false,
 FileMatch: []interface {}{
-  "(^|/)\\.pre-commit-config\\.yaml$",
+  "(^|/)\\.pre-commit-config\\.ya?ml$",
 },
 PrBodyNotes: []interface {}{
   "Note: The `pre-commit` manager in Renovate is not supported by the `pre-commit` maintainers or community. Please do not report any problems there, instead [create a Discussion in the Renovate repository](https://github.com/renovatebot/renovate/discussions/new) if you have any questions.",
@@ -3565,7 +3565,7 @@ FileMatch: []interface {}{
 	if v, ok := raw["travis"]; !ok || v == nil {
 		plain.Travis = ConfigTravis{
 FileMatch: []interface {}{
-  "^\\.travis\\.yml$",
+  "^\\.travis\\.ya?ml$",
 },
 Major: map[string]interface {}{
   "enabled": false,
