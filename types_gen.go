@@ -875,6 +875,9 @@ type Config struct {
 	// Configuration object for the swift manager
 	Swift ConfigSwift `json:"swift,omitempty,omitzero"`
 
+	// Configuration object for the tekton manager
+	Tekton ConfigTekton `json:"tekton,omitempty,omitzero"`
+
 	// Configuration object for the terraform manager
 	Terraform ConfigTerraform `json:"terraform,omitempty,omitzero"`
 
@@ -935,6 +938,9 @@ type Config struct {
 	// Config to apply when a PR is needed due to a vulnerability in the existing
 	// package version.
 	VulnerabilityAlerts ConfigVulnerabilityAlerts `json:"vulnerabilityAlerts,omitempty,omitzero"`
+
+	// Configuration object for the woodpecker manager
+	Woodpecker ConfigWoodpecker `json:"woodpecker,omitempty,omitzero"`
 
 	// Writes discovered repositories to a JSON file and then exit.
 	WriteDiscoveredRepos *string `json:"writeDiscoveredRepos,omitempty,omitzero"`
@@ -1908,6 +1914,9 @@ func (j *ConfigSuppressNotificationsElem) UnmarshalJSON(value []byte) error {
 // Configuration object for the swift manager
 type ConfigSwift map[string]interface{}
 
+// Configuration object for the tekton manager
+type ConfigTekton map[string]interface{}
+
 // Configuration object for the terraform manager
 type ConfigTerraform map[string]interface{}
 
@@ -2040,6 +2049,9 @@ func (j *ConfigVersioning) UnmarshalJSON(value []byte) error {
 // Config to apply when a PR is needed due to a vulnerability in the existing
 // package version.
 type ConfigVulnerabilityAlerts map[string]interface{}
+
+// Configuration object for the woodpecker manager
+type ConfigWoodpecker map[string]interface{}
 
 
 // UnmarshalJSON implements json.Unmarshaler.
@@ -3147,6 +3159,11 @@ RangeStrategy: "bump",
 Versioning: "swift",
 }
 	}
+	if v, ok := raw["tekton"]; !ok || v == nil {
+		plain.Tekton = ConfigTekton{
+FileMatch: []interface {}{},
+}
+	}
 	if v, ok := raw["terraform"]; !ok || v == nil {
 		plain.Terraform = ConfigTerraform{
 CommitMessageTopic: "Terraform {{depName}}",
@@ -3235,6 +3252,13 @@ PrCreation: "immediate",
 RangeStrategy: "update-lockfile",
 Schedule: []interface {}{},
 StabilityDays: 0.0,
+}
+	}
+	if v, ok := raw["woodpecker"]; !ok || v == nil {
+		plain.Woodpecker = ConfigWoodpecker{
+FileMatch: []interface {}{
+  "(^|\\/)\\.woodpecker[^/]*\\.ya?ml$",
+},
 }
 	}
 	*j = Config(plain)
