@@ -3261,7 +3261,7 @@ LockFileMaintenance: map[string]interface {}{
 	if v, ok := raw["pip_requirements"]; !ok || v == nil {
 		plain.PipRequirements = ConfigPipRequirements{
 FileMatch: []interface {}{
-  "(^|/)([\\w-]*)requirements\\.(txt|pip)$",
+  "(^|/)[\\w-]*requirements(-\\w+)?\\.(txt|pip)$",
 },
 }
 	}
