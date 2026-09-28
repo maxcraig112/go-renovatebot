@@ -1716,8 +1716,8 @@ type ConfigPackageRulesElem struct {
 	// `packageRules` object.
 	MatchDepTypes interface{} `json:"matchDepTypes,omitempty,omitzero"`
 
-	// List of strings to do an exact match against package files with full path. Only
-	// works inside a `packageRules` object.
+	// List of strings to do an exact match against package and lock files with full
+	// path. Only works inside a `packageRules` object.
 	MatchFiles []string `json:"matchFiles,omitempty,omitzero"`
 
 	// List of languages to match (e.g. `["python"]`). Valid only within a
