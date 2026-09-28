@@ -765,6 +765,9 @@ type Config struct {
 	// null.
 	PrTitle *string `json:"prTitle,omitempty,omitzero"`
 
+	// Whether to bypass appending extra context to the Pull Request title.
+	PrTitleStrict bool `json:"prTitleStrict,omitempty,omitzero"`
+
 	// Configuration object for the pre-commit manager
 	PreCommit ConfigPreCommit `json:"pre-commit,omitempty,omitzero"`
 
@@ -3288,6 +3291,9 @@ Update: "{{{updateType}}}",
 	}
 	if v, ok := raw["prPriority"]; !ok || v == nil {
 		plain.PrPriority = 0
+	}
+	if v, ok := raw["prTitleStrict"]; !ok || v == nil {
+		plain.PrTitleStrict = false
 	}
 	if v, ok := raw["pre-commit"]; !ok || v == nil {
 		plain.PreCommit = ConfigPreCommit{
