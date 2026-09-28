@@ -331,7 +331,7 @@ type Config struct {
 	Enabled *bool `json:"enabled,omitempty,omitzero"`
 
 	// A list of package managers to enable. Only managers on the list are enabled.
-	EnabledManagers []interface{} `json:"enabledManagers,omitempty,omitzero"`
+	EnabledManagers []string `json:"enabledManagers,omitempty,omitzero"`
 
 	// An object containing configuration encrypted with project key.
 	Encrypted ConfigEncrypted `json:"encrypted,omitempty,omitzero"`
@@ -710,7 +710,7 @@ type Config struct {
 	Poetry ConfigPoetry `json:"poetry,omitempty,omitzero"`
 
 	// Enable post-update options to be run after package/artifact updating.
-	PostUpdateOptions []interface{} `json:"postUpdateOptions,omitempty,omitzero"`
+	PostUpdateOptions []ConfigPostUpdateOptionsElem `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// Post-upgrade tasks that are executed before a commit is made by Renovate.
 	PostUpgradeTasks ConfigPostUpgradeTasks `json:"postUpgradeTasks,omitempty,omitzero"`
@@ -830,7 +830,7 @@ type Config struct {
 	Replacement ConfigReplacement `json:"replacement,omitempty,omitzero"`
 
 	// List of Repositories.
-	Repositories []interface{} `json:"repositories,omitempty,omitzero"`
+	Repositories []string `json:"repositories,omitempty,omitzero"`
 
 	// This option decides if Renovate uses a JSON cache to speed up extractions.
 	RepositoryCache ConfigRepositoryCache `json:"repositoryCache,omitempty,omitzero"`
@@ -1722,6 +1722,49 @@ func (j *ConfigPlatform) UnmarshalJSON(value []byte) error {
 
 // Configuration object for the poetry manager
 type ConfigPoetry map[string]interface{}
+
+type ConfigPostUpdateOptionsElem string
+
+const ConfigPostUpdateOptionsElemBundlerConservative ConfigPostUpdateOptionsElem = "bundlerConservative"
+const ConfigPostUpdateOptionsElemGomodMassage ConfigPostUpdateOptionsElem = "gomodMassage"
+const ConfigPostUpdateOptionsElemGomodTidy ConfigPostUpdateOptionsElem = "gomodTidy"
+const ConfigPostUpdateOptionsElemGomodTidy117 ConfigPostUpdateOptionsElem = "gomodTidy1.17"
+const ConfigPostUpdateOptionsElemGomodTidyE ConfigPostUpdateOptionsElem = "gomodTidyE"
+const ConfigPostUpdateOptionsElemGomodUpdateImportPaths ConfigPostUpdateOptionsElem = "gomodUpdateImportPaths"
+const ConfigPostUpdateOptionsElemHelmUpdateSubChartArchives ConfigPostUpdateOptionsElem = "helmUpdateSubChartArchives"
+const ConfigPostUpdateOptionsElemNpmDedupe ConfigPostUpdateOptionsElem = "npmDedupe"
+const ConfigPostUpdateOptionsElemPnpmDedupe ConfigPostUpdateOptionsElem = "pnpmDedupe"
+const ConfigPostUpdateOptionsElemYarnDedupeFewer ConfigPostUpdateOptionsElem = "yarnDedupeFewer"
+const ConfigPostUpdateOptionsElemYarnDedupeHighest ConfigPostUpdateOptionsElem = "yarnDedupeHighest"
+var enumValues_ConfigPostUpdateOptionsElem  = []interface {}{
+  "bundlerConservative",
+  "helmUpdateSubChartArchives",
+  "gomodMassage",
+  "gomodUpdateImportPaths",
+  "gomodTidy",
+  "gomodTidy1.17",
+  "gomodTidyE",
+  "npmDedupe",
+  "pnpmDedupe",
+  "yarnDedupeFewer",
+  "yarnDedupeHighest",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigPostUpdateOptionsElem) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigPostUpdateOptionsElem {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigPostUpdateOptionsElem, v)
+	}
+	*j = ConfigPostUpdateOptionsElem(v)
+	return nil
+}
+
 
 // Post-upgrade tasks that are executed before a commit is made by Renovate.
 type ConfigPostUpgradeTasks map[string]interface{}
@@ -3149,7 +3192,7 @@ FileMatch: []interface {}{
 }
 	}
 	if v, ok := raw["postUpdateOptions"]; !ok || v == nil {
-		plain.PostUpdateOptions = []interface{}{
+		plain.PostUpdateOptions = []ConfigPostUpdateOptionsElem{
 }
 	}
 	if v, ok := raw["postUpgradeTasks"]; !ok || v == nil {
