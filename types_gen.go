@@ -2207,6 +2207,7 @@ const ConfigSuppressNotificationsElemBranchAutomergeFailure ConfigSuppressNotifi
 const ConfigSuppressNotificationsElemConfigErrorIssue ConfigSuppressNotificationsElem = "configErrorIssue"
 const ConfigSuppressNotificationsElemDeprecationWarningIssues ConfigSuppressNotificationsElem = "deprecationWarningIssues"
 const ConfigSuppressNotificationsElemLockFileErrors ConfigSuppressNotificationsElem = "lockFileErrors"
+const ConfigSuppressNotificationsElemMissingCredentialsError ConfigSuppressNotificationsElem = "missingCredentialsError"
 const ConfigSuppressNotificationsElemOnboardingClose ConfigSuppressNotificationsElem = "onboardingClose"
 const ConfigSuppressNotificationsElemPrEditedNotification ConfigSuppressNotificationsElem = "prEditedNotification"
 const ConfigSuppressNotificationsElemPrIgnoreNotification ConfigSuppressNotificationsElem = "prIgnoreNotification"
@@ -2216,6 +2217,7 @@ var enumValues_ConfigSuppressNotificationsElem  = []interface {}{
   "configErrorIssue",
   "deprecationWarningIssues",
   "lockFileErrors",
+  "missingCredentialsError",
   "onboardingClose",
   "prEditedNotification",
   "prIgnoreNotification",
