@@ -3337,7 +3337,7 @@ StabilityDays: 0.0,
 	if v, ok := raw["woodpecker"]; !ok || v == nil {
 		plain.Woodpecker = ConfigWoodpecker{
 FileMatch: []interface {}{
-  "(^|\\/)\\.woodpecker[^/]*\\.ya?ml$",
+  "^\\.woodpecker(?:\\/[^/]+)?\\.ya?ml$",
 },
 }
 	}
