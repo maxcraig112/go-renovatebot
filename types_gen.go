@@ -53,10 +53,6 @@ type AnsibleGalaxy map[string]interface{}
 // See also: https://docs.renovatebot.com/configuration-options/#ant
 type Ant map[string]interface{}
 
-// Configuration object for the apm manager
-// See also: https://docs.renovatebot.com/configuration-options/#apm
-type Apm map[string]interface{}
-
 // Configuration object for the argocd manager
 // See also: https://docs.renovatebot.com/configuration-options/#argocd
 type Argocd map[string]interface{}
@@ -375,9 +371,6 @@ type BumpVersionsElem struct {
 
 	// Name corresponds to the JSON schema field "name".
 	Name *Name `json:"name,omitempty,omitzero"`
-
-	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
-	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 }
 
 // Configuration object for the bun manager
@@ -560,9 +553,6 @@ type Config struct {
 
 	// Ant corresponds to the JSON schema field "ant".
 	Ant Ant `json:"ant,omitempty,omitzero"`
-
-	// Apm corresponds to the JSON schema field "apm".
-	Apm Apm `json:"apm,omitempty,omitzero"`
 
 	// Argocd corresponds to the JSON schema field "argocd".
 	Argocd Argocd `json:"argocd,omitempty,omitzero"`
@@ -1111,10 +1101,6 @@ type Config struct {
 	// "minimumReleaseAgeBehaviour".
 	MinimumReleaseAgeBehaviour *MinimumReleaseAgeBehaviour `json:"minimumReleaseAgeBehaviour,omitempty,omitzero"`
 
-	// MinimumReleaseAgeBuffer corresponds to the JSON schema field
-	// "minimumReleaseAgeBuffer".
-	MinimumReleaseAgeBuffer *MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
-
 	// Minor corresponds to the JSON schema field "minor".
 	Minor Minor `json:"minor,omitempty,omitzero"`
 
@@ -1163,9 +1149,6 @@ type Config struct {
 	// OsvVulnerabilityAlerts corresponds to the JSON schema field
 	// "osvVulnerabilityAlerts".
 	OsvVulnerabilityAlerts *OsvVulnerabilityAlerts `json:"osvVulnerabilityAlerts,omitempty,omitzero"`
-
-	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
-	OverrideDescription OverrideDescription `json:"overrideDescription,omitempty,omitzero"`
 
 	// PackageRules corresponds to the JSON schema field "packageRules".
 	PackageRules PackageRules `json:"packageRules,omitempty,omitzero"`
@@ -1495,12 +1478,9 @@ type Constraints struct {
 	// Used in the `gomod` manager to determine the [minimum version of Go required to
 	// use this module](https://go.dev/ref/mod#go-mod-file-go).
 	//
-	// Note that this is prefixed with a `%` to explicitly note that this is not a
+	// Note that this is prefixed with a `%` to explicilty note that this is not a
 	// tool that Containerbase knows.
 	GoMod *string `json:"%goMod,omitempty,omitzero"`
-
-	// A constraint for the `apm` Containerbase tool
-	Apm *string `json:"apm,omitempty,omitzero"`
 
 	// A constraint for the `bazelisk` Containerbase tool
 	Bazelisk *string `json:"bazelisk,omitempty,omitzero"`
@@ -1552,17 +1532,6 @@ type Constraints struct {
 
 	// A constraint for the `flux` Containerbase tool
 	Flux *string `json:"flux,omitempty,omitzero"`
-
-	// A constraint for the `gh` Containerbase tool
-	Gh *string `json:"gh,omitempty,omitzero"`
-
-	// Used in the `github-actions` manager to specify a release tag for the
-	// [`github/gh-actions-lock`](https://github.com/github/gh-actions-lock) `gh` CLI
-	// extension, which regenerates `.github/workflows/actions.lock`.
-	//
-	// Must be a full release tag, prefixed with `v`, such as `v0.1.7`. Set it to an
-	// empty string to always install the latest release.
-	GhActionsLock *string `json:"ghActionsLock,omitempty,omitzero"`
 
 	// A constraint for the `gleam` Containerbase tool
 	Gleam *string `json:"gleam,omitempty,omitzero"`
@@ -1733,20 +1702,12 @@ type ConstraintsVersioning struct {
 	// Used in the `gomod` manager to determine the [minimum version of Go required to
 	// use this module](https://go.dev/ref/mod#go-mod-file-go).
 	//
-	// Note that this is prefixed with a `%` to explicitly note that this is not a
+	// Note that this is prefixed with a `%` to explicilty note that this is not a
 	// tool that Containerbase knows.
 	GoMod *string `json:"%goMod,omitempty,omitzero"`
 
 	// Used in the `nuget` manager to track .NET SDK version required.
 	DotnetSdk *string `json:"dotnet-sdk,omitempty,omitzero"`
-
-	// Used in the `github-actions` manager to specify a release tag for the
-	// [`github/gh-actions-lock`](https://github.com/github/gh-actions-lock) `gh` CLI
-	// extension, which regenerates `.github/workflows/actions.lock`.
-	//
-	// Must be a full release tag, prefixed with `v`, such as `v0.1.7`. Set it to an
-	// empty string to always install the latest release.
-	GhActionsLock *string `json:"ghActionsLock,omitempty,omitzero"`
 
 	// Used in the `gomod` manager to specify the version of the Go toolchain to use.
 	//
@@ -2259,9 +2220,8 @@ type Fvm map[string]interface{}
 // See also: https://docs.renovatebot.com/configuration-options/#gitauthor
 type GitAuthor string
 
-// Git author emails ignored by Renovate. Entries can be exact
-// [RFC5322](https://datatracker.ietf.org/doc/html/rfc5322) strings, glob patterns,
-// or regex patterns using Renovate regex syntax.
+// Git authors which are ignored by Renovate. Must conform to
+// [RFC5322](https://datatracker.ietf.org/doc/html/rfc5322).
 // See also: https://docs.renovatebot.com/configuration-options/#gitignoredauthors
 type GitIgnoredAuthors []string
 
@@ -2441,9 +2401,6 @@ type HostRulesElem struct {
 	// MaxRetryAfter corresponds to the JSON schema field "maxRetryAfter".
 	MaxRetryAfter *MaxRetryAfter `json:"maxRetryAfter,omitempty,omitzero"`
 
-	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
-	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
-
 	// ReadOnly corresponds to the JSON schema field "readOnly".
 	ReadOnly *ReadOnly `json:"readOnly,omitempty,omitzero"`
 
@@ -2528,9 +2485,6 @@ type InsecureRegistry bool
 // See also:
 // https://docs.renovatebot.com/configuration-options/#postupgradetasksinstalltools
 type InstallTools struct {
-	// Install the `apm` Containerbase tool
-	Apm InstallToolsApm `json:"apm,omitempty,omitzero"`
-
 	// Install the `bazelisk` Containerbase tool
 	Bazelisk InstallToolsBazelisk `json:"bazelisk,omitempty,omitzero"`
 
@@ -2578,9 +2532,6 @@ type InstallTools struct {
 
 	// Install the `flux` Containerbase tool
 	Flux InstallToolsFlux `json:"flux,omitempty,omitzero"`
-
-	// Install the `gh` Containerbase tool
-	Gh InstallToolsGh `json:"gh,omitempty,omitzero"`
 
 	// Install the `gleam` Containerbase tool
 	Gleam InstallToolsGleam `json:"gleam,omitempty,omitzero"`
@@ -2670,9 +2621,6 @@ type InstallTools struct {
 	YarnSlim InstallToolsYarnSlim `json:"yarn-slim,omitempty,omitzero"`
 }
 
-// Install the `apm` Containerbase tool
-type InstallToolsApm map[string]interface{}
-
 // Install the `bazelisk` Containerbase tool
 type InstallToolsBazelisk map[string]interface{}
 
@@ -2720,9 +2668,6 @@ type InstallToolsFlutter map[string]interface{}
 
 // Install the `flux` Containerbase tool
 type InstallToolsFlux map[string]interface{}
-
-// Install the `gh` Containerbase tool
-type InstallToolsGh map[string]interface{}
 
 // Install the `gleam` Containerbase tool
 type InstallToolsGleam map[string]interface{}
@@ -2922,9 +2867,6 @@ type LogLevelRemapElem struct {
 
 	// NewLogLevel corresponds to the JSON schema field "newLogLevel".
 	NewLogLevel *NewLogLevel `json:"newLogLevel,omitempty,omitzero"`
-
-	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
-	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 }
 
 // Configuration to apply when an update type is `major`.
@@ -2999,13 +2941,6 @@ type MatchFileNames []string
 // A domain name, host name or base URL to match against.
 // See also: https://docs.renovatebot.com/configuration-options/#hostrulesmatchhost
 type MatchHost string
-
-// Matches only if the update is considered breaking (e.g. major, or minor for 0.x
-// in ecosystems like Cargo) when `true`, or non-breaking when `false`. Valid only
-// within a `packageRules` object.
-// See also:
-// https://docs.renovatebot.com/configuration-options/#packagerulesmatchisbreaking
-type MatchIsBreaking bool
 
 // A JSONata expression to match against the full config object. Valid only within
 // a `packageRules` object.
@@ -3165,11 +3100,6 @@ func (j *MinimumReleaseAgeBehaviour) UnmarshalJSON(value []byte) error {
 	return nil
 }
 
-// Extra time added to `minimumReleaseAge` before an update is considered stable.
-// See also:
-// https://docs.renovatebot.com/configuration-options/#minimumreleaseagebuffer
-type MinimumReleaseAgeBuffer string
-
 // Configuration to apply when an update type is `minor`.
 // See also: https://docs.renovatebot.com/configuration-options/#minor
 type Minor map[string]interface{}
@@ -3321,12 +3251,6 @@ type OverrideDatasource string
 // https://docs.renovatebot.com/configuration-options/#packagerulesoverridedepname
 type OverrideDepName string
 
-// Description which replaces the descriptions of any presets which this config
-// extends.
-// See also:
-// https://docs.renovatebot.com/configuration-options/#overridedescription
-type OverrideDescription interface{}
-
 // Override the packageName value.
 // See also:
 // https://docs.renovatebot.com/configuration-options/#packagerulesoverridepackagename
@@ -3388,9 +3312,6 @@ type PackageRulesElem struct {
 	// MatchFileNames corresponds to the JSON schema field "matchFileNames".
 	MatchFileNames MatchFileNames `json:"matchFileNames,omitempty,omitzero"`
 
-	// MatchIsBreaking corresponds to the JSON schema field "matchIsBreaking".
-	MatchIsBreaking *MatchIsBreaking `json:"matchIsBreaking,omitempty,omitzero"`
-
 	// MatchJsonata corresponds to the JSON schema field "matchJsonata".
 	MatchJsonata MatchJsonata `json:"matchJsonata,omitempty,omitzero"`
 
@@ -3420,9 +3341,6 @@ type PackageRulesElem struct {
 
 	// OverrideDepName corresponds to the JSON schema field "overrideDepName".
 	OverrideDepName *OverrideDepName `json:"overrideDepName,omitempty,omitzero"`
-
-	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
-	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
 	// OverridePackageName corresponds to the JSON schema field "overridePackageName".
 	OverridePackageName *OverridePackageName `json:"overridePackageName,omitempty,omitzero"`
@@ -3550,7 +3468,6 @@ const PostUpdateOptionsElemGomodMassage PostUpdateOptionsElem = "gomodMassage"
 const PostUpdateOptionsElemGomodSkipVendor PostUpdateOptionsElem = "gomodSkipVendor"
 const PostUpdateOptionsElemGomodTidy PostUpdateOptionsElem = "gomodTidy"
 const PostUpdateOptionsElemGomodTidy117 PostUpdateOptionsElem = "gomodTidy1.17"
-const PostUpdateOptionsElemGomodTidyAll PostUpdateOptionsElem = "gomodTidyAll"
 const PostUpdateOptionsElemGomodTidyE PostUpdateOptionsElem = "gomodTidyE"
 const PostUpdateOptionsElemGomodUpdateImportPaths PostUpdateOptionsElem = "gomodUpdateImportPaths"
 const PostUpdateOptionsElemGomodVendor PostUpdateOptionsElem = "gomodVendor"
@@ -3570,7 +3487,6 @@ var enumValues_PostUpdateOptionsElem = []interface{}{
 	"gomodMassage",
 	"gomodTidy",
 	"gomodTidy1.17",
-	"gomodTidyAll",
 	"gomodTidyE",
 	"gomodUpdateImportPaths",
 	"gomodSkipVendor",
@@ -3782,7 +3698,7 @@ func (j *RangeStrategy) UnmarshalJSON(value []byte) error {
 // See also: https://docs.renovatebot.com/configuration-options/#hostrulesreadonly
 type ReadOnly bool
 
-// Label to request a rebase from Renovate.
+// Label to request a rebase from Renovate bot.
 // See also: https://docs.renovatebot.com/configuration-options/#rebaselabel
 type RebaseLabel string
 
