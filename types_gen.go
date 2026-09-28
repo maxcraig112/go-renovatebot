@@ -1947,6 +1947,7 @@ const ConfigVersioningHelm ConfigVersioning = "helm"
 const ConfigVersioningHermit ConfigVersioning = "hermit"
 const ConfigVersioningHex ConfigVersioning = "hex"
 const ConfigVersioningIvy ConfigVersioning = "ivy"
+const ConfigVersioningKubernetesApi ConfigVersioning = "kubernetes-api"
 const ConfigVersioningLoose ConfigVersioning = "loose"
 const ConfigVersioningMaven ConfigVersioning = "maven"
 const ConfigVersioningNode ConfigVersioning = "node"
@@ -1978,6 +1979,7 @@ var enumValues_ConfigVersioning  = []interface {}{
   "hermit",
   "hex",
   "ivy",
+  "kubernetes-api",
   "loose",
   "maven",
   "node",
