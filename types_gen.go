@@ -489,6 +489,10 @@ type Config struct {
 	// array.
 	IgnorePresets interface{} `json:"ignorePresets,omitempty,omitzero"`
 
+	// Reviewers to be ignored in PR reviewers presence (either username or email
+	// address depending on the platform).
+	IgnoreReviewers []string `json:"ignoreReviewers,omitempty,omitzero"`
+
 	// Set this to `false` if `allowScripts=true` and you wish to run scripts when
 	// updating lock files.
 	IgnoreScripts bool `json:"ignoreScripts,omitempty,omitzero"`
