@@ -134,10 +134,11 @@ func backfillVersion(
 	}
 
 	message := fmt.Sprintf("chore: regenerate schema for renovate %s", version)
-	if err := gh.CommitAndTag(ctx, output, src, message, tag); err != nil {
+	sha, err := gh.CommitAndTag(ctx, output, src, message, tag)
+	if err != nil {
 		return outcomeFailed, err
 	}
 
-	fmt.Printf("tagged %s\n", tag)
+	fmt.Printf("tagged %s -> %s\n", tag, sha)
 	return outcomeGenerated, nil
 }

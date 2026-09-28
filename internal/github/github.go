@@ -23,33 +23,36 @@ func (c *Client) TagExists(ctx context.Context, tag string) (bool, error) {
 // CommitAndTag writes content at path on top of the branch's current HEAD
 // and tags the result with tag. If content is identical to what is already
 // committed at path, no new commit is made and tag is applied to the
-// existing HEAD instead.
-func (c *Client) CommitAndTag(ctx context.Context, path string, content []byte, message, tag string) error {
+// existing HEAD instead. It returns the commit SHA the tag now points to.
+func (c *Client) CommitAndTag(ctx context.Context, path string, content []byte, message, tag string) (string, error) {
 	headRef, _, err := c.git.GetRef(ctx, c.owner, c.repo, "heads/"+c.branch)
 	if err != nil {
-		return fmt.Errorf("github: getting HEAD of %s: %w", c.branch, err)
+		return "", fmt.Errorf("github: getting HEAD of %s: %w", c.branch, err)
 	}
 	headSHA := headRef.GetObject().GetSHA()
 
 	baseCommit, _, err := c.git.GetCommit(ctx, c.owner, c.repo, headSHA)
 	if err != nil {
-		return fmt.Errorf("github: getting commit %s: %w", headSHA, err)
+		return "", fmt.Errorf("github: getting commit %s: %w", headSHA, err)
 	}
 
 	unchanged, err := c.pathMatchesContent(ctx, baseCommit.GetTree().GetSHA(), path, content)
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	targetSHA := headSHA
 	if !unchanged {
 		targetSHA, err = c.commitFile(ctx, baseCommit, path, content, message)
 		if err != nil {
-			return err
+			return "", err
 		}
 	}
 
-	return c.createTag(ctx, tag, targetSHA)
+	if err := c.createTag(ctx, tag, targetSHA); err != nil {
+		return "", err
+	}
+	return targetSHA, nil
 }
 
 // pathMatchesContent reports whether path already contains content in the
