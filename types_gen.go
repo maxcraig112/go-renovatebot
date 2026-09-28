@@ -365,6 +365,10 @@ type Config struct {
 	// Decides if CLI configuration options are moved to the `force` config section.
 	ForceCli bool `json:"forceCli,omitempty,omitzero"`
 
+	// Disallow maintainers to push to Renovate pull requests when running in fork
+	// mode.
+	ForkModeDisallowMaintainerEdits bool `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
+
 	// Set a personal access token here to enable "fork mode".
 	ForkToken *string `json:"forkToken,omitempty,omitzero"`
 
@@ -2509,6 +2513,9 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["forceCli"]; !ok || v == nil {
 		plain.ForceCli = true
+	}
+	if v, ok := raw["forkModeDisallowMaintainerEdits"]; !ok || v == nil {
+		plain.ForkModeDisallowMaintainerEdits = false
 	}
 	if v, ok := raw["fvm"]; !ok || v == nil {
 		plain.Fvm = ConfigFvm{
