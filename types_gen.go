@@ -1445,7 +1445,7 @@ type ConfigPackageRulesElem struct {
 	// A version range or regex pattern capturing allowed versions for dependencies.
 	AllowedVersions *string `json:"allowedVersions,omitempty,omitzero"`
 
-	// If set, Renovate will use this url to fetch changelogs for a matched
+	// If set, Renovate will use this URL to fetch changelogs for a matched
 	// dependency. Valid only within a `packageRules` object.
 	CustomChangelogUrl *string `json:"customChangelogUrl,omitempty,omitzero"`
 
