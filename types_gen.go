@@ -3101,7 +3101,7 @@ Versioning: "swift",
 	}
 	if v, ok := raw["terraform"]; !ok || v == nil {
 		plain.Terraform = ConfigTerraform{
-CommitMessageTopic: "Terraform {{managerData.terraformDependencyType}} {{depName}}",
+CommitMessageTopic: "Terraform {{depName}}",
 FileMatch: []interface {}{
   "\\.tf$",
 },
