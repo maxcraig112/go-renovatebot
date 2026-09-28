@@ -2542,6 +2542,8 @@ FileMatch: []interface {}{
   "(^|\\/)gradle\\.properties$",
   "(^|\\/)gradle\\/.+\\.toml$",
   "\\.versions\\.toml$",
+  "(^|\\/)versions.props$",
+  "(^|\\/)versions.lock$",
 },
 Timeout: 600.0,
 Versioning: "gradle",
