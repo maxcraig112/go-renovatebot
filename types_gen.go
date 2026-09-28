@@ -1280,6 +1280,9 @@ type ConfigHostRulesElem struct {
 	// Explicitly turn on insecure Docker registry access (HTTP).
 	InsecureRegistry *bool `json:"insecureRegistry,omitempty,omitzero"`
 
+	// Enable http keepalives for hosts
+	Keepalive bool `json:"keepalive,omitempty,omitzero"`
+
 	// A domain name, host name or base URL to match against.
 	MatchHost *string `json:"matchHost,omitempty,omitzero"`
 
@@ -1306,6 +1309,9 @@ func (j *ConfigHostRulesElem) UnmarshalJSON(value []byte) error {
 	}
 	if v, ok := raw["enableHttp2"]; !ok || v == nil {
 		plain.EnableHttp2 = false
+	}
+	if v, ok := raw["keepalive"]; !ok || v == nil {
+		plain.Keepalive = false
 	}
 	*j = ConfigHostRulesElem(plain)
 	return nil
