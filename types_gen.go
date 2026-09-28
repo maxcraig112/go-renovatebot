@@ -1478,7 +1478,7 @@ type Constraints struct {
 	// Used in the `gomod` manager to determine the [minimum version of Go required to
 	// use this module](https://go.dev/ref/mod#go-mod-file-go).
 	//
-	// Note that this is prefixed with a `%` to explicilty note that this is not a
+	// Note that this is prefixed with a `%` to explicitly note that this is not a
 	// tool that Containerbase knows.
 	GoMod *string `json:"%goMod,omitempty,omitzero"`
 
@@ -1702,7 +1702,7 @@ type ConstraintsVersioning struct {
 	// Used in the `gomod` manager to determine the [minimum version of Go required to
 	// use this module](https://go.dev/ref/mod#go-mod-file-go).
 	//
-	// Note that this is prefixed with a `%` to explicilty note that this is not a
+	// Note that this is prefixed with a `%` to explicitly note that this is not a
 	// tool that Containerbase knows.
 	GoMod *string `json:"%goMod,omitempty,omitzero"`
 
