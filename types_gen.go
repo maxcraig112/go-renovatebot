@@ -3219,7 +3219,8 @@ Versioning: "ruby",
 		plain.Sbt = ConfigSbt{
 FileMatch: []interface {}{
   "\\.sbt$",
-  "project/[^/]*.scala$",
+  "project/[^/]*\\.scala$",
+  "project/build\\.properties$",
 },
 Versioning: "ivy",
 }
