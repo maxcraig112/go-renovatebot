@@ -2001,6 +2001,7 @@ const ConfigVersioningIvy ConfigVersioning = "ivy"
 const ConfigVersioningKubernetesApi ConfigVersioning = "kubernetes-api"
 const ConfigVersioningLoose ConfigVersioning = "loose"
 const ConfigVersioningMaven ConfigVersioning = "maven"
+const ConfigVersioningNixpkgs ConfigVersioning = "nixpkgs"
 const ConfigVersioningNode ConfigVersioning = "node"
 const ConfigVersioningNpm ConfigVersioning = "npm"
 const ConfigVersioningNuget ConfigVersioning = "nuget"
@@ -2033,6 +2034,7 @@ var enumValues_ConfigVersioning  = []interface {}{
   "kubernetes-api",
   "loose",
   "maven",
+  "nixpkgs",
   "node",
   "npm",
   "nuget",
