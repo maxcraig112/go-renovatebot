@@ -2034,6 +2034,7 @@ const ConfigVersioningAwsMachineImage ConfigVersioning = "aws-machine-image"
 const ConfigVersioningCargo ConfigVersioning = "cargo"
 const ConfigVersioningComposer ConfigVersioning = "composer"
 const ConfigVersioningConan ConfigVersioning = "conan"
+const ConfigVersioningDeb ConfigVersioning = "deb"
 const ConfigVersioningDebian ConfigVersioning = "debian"
 const ConfigVersioningDocker ConfigVersioning = "docker"
 const ConfigVersioningGit ConfigVersioning = "git"
@@ -2068,6 +2069,7 @@ var enumValues_ConfigVersioning  = []interface {}{
   "cargo",
   "composer",
   "conan",
+  "deb",
   "debian",
   "docker",
   "git",
