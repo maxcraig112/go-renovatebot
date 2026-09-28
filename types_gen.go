@@ -2953,7 +2953,7 @@ Update: "{{{updateType}}}",
 }
 	}
 	if v, ok := raw["prBodyTemplate"]; !ok || v == nil {
-		plain.PrBodyTemplate = "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}"
+		plain.PrBodyTemplate = "{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}"
 	}
 	if v, ok := raw["prCommitsPerRunLimit"]; !ok || v == nil {
 		plain.PrCommitsPerRunLimit = 0
