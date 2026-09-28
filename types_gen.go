@@ -60,7 +60,7 @@ type Config struct {
 	Autodiscover bool `json:"autodiscover,omitempty,omitzero"`
 
 	// Filter the list of autodiscovered repositories.
-	AutodiscoverFilter *string `json:"autodiscoverFilter,omitempty,omitzero"`
+	AutodiscoverFilter interface{} `json:"autodiscoverFilter,omitempty,omitzero"`
 
 	// Whether to automerge branches/PRs automatically, without human intervention.
 	Automerge bool `json:"automerge,omitempty,omitzero"`
@@ -363,12 +363,8 @@ type Config struct {
 	// Decides if CLI configuration options are moved to the `force` config section.
 	ForceCli bool `json:"forceCli,omitempty,omitzero"`
 
-	// Set to `true` to fork the source repository and create branches there instead.
-	ForkMode bool `json:"forkMode,omitempty,omitzero"`
-
-	// Will be used on GitHub when `forkMode` is set to `true` to clone the
-	// repositories.
-	ForkToken string `json:"forkToken,omitempty,omitzero"`
+	// Set a personal access token here to enable "fork mode".
+	ForkToken *string `json:"forkToken,omitempty,omitzero"`
 
 	// Configuration object for the fvm manager
 	Fvm ConfigFvm `json:"fvm,omitempty,omitzero"`
@@ -491,8 +487,8 @@ type Config struct {
 	// array.
 	IgnorePresets interface{} `json:"ignorePresets,omitempty,omitzero"`
 
-	// Set this to `true` if `allowScripts=true` but you wish to skip running scripts
-	// when updating lock files.
+	// Set this to `false` if `allowScripts=true` and you wish to run scripts when
+	// updating lock files.
 	IgnoreScripts bool `json:"ignoreScripts,omitempty,omitzero"`
 
 	// Set to `true` to enable automerging without tests.
@@ -1543,6 +1539,7 @@ type ConfigPlatform string
 const ConfigPlatformAzure ConfigPlatform = "azure"
 const ConfigPlatformBitbucket ConfigPlatform = "bitbucket"
 const ConfigPlatformBitbucketServer ConfigPlatform = "bitbucket-server"
+const ConfigPlatformCodecommit ConfigPlatform = "codecommit"
 const ConfigPlatformGitea ConfigPlatform = "gitea"
 const ConfigPlatformGithub ConfigPlatform = "github"
 const ConfigPlatformGitlab ConfigPlatform = "gitlab"
@@ -1550,6 +1547,7 @@ var enumValues_ConfigPlatform  = []interface {}{
   "azure",
   "bitbucket",
   "bitbucket-server",
+  "codecommit",
   "gitea",
   "github",
   "gitlab",
@@ -2151,6 +2149,7 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["azure-pipelines"]; !ok || v == nil {
 		plain.AzurePipelines = ConfigAzurePipelines{
+Enabled: false,
 FileMatch: []interface {}{
   "azure.*pipelines?.*\\.ya?ml$",
 },
@@ -2197,7 +2196,7 @@ PinDigests: false,
 		plain.BbUseDefaultReviewers = true
 	}
 	if v, ok := raw["binarySource"]; !ok || v == nil {
-		plain.BinarySource = "global"
+		plain.BinarySource = "install"
 	}
 	if v, ok := raw["bitbucket-pipelines"]; !ok || v == nil {
 		plain.BitbucketPipelines = ConfigBitbucketPipelines{
@@ -2210,7 +2209,7 @@ FileMatch: []interface {}{
 		plain.BranchName = "{{{branchPrefix}}}{{{additionalBranchPrefix}}}{{{branchTopic}}}"
 	}
 	if v, ok := raw["branchNameStrict"]; !ok || v == nil {
-		plain.BranchNameStrict = false
+		plain.BranchNameStrict = true
 	}
 	if v, ok := raw["branchPrefix"]; !ok || v == nil {
 		plain.BranchPrefix = "renovate/"
@@ -2451,12 +2450,6 @@ FileMatch: []interface {}{
 	if v, ok := raw["forceCli"]; !ok || v == nil {
 		plain.ForceCli = true
 	}
-	if v, ok := raw["forkMode"]; !ok || v == nil {
-		plain.ForkMode = false
-	}
-	if v, ok := raw["forkToken"]; !ok || v == nil {
-		plain.ForkToken = ""
-	}
 	if v, ok := raw["fvm"]; !ok || v == nil {
 		plain.Fvm = ConfigFvm{
 FileMatch: []interface {}{
@@ -2653,7 +2646,7 @@ Versioning: "semver",
 		plain.IgnorePrAuthor = false
 	}
 	if v, ok := raw["ignoreScripts"]; !ok || v == nil {
-		plain.IgnoreScripts = false
+		plain.IgnoreScripts = true
 	}
 	if v, ok := raw["ignoreTests"]; !ok || v == nil {
 		plain.IgnoreTests = false
@@ -2666,7 +2659,7 @@ Versioning: "semver",
 }
 	}
 	if v, ok := raw["internalChecksFilter"]; !ok || v == nil {
-		plain.InternalChecksFilter = "none"
+		plain.InternalChecksFilter = "strict"
 	}
 	if v, ok := raw["java"]; !ok || v == nil {
 		plain.Java = ConfigJava{
