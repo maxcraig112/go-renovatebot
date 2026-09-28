@@ -529,7 +529,7 @@ type Config struct {
 	// Include package files only within these defined paths.
 	IncludePaths []string `json:"includePaths,omitempty,omitzero"`
 
-	// Whether to consider passing internal checks such as stabilityDays when
+	// Whether to consider passing internal checks such as `minimumReleaseAge` when
 	// determining branch status.
 	InternalChecksAsSuccess bool `json:"internalChecksAsSuccess,omitempty,omitzero"`
 
@@ -590,6 +590,9 @@ type Config struct {
 	// Define presets here which have been removed or renamed and should be migrated
 	// automatically.
 	MigratePresets ConfigMigratePresets `json:"migratePresets,omitempty,omitzero"`
+
+	// Time required before a new release is considered stable.
+	MinimumReleaseAge *string `json:"minimumReleaseAge,omitempty,omitzero"`
 
 	// Configuration to apply when an update type is `minor`.
 	Minor ConfigMinor `json:"minor,omitempty,omitzero"`
@@ -907,9 +910,6 @@ type Config struct {
 	// Skip installing modules/dependencies if lock file updating is possible without
 	// a full install.
 	SkipInstalls *bool `json:"skipInstalls,omitempty,omitzero"`
-
-	// Number of days required before a new release is considered stable.
-	StabilityDays int `json:"stabilityDays,omitempty,omitzero"`
 
 	// Label to make Renovate stop updating a PR.
 	StopUpdatingLabel string `json:"stopUpdatingLabel,omitempty,omitzero"`
@@ -3416,9 +3416,6 @@ FileMatch: []interface {}{
 Versioning: "pep440",
 }
 	}
-	if v, ok := raw["stabilityDays"]; !ok || v == nil {
-		plain.StabilityDays = 0
-	}
 	if v, ok := raw["stopUpdatingLabel"]; !ok || v == nil {
 		plain.StopUpdatingLabel = "stop-updating"
 	}
@@ -3532,10 +3529,10 @@ BranchTopic: "{{{datasource}}}-{{{depName}}}-vulnerability",
 CommitMessageSuffix: "[SECURITY]",
 DependencyDashboardApproval: false,
 GroupName: nil,
+MinimumReleaseAge: nil,
 PrCreation: "immediate",
 RangeStrategy: "update-lockfile",
 Schedule: []interface {}{},
-StabilityDays: 0.0,
 }
 	}
 	if v, ok := raw["woodpecker"]; !ok || v == nil {
