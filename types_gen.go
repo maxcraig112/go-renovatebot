@@ -284,6 +284,10 @@ type Config struct {
 	// when they have been removed manually.
 	DependencyDashboardLabels []string `json:"dependencyDashboardLabels,omitempty,omitzero"`
 
+	// Control if the Dependency Dashboard issue lists CVEs supplied by
+	// [osv.dev](https://osv.dev).
+	DependencyDashboardOSVVulnerabilitySummary ConfigDependencyDashboardOSVVulnerabilitySummary `json:"dependencyDashboardOSVVulnerabilitySummary,omitempty,omitzero"`
+
 	// Title for the Dependency Dashboard issue.
 	DependencyDashboardTitle string `json:"dependencyDashboardTitle,omitempty,omitzero"`
 
@@ -1000,7 +1004,7 @@ type Config struct {
 	Velaci ConfigVelaci `json:"velaci,omitempty,omitzero"`
 
 	// Versioning to use for filtering and comparisons.
-	Versioning *ConfigVersioning `json:"versioning,omitempty,omitzero"`
+	Versioning *string `json:"versioning,omitempty,omitzero"`
 
 	// Config to apply when a PR is needed due to a vulnerability in the existing
 	// package version.
@@ -1251,6 +1255,33 @@ type ConfigCpanfile map[string]interface{}
 // Custom environment variables for child processes and sidecar Docker containers.
 type ConfigCustomEnvVariables map[string]interface{}
 
+type ConfigDependencyDashboardOSVVulnerabilitySummary string
+
+const ConfigDependencyDashboardOSVVulnerabilitySummaryAll ConfigDependencyDashboardOSVVulnerabilitySummary = "all"
+const ConfigDependencyDashboardOSVVulnerabilitySummaryNone ConfigDependencyDashboardOSVVulnerabilitySummary = "none"
+const ConfigDependencyDashboardOSVVulnerabilitySummaryUnresolved ConfigDependencyDashboardOSVVulnerabilitySummary = "unresolved"
+var enumValues_ConfigDependencyDashboardOSVVulnerabilitySummary  = []interface {}{
+  "none",
+  "all",
+  "unresolved",
+}
+
+// UnmarshalJSON implements json.Unmarshaler.
+func (j *ConfigDependencyDashboardOSVVulnerabilitySummary) UnmarshalJSON(value []byte) error {
+	var v string
+	if err := json.Unmarshal(value, &v); err != nil { return err }
+	var ok bool
+	for _, expected := range enumValues_ConfigDependencyDashboardOSVVulnerabilitySummary {
+	if reflect.DeepEqual(v, expected) { ok = true; break }
+	}
+	if !ok {
+	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigDependencyDashboardOSVVulnerabilitySummary, v)
+	}
+	*j = ConfigDependencyDashboardOSVVulnerabilitySummary(v)
+	return nil
+}
+
+
 // Configuration object for the deps-edn manager
 type ConfigDepsEdn map[string]interface{}
 
@@ -1433,6 +1464,9 @@ type ConfigHostRulesElem struct {
 
 	// Limit concurrent requests per host.
 	ConcurrentRequestLimit *int `json:"concurrentRequestLimit,omitempty,omitzero"`
+
+	// A custom description for this configuration object
+	Description *string `json:"description,omitempty,omitzero"`
 
 	// Enable got DNS cache.
 	DnsCache bool `json:"dnsCache,omitempty,omitzero"`
@@ -1626,6 +1660,9 @@ type ConfigPackageRulesElem struct {
 	// If set, Renovate will use this URL to fetch changelogs for a matched
 	// dependency. Valid only within a `packageRules` object.
 	CustomChangelogUrl *string `json:"customChangelogUrl,omitempty,omitzero"`
+
+	// A custom description for this configuration object
+	Description *string `json:"description,omitempty,omitzero"`
 
 	// Dep names to exclude. Valid only within a `packageRules` object.
 	ExcludeDepNames interface{} `json:"excludeDepNames,omitempty,omitzero"`
@@ -1986,6 +2023,9 @@ type ConfigRegexManagersElem struct {
 	// `regexManagers` object.
 	DepTypeTemplate *string `json:"depTypeTemplate,omitempty,omitzero"`
 
+	// A custom description for this configuration object
+	Description *string `json:"description,omitempty,omitzero"`
+
 	// Optional `extractVersion` for extracted dependencies. Valid only within a
 	// `regexManagers` object.
 	ExtractVersionTemplate *string `json:"extractVersionTemplate,omitempty,omitzero"`
@@ -2251,99 +2291,6 @@ type ConfigUserStrings map[string]interface{}
 
 // Configuration object for the velaci manager
 type ConfigVelaci map[string]interface{}
-
-type ConfigVersioning string
-
-const ConfigVersioningAwsMachineImage ConfigVersioning = "aws-machine-image"
-const ConfigVersioningAzureRestApi ConfigVersioning = "azure-rest-api"
-const ConfigVersioningBazelModule ConfigVersioning = "bazel-module"
-const ConfigVersioningCargo ConfigVersioning = "cargo"
-const ConfigVersioningComposer ConfigVersioning = "composer"
-const ConfigVersioningConan ConfigVersioning = "conan"
-const ConfigVersioningDeb ConfigVersioning = "deb"
-const ConfigVersioningDebian ConfigVersioning = "debian"
-const ConfigVersioningDocker ConfigVersioning = "docker"
-const ConfigVersioningGit ConfigVersioning = "git"
-const ConfigVersioningGoModDirective ConfigVersioning = "go-mod-directive"
-const ConfigVersioningGradle ConfigVersioning = "gradle"
-const ConfigVersioningHashicorp ConfigVersioning = "hashicorp"
-const ConfigVersioningHelm ConfigVersioning = "helm"
-const ConfigVersioningHermit ConfigVersioning = "hermit"
-const ConfigVersioningHex ConfigVersioning = "hex"
-const ConfigVersioningIvy ConfigVersioning = "ivy"
-const ConfigVersioningKubernetesApi ConfigVersioning = "kubernetes-api"
-const ConfigVersioningLoose ConfigVersioning = "loose"
-const ConfigVersioningMaven ConfigVersioning = "maven"
-const ConfigVersioningNixpkgs ConfigVersioning = "nixpkgs"
-const ConfigVersioningNode ConfigVersioning = "node"
-const ConfigVersioningNpm ConfigVersioning = "npm"
-const ConfigVersioningNuget ConfigVersioning = "nuget"
-const ConfigVersioningPep440 ConfigVersioning = "pep440"
-const ConfigVersioningPerl ConfigVersioning = "perl"
-const ConfigVersioningPoetry ConfigVersioning = "poetry"
-const ConfigVersioningPython ConfigVersioning = "python"
-const ConfigVersioningRedhat ConfigVersioning = "redhat"
-const ConfigVersioningRegex ConfigVersioning = "regex"
-const ConfigVersioningRez ConfigVersioning = "rez"
-const ConfigVersioningRuby ConfigVersioning = "ruby"
-const ConfigVersioningSemver ConfigVersioning = "semver"
-const ConfigVersioningSemverCoerced ConfigVersioning = "semver-coerced"
-const ConfigVersioningSwift ConfigVersioning = "swift"
-const ConfigVersioningUbuntu ConfigVersioning = "ubuntu"
-var enumValues_ConfigVersioning  = []interface {}{
-  "aws-machine-image",
-  "azure-rest-api",
-  "bazel-module",
-  "cargo",
-  "composer",
-  "conan",
-  "deb",
-  "debian",
-  "docker",
-  "git",
-  "go-mod-directive",
-  "gradle",
-  "hashicorp",
-  "helm",
-  "hermit",
-  "hex",
-  "ivy",
-  "kubernetes-api",
-  "loose",
-  "maven",
-  "nixpkgs",
-  "node",
-  "npm",
-  "nuget",
-  "pep440",
-  "perl",
-  "poetry",
-  "python",
-  "redhat",
-  "regex",
-  "rez",
-  "ruby",
-  "semver",
-  "semver-coerced",
-  "swift",
-  "ubuntu",
-}
-
-// UnmarshalJSON implements json.Unmarshaler.
-func (j *ConfigVersioning) UnmarshalJSON(value []byte) error {
-	var v string
-	if err := json.Unmarshal(value, &v); err != nil { return err }
-	var ok bool
-	for _, expected := range enumValues_ConfigVersioning {
-	if reflect.DeepEqual(v, expected) { ok = true; break }
-	}
-	if !ok {
-	return fmt.Errorf("invalid value (expected one of %#v): %#v", enumValues_ConfigVersioning, v)
-	}
-	*j = ConfigVersioning(v)
-	return nil
-}
-
 
 // Config to apply when a PR is needed due to a vulnerability in the existing
 // package version.
@@ -2668,6 +2615,9 @@ FileMatch: []interface {}{
 	}
 	if v, ok := raw["dependencyDashboardHeader"]; !ok || v == nil {
 		plain.DependencyDashboardHeader = "This issue lists Renovate updates and detected dependencies. Read the [Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/) docs to learn more."
+	}
+	if v, ok := raw["dependencyDashboardOSVVulnerabilitySummary"]; !ok || v == nil {
+		plain.DependencyDashboardOSVVulnerabilitySummary = "none"
 	}
 	if v, ok := raw["dependencyDashboardTitle"]; !ok || v == nil {
 		plain.DependencyDashboardTitle = "Dependency Dashboard"
