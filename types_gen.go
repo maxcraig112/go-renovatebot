@@ -1604,9 +1604,6 @@ type Constraints struct {
 	// A constraint for the `java` Containerbase tool
 	Java *string `json:"java,omitempty,omitzero"`
 
-	// A constraint for the `java-maven` Containerbase tool
-	JavaMaven *string `json:"java-maven,omitempty,omitzero"`
-
 	// A constraint for the `jb` Containerbase tool
 	Jb *string `json:"jb,omitempty,omitzero"`
 
@@ -2019,8 +2016,7 @@ type Droneci map[string]interface{}
 type EnableHttp2 bool
 
 // Enable or disable corresponding functionality.
-// See also:
-// https://docs.renovatebot.com/configuration-options/#packagerulesenabled
+// See also: https://docs.renovatebot.com/configuration-options/#enabled
 type Enabled bool
 
 // A list of package managers to enable. Only managers on the list are enabled.
@@ -2603,9 +2599,6 @@ type InstallTools struct {
 	// Install the `java` Containerbase tool
 	Java InstallToolsJava `json:"java,omitempty,omitzero"`
 
-	// Install the `java-maven` Containerbase tool
-	JavaMaven InstallToolsJavaMaven `json:"java-maven,omitempty,omitzero"`
-
 	// Install the `jb` Containerbase tool
 	Jb InstallToolsJb `json:"jb,omitempty,omitzero"`
 
@@ -2744,9 +2737,6 @@ type InstallToolsHelmfile map[string]interface{}
 
 // Install the `java` Containerbase tool
 type InstallToolsJava map[string]interface{}
-
-// Install the `java-maven` Containerbase tool
-type InstallToolsJavaMaven map[string]interface{}
 
 // Install the `jb` Containerbase tool
 type InstallToolsJb map[string]interface{}
@@ -2933,7 +2923,7 @@ type Major map[string]interface{}
 
 // RegEx (`re2`) and glob patterns for matching manager files.
 // See also:
-// https://docs.renovatebot.com/configuration-options/#ansiblemanagerfilepatterns
+// https://docs.renovatebot.com/configuration-options/#managerfilepatterns
 type ManagerFilePatterns interface{}
 
 // List of strings containing exact matches (e.g. `["main"]`) and/or regex
