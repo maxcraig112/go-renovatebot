@@ -156,6 +156,10 @@ type Ansible struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -190,6 +194,9 @@ type Ansible struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -208,8 +215,14 @@ type Ansible struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -257,6 +270,9 @@ type Ansible struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -268,6 +284,9 @@ type Ansible struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -510,6 +529,10 @@ type AnsibleGalaxy struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -544,6 +567,9 @@ type AnsibleGalaxy struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -562,8 +588,14 @@ type AnsibleGalaxy struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -611,6 +643,9 @@ type AnsibleGalaxy struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -622,6 +657,9 @@ type AnsibleGalaxy struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -864,6 +902,10 @@ type Ant struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -898,6 +940,9 @@ type Ant struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -916,8 +961,14 @@ type Ant struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -965,6 +1016,9 @@ type Ant struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -976,6 +1030,9 @@ type Ant struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -1218,6 +1275,10 @@ type Apm struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -1252,6 +1313,9 @@ type Apm struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -1270,8 +1334,14 @@ type Apm struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -1319,6 +1389,9 @@ type Apm struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -1330,6 +1403,9 @@ type Apm struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -1572,6 +1648,10 @@ type Argocd struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -1606,6 +1686,9 @@ type Argocd struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -1624,8 +1707,14 @@ type Argocd struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -1673,6 +1762,9 @@ type Argocd struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -1684,6 +1776,9 @@ type Argocd struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -1960,6 +2055,10 @@ type Asdf struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -1994,6 +2093,9 @@ type Asdf struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -2012,8 +2114,14 @@ type Asdf struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -2061,6 +2169,9 @@ type Asdf struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -2072,6 +2183,9 @@ type Asdf struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -2436,6 +2550,10 @@ type AzurePipelines struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -2470,6 +2588,9 @@ type AzurePipelines struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -2488,8 +2609,14 @@ type AzurePipelines struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -2537,6 +2664,9 @@ type AzurePipelines struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -2548,6 +2678,9 @@ type AzurePipelines struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -2804,6 +2937,10 @@ type Batect struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -2838,6 +2975,9 @@ type Batect struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -2856,8 +2996,14 @@ type Batect struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -2905,6 +3051,9 @@ type Batect struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -2916,6 +3065,9 @@ type Batect struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -3158,6 +3310,10 @@ type BatectWrapper struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -3192,6 +3348,9 @@ type BatectWrapper struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -3210,8 +3369,14 @@ type BatectWrapper struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -3259,6 +3424,9 @@ type BatectWrapper struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -3270,6 +3438,9 @@ type BatectWrapper struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -3512,6 +3683,10 @@ type Bazel struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -3546,6 +3721,9 @@ type Bazel struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -3564,8 +3742,14 @@ type Bazel struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -3613,6 +3797,9 @@ type Bazel struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -3624,6 +3811,9 @@ type Bazel struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -3866,6 +4056,10 @@ type BazelModule struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -3900,6 +4094,9 @@ type BazelModule struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -3918,8 +4115,14 @@ type BazelModule struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -3967,6 +4170,9 @@ type BazelModule struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -3978,6 +4184,9 @@ type BazelModule struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -4220,6 +4429,10 @@ type Bazelisk struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -4254,6 +4467,9 @@ type Bazelisk struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -4272,8 +4488,14 @@ type Bazelisk struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -4321,6 +4543,9 @@ type Bazelisk struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -4332,6 +4557,9 @@ type Bazelisk struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -4584,6 +4812,10 @@ type Bicep struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -4618,6 +4850,9 @@ type Bicep struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -4636,8 +4871,14 @@ type Bicep struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -4685,6 +4926,9 @@ type Bicep struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -4696,6 +4940,9 @@ type Bicep struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -4939,6 +5186,10 @@ type BitbucketPipelines struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -4973,6 +5224,9 @@ type BitbucketPipelines struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -4991,8 +5245,14 @@ type BitbucketPipelines struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -5040,6 +5300,9 @@ type BitbucketPipelines struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -5051,6 +5314,9 @@ type BitbucketPipelines struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -5293,6 +5559,10 @@ type Bitrise struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -5327,6 +5597,9 @@ type Bitrise struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -5345,8 +5618,14 @@ type Bitrise struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -5394,6 +5673,9 @@ type Bitrise struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -5405,6 +5687,9 @@ type Bitrise struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -5673,6 +5958,10 @@ type Buildkite struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -5707,6 +5996,9 @@ type Buildkite struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -5725,8 +6017,14 @@ type Buildkite struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -5774,6 +6072,9 @@ type Buildkite struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -5785,6 +6086,9 @@ type Buildkite struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -6027,6 +6331,10 @@ type Buildpacks struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -6061,6 +6369,9 @@ type Buildpacks struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -6079,8 +6390,14 @@ type Buildpacks struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -6128,6 +6445,9 @@ type Buildpacks struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -6139,6 +6459,9 @@ type Buildpacks struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -6445,6 +6768,10 @@ type Bun struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -6479,6 +6806,9 @@ type Bun struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -6497,8 +6827,14 @@ type Bun struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -6546,6 +6882,9 @@ type Bun struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -6557,6 +6896,9 @@ type Bun struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -6799,6 +7141,10 @@ type BunVersion struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -6833,6 +7179,9 @@ type BunVersion struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -6851,8 +7200,14 @@ type BunVersion struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -6900,6 +7255,9 @@ type BunVersion struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -6911,6 +7269,9 @@ type BunVersion struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -7153,6 +7514,10 @@ type Bundler struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -7187,6 +7552,9 @@ type Bundler struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -7205,8 +7573,14 @@ type Bundler struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -7254,6 +7628,9 @@ type Bundler struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -7265,6 +7642,9 @@ type Bundler struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -7507,6 +7887,10 @@ type Cake struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -7541,6 +7925,9 @@ type Cake struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -7559,8 +7946,14 @@ type Cake struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -7608,6 +8001,9 @@ type Cake struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -7619,6 +8015,9 @@ type Cake struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -7861,6 +8260,10 @@ type Cargo struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -7895,6 +8298,9 @@ type Cargo struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -7913,8 +8319,14 @@ type Cargo struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -7962,6 +8374,9 @@ type Cargo struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -7973,6 +8388,9 @@ type Cargo struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -8215,6 +8633,10 @@ type Cdnurl struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -8249,6 +8671,9 @@ type Cdnurl struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -8267,8 +8692,14 @@ type Cdnurl struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -8316,6 +8747,9 @@ type Cdnurl struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -8327,6 +8761,9 @@ type Cdnurl struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -8575,6 +9012,10 @@ type Circleci struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -8609,6 +9050,9 @@ type Circleci struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -8627,8 +9071,14 @@ type Circleci struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -8676,6 +9126,9 @@ type Circleci struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -8687,6 +9140,9 @@ type Circleci struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -8938,6 +9394,10 @@ type Cloudbuild struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -8972,6 +9432,9 @@ type Cloudbuild struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -8990,8 +9453,14 @@ type Cloudbuild struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -9039,6 +9508,9 @@ type Cloudbuild struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -9050,6 +9522,9 @@ type Cloudbuild struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -9292,6 +9767,10 @@ type Cocoapods struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -9326,6 +9805,9 @@ type Cocoapods struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -9344,8 +9826,14 @@ type Cocoapods struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -9393,6 +9881,9 @@ type Cocoapods struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -9404,6 +9895,9 @@ type Cocoapods struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -9729,6 +10223,10 @@ type Composer struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -9763,6 +10261,9 @@ type Composer struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -9781,8 +10282,14 @@ type Composer struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -9830,6 +10337,9 @@ type Composer struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -9841,6 +10351,9 @@ type Composer struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -10089,6 +10602,10 @@ type Conan struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -10123,6 +10640,9 @@ type Conan struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -10141,8 +10661,14 @@ type Conan struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -10190,6 +10716,9 @@ type Conan struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -10201,6 +10730,9 @@ type Conan struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -11703,6 +12235,10 @@ type Copier struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -11737,6 +12273,9 @@ type Copier struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -11755,8 +12294,14 @@ type Copier struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -11804,6 +12349,9 @@ type Copier struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -11815,6 +12363,9 @@ type Copier struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -12057,6 +12608,10 @@ type Cpanfile struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -12091,6 +12646,9 @@ type Cpanfile struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -12109,8 +12667,14 @@ type Cpanfile struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -12158,6 +12722,9 @@ type Cpanfile struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -12169,6 +12736,9 @@ type Cpanfile struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -12411,6 +12981,10 @@ type Crossplane struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -12445,6 +13019,9 @@ type Crossplane struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -12463,8 +13040,14 @@ type Crossplane struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -12512,6 +13095,9 @@ type Crossplane struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -12523,6 +13109,9 @@ type Crossplane struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -12765,6 +13354,10 @@ type Crow struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -12799,6 +13392,9 @@ type Crow struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -12817,8 +13413,14 @@ type Crow struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -12866,6 +13468,9 @@ type Crow struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -12877,6 +13482,9 @@ type Crow struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -13260,6 +13868,10 @@ type Deno struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -13294,6 +13906,9 @@ type Deno struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -13312,8 +13927,14 @@ type Deno struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -13361,6 +13982,9 @@ type Deno struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -13372,6 +13996,9 @@ type Deno struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -13707,6 +14334,10 @@ type DepsEdn struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -13741,6 +14372,9 @@ type DepsEdn struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -13759,8 +14393,14 @@ type DepsEdn struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -13808,6 +14448,9 @@ type DepsEdn struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -13819,6 +14462,9 @@ type DepsEdn struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -14065,6 +14711,10 @@ type Devbox struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -14099,6 +14749,9 @@ type Devbox struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -14117,8 +14770,14 @@ type Devbox struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -14166,6 +14825,9 @@ type Devbox struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -14177,6 +14839,9 @@ type Devbox struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -14419,6 +15084,10 @@ type Devcontainer struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -14453,6 +15122,9 @@ type Devcontainer struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -14471,8 +15143,14 @@ type Devcontainer struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -14520,6 +15198,9 @@ type Devcontainer struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -14531,6 +15212,9 @@ type Devcontainer struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -14773,6 +15457,10 @@ type Digest struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -14801,6 +15489,9 @@ type Digest struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -14813,8 +15504,14 @@ type Digest struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -14850,6 +15547,9 @@ type Digest struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -14858,6 +15558,9 @@ type Digest struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -15070,6 +15773,10 @@ type DockerCompose struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -15104,6 +15811,9 @@ type DockerCompose struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -15122,8 +15832,14 @@ type DockerCompose struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -15171,6 +15887,9 @@ type DockerCompose struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -15182,6 +15901,9 @@ type DockerCompose struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -15424,6 +16146,10 @@ type Dockerfile struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -15458,6 +16184,9 @@ type Dockerfile struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -15476,8 +16205,14 @@ type Dockerfile struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -15525,6 +16260,9 @@ type Dockerfile struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -15536,6 +16274,9 @@ type Dockerfile struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -15782,6 +16523,10 @@ type Droneci struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -15816,6 +16561,9 @@ type Droneci struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -15834,8 +16582,14 @@ type Droneci struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -15883,6 +16637,9 @@ type Droneci struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -15894,6 +16651,9 @@ type Droneci struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -16292,6 +17052,10 @@ type Fleet struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -16326,6 +17090,9 @@ type Fleet struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -16344,8 +17111,14 @@ type Fleet struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -16393,6 +17166,9 @@ type Fleet struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -16404,6 +17180,9 @@ type Fleet struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -16646,6 +17425,10 @@ type Flux struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -16680,6 +17463,9 @@ type Flux struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -16698,8 +17484,14 @@ type Flux struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -16747,6 +17539,9 @@ type Flux struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -16758,6 +17553,9 @@ type Flux struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -17072,6 +17870,10 @@ type Fvm struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -17106,6 +17908,9 @@ type Fvm struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -17124,8 +17929,14 @@ type Fvm struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -17173,6 +17984,9 @@ type Fvm struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -17184,6 +17998,9 @@ type Fvm struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -17443,6 +18260,10 @@ type GitSubmodules struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -17477,6 +18298,9 @@ type GitSubmodules struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -17495,8 +18319,14 @@ type GitSubmodules struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -17544,6 +18374,9 @@ type GitSubmodules struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -17555,6 +18388,9 @@ type GitSubmodules struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -17797,6 +18633,10 @@ type GithubActions struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -17831,6 +18671,9 @@ type GithubActions struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -17849,8 +18692,14 @@ type GithubActions struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -17898,6 +18747,9 @@ type GithubActions struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -17909,6 +18761,9 @@ type GithubActions struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -18151,6 +19006,10 @@ type Gitlabci struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -18185,6 +19044,9 @@ type Gitlabci struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -18203,8 +19065,14 @@ type Gitlabci struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -18252,6 +19120,9 @@ type Gitlabci struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -18263,6 +19134,9 @@ type Gitlabci struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -18505,6 +19379,10 @@ type GitlabciInclude struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -18539,6 +19417,9 @@ type GitlabciInclude struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -18557,8 +19438,14 @@ type GitlabciInclude struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -18606,6 +19493,9 @@ type GitlabciInclude struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -18617,6 +19507,9 @@ type GitlabciInclude struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -18859,6 +19752,10 @@ type Glasskube struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -18893,6 +19790,9 @@ type Glasskube struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -18911,8 +19811,14 @@ type Glasskube struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -18960,6 +19866,9 @@ type Glasskube struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -18971,6 +19880,9 @@ type Glasskube struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -19213,6 +20125,10 @@ type Gleam struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -19247,6 +20163,9 @@ type Gleam struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -19265,8 +20184,14 @@ type Gleam struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -19314,6 +20239,9 @@ type Gleam struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -19325,6 +20253,9 @@ type Gleam struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -19571,6 +20502,10 @@ type Gomod struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -19605,6 +20540,9 @@ type Gomod struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -19623,8 +20561,14 @@ type Gomod struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -19672,6 +20616,9 @@ type Gomod struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -19683,6 +20630,9 @@ type Gomod struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -19925,6 +20875,10 @@ type Gradle struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -19959,6 +20913,9 @@ type Gradle struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -19977,8 +20934,14 @@ type Gradle struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -20026,6 +20989,9 @@ type Gradle struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -20037,6 +21003,9 @@ type Gradle struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -20279,6 +21248,10 @@ type GradleWrapper struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -20313,6 +21286,9 @@ type GradleWrapper struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -20331,8 +21307,14 @@ type GradleWrapper struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -20380,6 +21362,9 @@ type GradleWrapper struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -20391,6 +21376,9 @@ type GradleWrapper struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -20633,6 +21621,10 @@ type Group struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -20658,6 +21650,9 @@ type Group struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -20670,8 +21665,14 @@ type Group struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -20692,6 +21693,9 @@ type Group struct {
 	// MinimumGroupSize corresponds to the JSON schema field "minimumGroupSize".
 	MinimumGroupSize *MinimumGroupSize `json:"minimumGroupSize,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -20700,6 +21704,9 @@ type Group struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -20926,6 +21933,10 @@ type HaskellCabal struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -20960,6 +21971,9 @@ type HaskellCabal struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -20978,8 +21992,14 @@ type HaskellCabal struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -21027,6 +22047,9 @@ type HaskellCabal struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -21038,6 +22061,9 @@ type HaskellCabal struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -21285,6 +22311,10 @@ type HelmRequirements struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -21319,6 +22349,9 @@ type HelmRequirements struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -21337,8 +22370,14 @@ type HelmRequirements struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -21386,6 +22425,9 @@ type HelmRequirements struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -21397,6 +22439,9 @@ type HelmRequirements struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -21639,6 +22684,10 @@ type HelmValues struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -21673,6 +22722,9 @@ type HelmValues struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -21691,8 +22743,14 @@ type HelmValues struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -21740,6 +22798,9 @@ type HelmValues struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -21751,6 +22812,9 @@ type HelmValues struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -21993,6 +23057,10 @@ type Helmfile struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -22027,6 +23095,9 @@ type Helmfile struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -22045,8 +23116,14 @@ type Helmfile struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -22094,6 +23171,9 @@ type Helmfile struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -22105,6 +23185,9 @@ type Helmfile struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -22347,6 +23430,10 @@ type Helmsman struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -22381,6 +23468,9 @@ type Helmsman struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -22399,8 +23489,14 @@ type Helmsman struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -22448,6 +23544,9 @@ type Helmsman struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -22459,6 +23558,9 @@ type Helmsman struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -22701,6 +23803,10 @@ type Helmv3 struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -22735,6 +23841,9 @@ type Helmv3 struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -22753,8 +23862,14 @@ type Helmv3 struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -22802,6 +23917,9 @@ type Helmv3 struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -22813,6 +23931,9 @@ type Helmv3 struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -23055,6 +24176,10 @@ type Hermit struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -23089,6 +24214,9 @@ type Hermit struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -23107,8 +24235,14 @@ type Hermit struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -23156,6 +24290,9 @@ type Hermit struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -23167,6 +24304,9 @@ type Hermit struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -23410,6 +24550,10 @@ type HomeassistantManifest struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -23444,6 +24588,9 @@ type HomeassistantManifest struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -23462,8 +24609,14 @@ type HomeassistantManifest struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -23511,6 +24664,9 @@ type HomeassistantManifest struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -23522,6 +24678,9 @@ type HomeassistantManifest struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -23764,6 +24923,10 @@ type Homebrew struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -23798,6 +24961,9 @@ type Homebrew struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -23816,8 +24982,14 @@ type Homebrew struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -23865,6 +25037,9 @@ type Homebrew struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -23876,6 +25051,9 @@ type Homebrew struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -24198,6 +25376,10 @@ type Html struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -24232,6 +25414,9 @@ type Html struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -24250,8 +25435,14 @@ type Html struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -24299,6 +25490,9 @@ type Html struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -24310,6 +25504,9 @@ type Html struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -24666,6 +25863,10 @@ type Jenkins struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -24700,6 +25901,9 @@ type Jenkins struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -24718,8 +25922,14 @@ type Jenkins struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -24767,6 +25977,9 @@ type Jenkins struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -24778,6 +25991,9 @@ type Jenkins struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -25024,6 +26240,10 @@ type JsonnetBundler struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -25058,6 +26278,9 @@ type JsonnetBundler struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -25076,8 +26299,14 @@ type JsonnetBundler struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -25125,6 +26354,9 @@ type JsonnetBundler struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -25136,6 +26368,9 @@ type JsonnetBundler struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -25401,6 +26636,10 @@ type KotlinScript struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -25435,6 +26674,9 @@ type KotlinScript struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -25453,8 +26695,14 @@ type KotlinScript struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -25502,6 +26750,9 @@ type KotlinScript struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -25513,6 +26764,9 @@ type KotlinScript struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -25755,6 +27009,10 @@ type Kubernetes struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -25789,6 +27047,9 @@ type Kubernetes struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -25807,8 +27068,14 @@ type Kubernetes struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -25856,6 +27123,9 @@ type Kubernetes struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -25867,6 +27137,9 @@ type Kubernetes struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -26109,6 +27382,10 @@ type Kustomize struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -26143,6 +27420,9 @@ type Kustomize struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -26161,8 +27441,14 @@ type Kustomize struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -26210,6 +27496,9 @@ type Kustomize struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -26221,6 +27510,9 @@ type Kustomize struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -26467,6 +27759,10 @@ type Leiningen struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -26501,6 +27797,9 @@ type Leiningen struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -26519,8 +27818,14 @@ type Leiningen struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -26568,6 +27873,9 @@ type Leiningen struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -26579,6 +27887,9 @@ type Leiningen struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -26822,6 +28133,10 @@ type LockFileMaintenance struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -26850,6 +28165,9 @@ type LockFileMaintenance struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -26862,8 +28180,14 @@ type LockFileMaintenance struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -26899,6 +28223,9 @@ type LockFileMaintenance struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -26907,6 +28234,9 @@ type LockFileMaintenance struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -27133,6 +28463,10 @@ type Major struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -27161,6 +28495,9 @@ type Major struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -27173,8 +28510,14 @@ type Major struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -27210,6 +28553,9 @@ type Major struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -27218,6 +28564,9 @@ type Major struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -27590,6 +28939,10 @@ type Maven struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -27624,6 +28977,9 @@ type Maven struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -27642,8 +28998,14 @@ type Maven struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -27691,6 +29053,9 @@ type Maven struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -27702,6 +29067,9 @@ type Maven struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -27944,6 +29312,10 @@ type MavenWrapper struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -27978,6 +29350,9 @@ type MavenWrapper struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -27996,8 +29371,14 @@ type MavenWrapper struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -28045,6 +29426,9 @@ type MavenWrapper struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -28056,6 +29440,9 @@ type MavenWrapper struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -28312,6 +29699,10 @@ type Meteor struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -28346,6 +29737,9 @@ type Meteor struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -28364,8 +29758,14 @@ type Meteor struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -28413,6 +29813,9 @@ type Meteor struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -28424,6 +29827,9 @@ type Meteor struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -28715,6 +30121,10 @@ type Minor struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -28743,6 +30153,9 @@ type Minor struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -28755,8 +30168,14 @@ type Minor struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -28792,6 +30211,9 @@ type Minor struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -28800,6 +30222,9 @@ type Minor struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -29008,6 +30433,10 @@ type Mint struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -29042,6 +30471,9 @@ type Mint struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -29060,8 +30492,14 @@ type Mint struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -29109,6 +30547,9 @@ type Mint struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -29120,6 +30561,9 @@ type Mint struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -29362,6 +30806,10 @@ type Mise struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -29396,6 +30844,9 @@ type Mise struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -29414,8 +30865,14 @@ type Mise struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -29463,6 +30920,9 @@ type Mise struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -29474,6 +30934,9 @@ type Mise struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -29716,6 +31179,10 @@ type Mix struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -29750,6 +31217,9 @@ type Mix struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -29768,8 +31238,14 @@ type Mix struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -29817,6 +31293,9 @@ type Mix struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -29828,6 +31307,9 @@ type Mix struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -30142,6 +31624,10 @@ type Nix struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -30176,6 +31662,9 @@ type Nix struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -30194,8 +31683,14 @@ type Nix struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -30243,6 +31738,9 @@ type Nix struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -30254,6 +31752,9 @@ type Nix struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -30504,6 +32005,10 @@ type Nodenv struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -30538,6 +32043,9 @@ type Nodenv struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -30556,8 +32064,14 @@ type Nodenv struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -30605,6 +32119,9 @@ type Nodenv struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -30616,6 +32133,9 @@ type Nodenv struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -30858,6 +32378,10 @@ type Npm struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -30892,6 +32416,9 @@ type Npm struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -30910,8 +32437,14 @@ type Npm struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -30959,6 +32492,9 @@ type Npm struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -30970,6 +32506,9 @@ type Npm struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -31224,6 +32763,10 @@ type Nuget struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -31258,6 +32801,9 @@ type Nuget struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -31276,8 +32822,14 @@ type Nuget struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -31325,6 +32877,9 @@ type Nuget struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -31336,6 +32891,9 @@ type Nuget struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -31578,6 +33136,10 @@ type Nvm struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -31612,6 +33174,9 @@ type Nvm struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -31630,8 +33195,14 @@ type Nvm struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -31679,6 +33250,9 @@ type Nvm struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -31690,6 +33264,9 @@ type Nvm struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -31932,6 +33509,10 @@ type Ocb struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -31966,6 +33547,9 @@ type Ocb struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -31984,8 +33568,14 @@ type Ocb struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -32033,6 +33623,9 @@ type Ocb struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -32044,6 +33637,9 @@ type Ocb struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -32286,6 +33882,10 @@ type Osgi struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -32320,6 +33920,9 @@ type Osgi struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -32338,8 +33941,14 @@ type Osgi struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -32387,6 +33996,9 @@ type Osgi struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -32398,6 +34010,9 @@ type Osgi struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -32680,6 +34295,10 @@ type PackageRulesElem struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -32717,6 +34336,9 @@ type PackageRulesElem struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -32732,8 +34354,14 @@ type PackageRulesElem struct {
 	// IgnoreDeprecated corresponds to the JSON schema field "ignoreDeprecated".
 	IgnoreDeprecated *IgnoreDeprecated `json:"ignoreDeprecated,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -32832,6 +34460,9 @@ type PackageRulesElem struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDatasource corresponds to the JSON schema field "overrideDatasource".
 	OverrideDatasource *OverrideDatasource `json:"overrideDatasource,omitempty,omitzero"`
 
@@ -32852,6 +34483,9 @@ type PackageRulesElem struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -33117,6 +34751,10 @@ type Patch struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -33145,6 +34783,9 @@ type Patch struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -33157,8 +34798,14 @@ type Patch struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -33194,6 +34841,9 @@ type Patch struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -33202,6 +34852,9 @@ type Patch struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -33410,6 +35063,10 @@ type Pep621 struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -33444,6 +35101,9 @@ type Pep621 struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -33462,8 +35122,14 @@ type Pep621 struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -33511,6 +35177,9 @@ type Pep621 struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -33522,6 +35191,9 @@ type Pep621 struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -33764,6 +35436,10 @@ type Pep723 struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -33798,6 +35474,9 @@ type Pep723 struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -33816,8 +35495,14 @@ type Pep723 struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -33865,6 +35550,9 @@ type Pep723 struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -33876,6 +35564,9 @@ type Pep723 struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -34118,6 +35809,10 @@ type Pin struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -34146,6 +35841,9 @@ type Pin struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -34158,8 +35856,14 @@ type Pin struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -34195,6 +35899,9 @@ type Pin struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -34203,6 +35910,9 @@ type Pin struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -34411,6 +36121,10 @@ type PinDigest struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -34439,6 +36153,9 @@ type PinDigest struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -34451,8 +36168,14 @@ type PinDigest struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -34488,6 +36211,9 @@ type PinDigest struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -34496,6 +36222,9 @@ type PinDigest struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -34708,6 +36437,10 @@ type PipCompile struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -34742,6 +36475,9 @@ type PipCompile struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -34760,8 +36496,14 @@ type PipCompile struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -34809,6 +36551,9 @@ type PipCompile struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -34820,6 +36565,9 @@ type PipCompile struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -35062,6 +36810,10 @@ type PipRequirements struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -35096,6 +36848,9 @@ type PipRequirements struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -35114,8 +36869,14 @@ type PipRequirements struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -35163,6 +36924,9 @@ type PipRequirements struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -35174,6 +36938,9 @@ type PipRequirements struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -35416,6 +37183,10 @@ type PipSetup struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -35450,6 +37221,9 @@ type PipSetup struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -35468,8 +37242,14 @@ type PipSetup struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -35517,6 +37297,9 @@ type PipSetup struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -35528,6 +37311,9 @@ type PipSetup struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -35770,6 +37556,10 @@ type Pipenv struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -35804,6 +37594,9 @@ type Pipenv struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -35822,8 +37615,14 @@ type Pipenv struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -35871,6 +37670,9 @@ type Pipenv struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -35882,6 +37684,9 @@ type Pipenv struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -36124,6 +37929,10 @@ type Pixi struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -36158,6 +37967,9 @@ type Pixi struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -36176,8 +37988,14 @@ type Pixi struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -36225,6 +38043,9 @@ type Pixi struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -36236,6 +38057,9 @@ type Pixi struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -36514,6 +38338,10 @@ type Poetry struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -36548,6 +38376,9 @@ type Poetry struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -36566,8 +38397,14 @@ type Poetry struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -36615,6 +38452,9 @@ type Poetry struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -36626,6 +38466,9 @@ type Poetry struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -37057,6 +38900,10 @@ type PreCommit struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -37091,6 +38938,9 @@ type PreCommit struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -37109,8 +38959,14 @@ type PreCommit struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -37158,6 +39014,9 @@ type PreCommit struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -37169,6 +39028,9 @@ type PreCommit struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -37416,6 +39278,10 @@ type Proto struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -37450,6 +39316,9 @@ type Proto struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -37468,8 +39337,14 @@ type Proto struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -37517,6 +39392,9 @@ type Proto struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -37528,6 +39406,9 @@ type Proto struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -37779,6 +39660,10 @@ type Pub struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -37813,6 +39698,9 @@ type Pub struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -37831,8 +39719,14 @@ type Pub struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -37880,6 +39774,9 @@ type Pub struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -37891,6 +39788,9 @@ type Pub struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -38133,6 +40033,10 @@ type Puppet struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -38167,6 +40071,9 @@ type Puppet struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -38185,8 +40092,14 @@ type Puppet struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -38234,6 +40147,9 @@ type Puppet struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -38245,6 +40161,9 @@ type Puppet struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -38487,6 +40406,10 @@ type Pyenv struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -38521,6 +40444,9 @@ type Pyenv struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -38539,8 +40465,14 @@ type Pyenv struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -38588,6 +40520,9 @@ type Pyenv struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -38599,6 +40534,9 @@ type Pyenv struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -38841,6 +40779,10 @@ type Quadlet struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -38875,6 +40817,9 @@ type Quadlet struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -38893,8 +40838,14 @@ type Quadlet struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -38942,6 +40893,9 @@ type Quadlet struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -38953,6 +40907,9 @@ type Quadlet struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -39329,6 +41286,10 @@ type RenovateConfig struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -39363,6 +41324,9 @@ type RenovateConfig struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -39381,8 +41345,14 @@ type RenovateConfig struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -39430,6 +41400,9 @@ type RenovateConfig struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -39441,6 +41414,9 @@ type RenovateConfig struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -39683,6 +41659,10 @@ type Replacement struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -39711,6 +41691,9 @@ type Replacement struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -39723,8 +41706,14 @@ type Replacement struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -39760,6 +41749,9 @@ type Replacement struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -39768,6 +41760,9 @@ type Replacement struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -40046,6 +42041,10 @@ type Rollback struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -40074,6 +42073,9 @@ type Rollback struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -40086,8 +42088,14 @@ type Rollback struct {
 	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
 	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -40123,6 +42131,9 @@ type Rollback struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -40131,6 +42142,9 @@ type Rollback struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -40344,6 +42358,10 @@ type RubyVersion struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -40378,6 +42396,9 @@ type RubyVersion struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -40396,8 +42417,14 @@ type RubyVersion struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -40445,6 +42472,9 @@ type RubyVersion struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -40456,6 +42486,9 @@ type RubyVersion struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -40698,6 +42731,10 @@ type RuntimeVersion struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -40732,6 +42769,9 @@ type RuntimeVersion struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -40750,8 +42790,14 @@ type RuntimeVersion struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -40799,6 +42845,9 @@ type RuntimeVersion struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -40810,6 +42859,9 @@ type RuntimeVersion struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -41052,6 +43104,10 @@ type RustToolchain struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -41086,6 +43142,9 @@ type RustToolchain struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -41104,8 +43163,14 @@ type RustToolchain struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -41153,6 +43218,9 @@ type RustToolchain struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -41164,6 +43232,9 @@ type RustToolchain struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -41406,6 +43477,10 @@ type Sbt struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -41440,6 +43515,9 @@ type Sbt struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -41458,8 +43536,14 @@ type Sbt struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -41507,6 +43591,9 @@ type Sbt struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -41518,6 +43605,9 @@ type Sbt struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -41760,6 +43850,10 @@ type Scalafmt struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -41794,6 +43888,9 @@ type Scalafmt struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -41812,8 +43909,14 @@ type Scalafmt struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -41861,6 +43964,9 @@ type Scalafmt struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -41872,6 +43978,9 @@ type Scalafmt struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -42180,6 +44289,10 @@ type SetupCfg struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -42214,6 +44327,9 @@ type SetupCfg struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -42232,8 +44348,14 @@ type SetupCfg struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -42281,6 +44403,9 @@ type SetupCfg struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -42292,6 +44417,9 @@ type SetupCfg struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -42544,6 +44672,10 @@ type Smithy struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -42578,6 +44710,9 @@ type Smithy struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -42596,8 +44731,14 @@ type Smithy struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -42645,6 +44786,9 @@ type Smithy struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -42656,6 +44800,9 @@ type Smithy struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -43130,6 +45277,10 @@ type Sveltos struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -43164,6 +45315,9 @@ type Sveltos struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -43182,8 +45336,14 @@ type Sveltos struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -43231,6 +45391,9 @@ type Sveltos struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -43242,6 +45405,9 @@ type Sveltos struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -43484,6 +45650,10 @@ type Swift struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -43518,6 +45688,9 @@ type Swift struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -43536,8 +45709,14 @@ type Swift struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -43585,6 +45764,9 @@ type Swift struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -43596,6 +45778,9 @@ type Swift struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -43838,6 +46023,10 @@ type Tekton struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -43872,6 +46061,9 @@ type Tekton struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -43890,8 +46082,14 @@ type Tekton struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -43939,6 +46137,9 @@ type Tekton struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -43950,6 +46151,9 @@ type Tekton struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -44192,6 +46396,10 @@ type Terraform struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -44226,6 +46434,9 @@ type Terraform struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -44244,8 +46455,14 @@ type Terraform struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -44293,6 +46510,9 @@ type Terraform struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -44304,6 +46524,9 @@ type Terraform struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -44546,6 +46769,10 @@ type TerraformVersion struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -44580,6 +46807,9 @@ type TerraformVersion struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -44598,8 +46828,14 @@ type TerraformVersion struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -44647,6 +46883,9 @@ type TerraformVersion struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -44658,6 +46897,9 @@ type TerraformVersion struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -44900,6 +47142,10 @@ type Terragrunt struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -44934,6 +47180,9 @@ type Terragrunt struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -44952,8 +47201,14 @@ type Terragrunt struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -45001,6 +47256,9 @@ type Terragrunt struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -45012,6 +47270,9 @@ type Terragrunt struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -45254,6 +47515,10 @@ type TerragruntVersion struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -45288,6 +47553,9 @@ type TerragruntVersion struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -45306,8 +47574,14 @@ type TerragruntVersion struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -45355,6 +47629,9 @@ type TerragruntVersion struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -45366,6 +47643,9 @@ type TerragruntVersion struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -45608,6 +47888,10 @@ type TflintPlugin struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -45642,6 +47926,9 @@ type TflintPlugin struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -45660,8 +47947,14 @@ type TflintPlugin struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -45709,6 +48002,9 @@ type TflintPlugin struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -45720,6 +48016,9 @@ type TflintPlugin struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -45995,6 +48294,10 @@ type Travis struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -46029,6 +48332,9 @@ type Travis struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -46047,8 +48353,14 @@ type Travis struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -46096,6 +48408,9 @@ type Travis struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -46107,6 +48422,9 @@ type Travis struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -46349,6 +48667,10 @@ type Typst struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -46383,6 +48705,9 @@ type Typst struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -46401,8 +48726,14 @@ type Typst struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -46450,6 +48781,9 @@ type Typst struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -46461,6 +48795,9 @@ type Typst struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -46703,6 +49040,10 @@ type Unity3D struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -46737,6 +49078,9 @@ type Unity3D struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -46755,8 +49099,14 @@ type Unity3D struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -46804,6 +49154,9 @@ type Unity3D struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -46815,6 +49168,9 @@ type Unity3D struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -47105,6 +49461,10 @@ type Velaci struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -47139,6 +49499,9 @@ type Velaci struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -47157,8 +49520,14 @@ type Velaci struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -47206,6 +49575,9 @@ type Velaci struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -47217,6 +49589,9 @@ type Velaci struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -47459,6 +49834,10 @@ type Vendir struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -47493,6 +49872,9 @@ type Vendir struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -47511,8 +49893,14 @@ type Vendir struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -47560,6 +49948,9 @@ type Vendir struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -47571,6 +49962,9 @@ type Vendir struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -47831,6 +50225,10 @@ type VulnerabilityAlerts struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -47865,6 +50263,9 @@ type VulnerabilityAlerts struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -47880,8 +50281,14 @@ type VulnerabilityAlerts struct {
 	// IgnoreDeprecated corresponds to the JSON schema field "ignoreDeprecated".
 	IgnoreDeprecated *IgnoreDeprecated `json:"ignoreDeprecated,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -47923,6 +50330,9 @@ type VulnerabilityAlerts struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -47934,6 +50344,9 @@ type VulnerabilityAlerts struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -48210,6 +50623,10 @@ type Woodpecker struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -48244,6 +50661,9 @@ type Woodpecker struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -48262,8 +50682,14 @@ type Woodpecker struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -48311,6 +50737,9 @@ type Woodpecker struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -48322,6 +50751,9 @@ type Woodpecker struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
@@ -48570,6 +51002,10 @@ type Xcodegen struct {
 	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
 	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
 
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
 	// DependencyDashboardApproval corresponds to the JSON schema field
 	// "dependencyDashboardApproval".
 	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
@@ -48604,6 +51040,9 @@ type Xcodegen struct {
 	// "gitLabIgnoreApprovals".
 	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
 
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
 	// GroupName corresponds to the JSON schema field "groupName".
 	GroupName GroupName `json:"groupName,omitempty,omitzero"`
 
@@ -48622,8 +51061,14 @@ type Xcodegen struct {
 	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
 	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
 
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
 	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
 	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
 
 	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
 	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
@@ -48671,6 +51116,9 @@ type Xcodegen struct {
 	// "minimumReleaseAgeBuffer".
 	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
 
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
 	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
 	OverrideDescription interface{} `json:"overrideDescription,omitempty,omitzero"`
 
@@ -48682,6 +51130,9 @@ type Xcodegen struct {
 
 	// PlatformCommit corresponds to the JSON schema field "platformCommit".
 	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
 
 	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
 	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
