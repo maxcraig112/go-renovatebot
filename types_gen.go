@@ -22711,12 +22711,18 @@ func (j *ForkProcessing) UnmarshalJSON(value []byte) error {
 
 type Format string
 
+const FormatHtml Format = "html"
 const FormatJson Format = "json"
 const FormatPlain Format = "plain"
+const FormatToml Format = "toml"
+const FormatYaml Format = "yaml"
 
 var enumValues_Format = []interface{}{
+	"html",
 	"json",
 	"plain",
+	"toml",
+	"yaml",
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
