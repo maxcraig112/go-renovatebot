@@ -14559,7 +14559,7 @@ type Config struct {
 	Jenkins *Jenkins `json:"jenkins,omitempty,omitzero"`
 
 	// Jsonata corresponds to the JSON schema field "jsonata".
-	Jsonata Jsonata `json:"jsonata,omitempty,omitzero"`
+	Jsonata *Jsonata `json:"jsonata,omitempty,omitzero"`
 
 	// JsonnetBundler corresponds to the JSON schema field "jsonnet-bundler".
 	JsonnetBundler *JsonnetBundler `json:"jsonnet-bundler,omitempty,omitzero"`
@@ -14804,7 +14804,7 @@ type Config struct {
 	RecreateWhen *RecreateWhen `json:"recreateWhen,omitempty,omitzero"`
 
 	// Regex corresponds to the JSON schema field "regex".
-	Regex Regex `json:"regex,omitempty,omitzero"`
+	Regex *Regex `json:"regex,omitempty,omitzero"`
 
 	// RegistryAliases corresponds to the JSON schema field "registryAliases".
 	RegistryAliases RegistryAliases `json:"registryAliases,omitempty,omitzero"`
@@ -33548,7 +33548,489 @@ type Jenkins struct {
 
 // Configuration object for the jsonata manager
 // See also: https://docs.renovatebot.com/configuration-options/#jsonata
-type Jsonata map[string]interface{}
+type Jsonata struct {
+	// AbandonmentThreshold corresponds to the JSON schema field
+	// "abandonmentThreshold".
+	AbandonmentThreshold AbandonmentThreshold `json:"abandonmentThreshold,omitempty,omitzero"`
+
+	// AddLabels corresponds to the JSON schema field "addLabels".
+	AddLabels AddLabels `json:"addLabels,omitempty,omitzero"`
+
+	// AdditionalBranchPrefix corresponds to the JSON schema field
+	// "additionalBranchPrefix".
+	AdditionalBranchPrefix *AdditionalBranchPrefix `json:"additionalBranchPrefix,omitempty,omitzero"`
+
+	// AdditionalReviewers corresponds to the JSON schema field "additionalReviewers".
+	AdditionalReviewers AdditionalReviewers `json:"additionalReviewers,omitempty,omitzero"`
+
+	// AssignAutomerge corresponds to the JSON schema field "assignAutomerge".
+	AssignAutomerge *AssignAutomerge `json:"assignAutomerge,omitempty,omitzero"`
+
+	// Assignees corresponds to the JSON schema field "assignees".
+	Assignees Assignees `json:"assignees,omitempty,omitzero"`
+
+	// AssigneesFromCodeOwners corresponds to the JSON schema field
+	// "assigneesFromCodeOwners".
+	AssigneesFromCodeOwners *AssigneesFromCodeOwners `json:"assigneesFromCodeOwners,omitempty,omitzero"`
+
+	// AssigneesSampleSize corresponds to the JSON schema field "assigneesSampleSize".
+	AssigneesSampleSize AssigneesSampleSize `json:"assigneesSampleSize,omitempty,omitzero"`
+
+	// AutoApprove corresponds to the JSON schema field "autoApprove".
+	AutoApprove *AutoApprove `json:"autoApprove,omitempty,omitzero"`
+
+	// AutoReplaceGlobalMatch corresponds to the JSON schema field
+	// "autoReplaceGlobalMatch".
+	AutoReplaceGlobalMatch *AutoReplaceGlobalMatch `json:"autoReplaceGlobalMatch,omitempty,omitzero"`
+
+	// Automerge corresponds to the JSON schema field "automerge".
+	Automerge *Automerge `json:"automerge,omitempty,omitzero"`
+
+	// AutomergeComment corresponds to the JSON schema field "automergeComment".
+	AutomergeComment *AutomergeComment `json:"automergeComment,omitempty,omitzero"`
+
+	// AutomergeSchedule corresponds to the JSON schema field "automergeSchedule".
+	AutomergeSchedule AutomergeSchedule `json:"automergeSchedule,omitempty,omitzero"`
+
+	// AutomergeStrategy corresponds to the JSON schema field "automergeStrategy".
+	AutomergeStrategy *AutomergeStrategy `json:"automergeStrategy,omitempty,omitzero"`
+
+	// AutomergeType corresponds to the JSON schema field "automergeType".
+	AutomergeType *AutomergeType `json:"automergeType,omitempty,omitzero"`
+
+	// AzureWorkItemId corresponds to the JSON schema field "azureWorkItemId".
+	AzureWorkItemId *AzureWorkItemId `json:"azureWorkItemId,omitempty,omitzero"`
+
+	// BbAutoResolvePrTasks corresponds to the JSON schema field
+	// "bbAutoResolvePrTasks".
+	BbAutoResolvePrTasks *BbAutoResolvePrTasks `json:"bbAutoResolvePrTasks,omitempty,omitzero"`
+
+	// BbUseDefaultReviewers corresponds to the JSON schema field
+	// "bbUseDefaultReviewers".
+	BbUseDefaultReviewers *BbUseDefaultReviewers `json:"bbUseDefaultReviewers,omitempty,omitzero"`
+
+	// BranchConcurrentLimit corresponds to the JSON schema field
+	// "branchConcurrentLimit".
+	BranchConcurrentLimit BranchConcurrentLimit `json:"branchConcurrentLimit,omitempty,omitzero"`
+
+	// BranchName corresponds to the JSON schema field "branchName".
+	BranchName *BranchName `json:"branchName,omitempty,omitzero"`
+
+	// BranchNameStrict corresponds to the JSON schema field "branchNameStrict".
+	BranchNameStrict *BranchNameStrict `json:"branchNameStrict,omitempty,omitzero"`
+
+	// BranchPrefix corresponds to the JSON schema field "branchPrefix".
+	BranchPrefix *BranchPrefix `json:"branchPrefix,omitempty,omitzero"`
+
+	// BranchPrefixOld corresponds to the JSON schema field "branchPrefixOld".
+	BranchPrefixOld *BranchPrefixOld `json:"branchPrefixOld,omitempty,omitzero"`
+
+	// BranchTopic corresponds to the JSON schema field "branchTopic".
+	BranchTopic *BranchTopic `json:"branchTopic,omitempty,omitzero"`
+
+	// BumpVersion corresponds to the JSON schema field "bumpVersion".
+	BumpVersion *BumpVersion `json:"bumpVersion,omitempty,omitzero"`
+
+	// BumpVersions corresponds to the JSON schema field "bumpVersions".
+	BumpVersions BumpVersions `json:"bumpVersions,omitempty,omitzero"`
+
+	// CommitBody corresponds to the JSON schema field "commitBody".
+	CommitBody *CommitBody `json:"commitBody,omitempty,omitzero"`
+
+	// CommitBodyTable corresponds to the JSON schema field "commitBodyTable".
+	CommitBodyTable *CommitBodyTable `json:"commitBodyTable,omitempty,omitzero"`
+
+	// CommitHourlyLimit corresponds to the JSON schema field "commitHourlyLimit".
+	CommitHourlyLimit *CommitHourlyLimit `json:"commitHourlyLimit,omitempty,omitzero"`
+
+	// CommitMessage corresponds to the JSON schema field "commitMessage".
+	CommitMessage *CommitMessage `json:"commitMessage,omitempty,omitzero"`
+
+	// CommitMessageAction corresponds to the JSON schema field "commitMessageAction".
+	CommitMessageAction *CommitMessageAction `json:"commitMessageAction,omitempty,omitzero"`
+
+	// CommitMessageExtra corresponds to the JSON schema field "commitMessageExtra".
+	CommitMessageExtra *CommitMessageExtra `json:"commitMessageExtra,omitempty,omitzero"`
+
+	// CommitMessageLowerCase corresponds to the JSON schema field
+	// "commitMessageLowerCase".
+	CommitMessageLowerCase *CommitMessageLowerCase `json:"commitMessageLowerCase,omitempty,omitzero"`
+
+	// CommitMessagePrefix corresponds to the JSON schema field "commitMessagePrefix".
+	CommitMessagePrefix *CommitMessagePrefix `json:"commitMessagePrefix,omitempty,omitzero"`
+
+	// CommitMessageSuffix corresponds to the JSON schema field "commitMessageSuffix".
+	CommitMessageSuffix *CommitMessageSuffix `json:"commitMessageSuffix,omitempty,omitzero"`
+
+	// CommitMessageTopic corresponds to the JSON schema field "commitMessageTopic".
+	CommitMessageTopic *CommitMessageTopic `json:"commitMessageTopic,omitempty,omitzero"`
+
+	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
+	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
+
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
+	// Constraints corresponds to the JSON schema field "constraints".
+	Constraints *Constraints `json:"constraints,omitempty,omitzero"`
+
+	// ConstraintsFiltering corresponds to the JSON schema field
+	// "constraintsFiltering".
+	ConstraintsFiltering *ConstraintsFiltering `json:"constraintsFiltering,omitempty,omitzero"`
+
+	// ConstraintsVersioning corresponds to the JSON schema field
+	// "constraintsVersioning".
+	ConstraintsVersioning *ConstraintsVersioning `json:"constraintsVersioning,omitempty,omitzero"`
+
+	// CustomDatasources corresponds to the JSON schema field "customDatasources".
+	CustomDatasources CustomDatasources `json:"customDatasources,omitempty,omitzero"`
+
+	// DefaultRegistryUrls corresponds to the JSON schema field "defaultRegistryUrls".
+	DefaultRegistryUrls DefaultRegistryUrls `json:"defaultRegistryUrls,omitempty,omitzero"`
+
+	// DependencyDashboardApproval corresponds to the JSON schema field
+	// "dependencyDashboardApproval".
+	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
+
+	// DependencyDashboardCategory corresponds to the JSON schema field
+	// "dependencyDashboardCategory".
+	DependencyDashboardCategory DependencyDashboardCategory `json:"dependencyDashboardCategory,omitempty,omitzero"`
+
+	// Description corresponds to the JSON schema field "description".
+	Description Description `json:"description,omitempty,omitzero"`
+
+	// Digest corresponds to the JSON schema field "digest".
+	Digest *Digest `json:"digest,omitempty,omitzero"`
+
+	// DraftPR corresponds to the JSON schema field "draftPR".
+	DraftPR *DraftPR `json:"draftPR,omitempty,omitzero"`
+
+	// Enabled corresponds to the JSON schema field "enabled".
+	Enabled *Enabled `json:"enabled,omitempty,omitzero"`
+
+	// Encrypted corresponds to the JSON schema field "encrypted".
+	Encrypted Encrypted `json:"encrypted,omitempty,omitzero"`
+
+	// ExcludeCommitPaths corresponds to the JSON schema field "excludeCommitPaths".
+	ExcludeCommitPaths ExcludeCommitPaths `json:"excludeCommitPaths,omitempty,omitzero"`
+
+	// ExpandCodeOwnersGroups corresponds to the JSON schema field
+	// "expandCodeOwnersGroups".
+	ExpandCodeOwnersGroups *ExpandCodeOwnersGroups `json:"expandCodeOwnersGroups,omitempty,omitzero"`
+
+	// Extends corresponds to the JSON schema field "extends".
+	Extends Extends `json:"extends,omitempty,omitzero"`
+
+	// ExtractVersion corresponds to the JSON schema field "extractVersion".
+	ExtractVersion *ExtractVersion `json:"extractVersion,omitempty,omitzero"`
+
+	// FilterUnavailableUsers corresponds to the JSON schema field
+	// "filterUnavailableUsers".
+	FilterUnavailableUsers *FilterUnavailableUsers `json:"filterUnavailableUsers,omitempty,omitzero"`
+
+	// FollowTag corresponds to the JSON schema field "followTag".
+	FollowTag *FollowTag `json:"followTag,omitempty,omitzero"`
+
+	// ForkModeDisallowMaintainerEdits corresponds to the JSON schema field
+	// "forkModeDisallowMaintainerEdits".
+	ForkModeDisallowMaintainerEdits *ForkModeDisallowMaintainerEdits `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
+
+	// GitLabIgnoreApprovals corresponds to the JSON schema field
+	// "gitLabIgnoreApprovals".
+	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
+
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
+	// Group corresponds to the JSON schema field "group".
+	Group *Group `json:"group,omitempty,omitzero"`
+
+	// GroupName corresponds to the JSON schema field "groupName".
+	GroupName GroupName `json:"groupName,omitempty,omitzero"`
+
+	// GroupSingleUpdates corresponds to the JSON schema field "groupSingleUpdates".
+	GroupSingleUpdates *GroupSingleUpdates `json:"groupSingleUpdates,omitempty,omitzero"`
+
+	// GroupSlug corresponds to the JSON schema field "groupSlug".
+	GroupSlug GroupSlug `json:"groupSlug,omitempty,omitzero"`
+
+	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
+	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
+
+	// IgnoreDeprecated corresponds to the JSON schema field "ignoreDeprecated".
+	IgnoreDeprecated *IgnoreDeprecated `json:"ignoreDeprecated,omitempty,omitzero"`
+
+	// IgnoreDeps corresponds to the JSON schema field "ignoreDeps".
+	IgnoreDeps IgnoreDeps `json:"ignoreDeps,omitempty,omitzero"`
+
+	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
+	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
+
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
+	// IgnorePresets corresponds to the JSON schema field "ignorePresets".
+	IgnorePresets IgnorePresets `json:"ignorePresets,omitempty,omitzero"`
+
+	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
+	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
+
+	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
+	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
+
+	// IgnoreUnstable corresponds to the JSON schema field "ignoreUnstable".
+	IgnoreUnstable *IgnoreUnstable `json:"ignoreUnstable,omitempty,omitzero"`
+
+	// IncludePaths corresponds to the JSON schema field "includePaths".
+	IncludePaths IncludePaths `json:"includePaths,omitempty,omitzero"`
+
+	// InternalChecksAsSuccess corresponds to the JSON schema field
+	// "internalChecksAsSuccess".
+	InternalChecksAsSuccess *InternalChecksAsSuccess `json:"internalChecksAsSuccess,omitempty,omitzero"`
+
+	// InternalChecksFilter corresponds to the JSON schema field
+	// "internalChecksFilter".
+	InternalChecksFilter *InternalChecksFilter `json:"internalChecksFilter,omitempty,omitzero"`
+
+	// KeepUpdatedLabel corresponds to the JSON schema field "keepUpdatedLabel".
+	KeepUpdatedLabel *KeepUpdatedLabel `json:"keepUpdatedLabel,omitempty,omitzero"`
+
+	// Labels corresponds to the JSON schema field "labels".
+	Labels Labels `json:"labels,omitempty,omitzero"`
+
+	// LockFileMaintenance corresponds to the JSON schema field "lockFileMaintenance".
+	LockFileMaintenance *LockFileMaintenance `json:"lockFileMaintenance,omitempty,omitzero"`
+
+	// Major corresponds to the JSON schema field "major".
+	Major *Major `json:"major,omitempty,omitzero"`
+
+	// ManagerFilePatterns corresponds to the JSON schema field "managerFilePatterns".
+	ManagerFilePatterns ManagerFilePatterns `json:"managerFilePatterns,omitempty,omitzero"`
+
+	// MaxMajorIncrement corresponds to the JSON schema field "maxMajorIncrement".
+	MaxMajorIncrement *MaxMajorIncrement `json:"maxMajorIncrement,omitempty,omitzero"`
+
+	// Milestone corresponds to the JSON schema field "milestone".
+	Milestone Milestone `json:"milestone,omitempty,omitzero"`
+
+	// MinimumGroupSize corresponds to the JSON schema field "minimumGroupSize".
+	MinimumGroupSize *MinimumGroupSize `json:"minimumGroupSize,omitempty,omitzero"`
+
+	// MinimumReleaseAge corresponds to the JSON schema field "minimumReleaseAge".
+	MinimumReleaseAge MinimumReleaseAge `json:"minimumReleaseAge,omitempty,omitzero"`
+
+	// MinimumReleaseAgeBehaviour corresponds to the JSON schema field
+	// "minimumReleaseAgeBehaviour".
+	MinimumReleaseAgeBehaviour *MinimumReleaseAgeBehaviour `json:"minimumReleaseAgeBehaviour,omitempty,omitzero"`
+
+	// MinimumReleaseAgeBuffer corresponds to the JSON schema field
+	// "minimumReleaseAgeBuffer".
+	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
+
+	// Minor corresponds to the JSON schema field "minor".
+	Minor *Minor `json:"minor,omitempty,omitzero"`
+
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
+	// Npmrc corresponds to the JSON schema field "npmrc".
+	Npmrc *Npmrc `json:"npmrc,omitempty,omitzero"`
+
+	// NpmrcMerge corresponds to the JSON schema field "npmrcMerge".
+	NpmrcMerge *NpmrcMerge `json:"npmrcMerge,omitempty,omitzero"`
+
+	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
+	OverrideDescription OverrideDescription `json:"overrideDescription,omitempty,omitzero"`
+
+	// PackageRules corresponds to the JSON schema field "packageRules".
+	PackageRules PackageRules `json:"packageRules,omitempty,omitzero"`
+
+	// Patch corresponds to the JSON schema field "patch".
+	Patch *Patch `json:"patch,omitempty,omitzero"`
+
+	// Pin corresponds to the JSON schema field "pin".
+	Pin *Pin `json:"pin,omitempty,omitzero"`
+
+	// PinDigest corresponds to the JSON schema field "pinDigest".
+	PinDigest *PinDigest `json:"pinDigest,omitempty,omitzero"`
+
+	// PinDigests corresponds to the JSON schema field "pinDigests".
+	PinDigests *PinDigests `json:"pinDigests,omitempty,omitzero"`
+
+	// PlatformAutomerge corresponds to the JSON schema field "platformAutomerge".
+	PlatformAutomerge *PlatformAutomerge `json:"platformAutomerge,omitempty,omitzero"`
+
+	// PlatformCommit corresponds to the JSON schema field "platformCommit".
+	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
+
+	// PostUpgradeTasks corresponds to the JSON schema field "postUpgradeTasks".
+	PostUpgradeTasks *PostUpgradeTasks `json:"postUpgradeTasks,omitempty,omitzero"`
+
+	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
+	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
+
+	// PrBodyDefinitions corresponds to the JSON schema field "prBodyDefinitions".
+	PrBodyDefinitions PrBodyDefinitions `json:"prBodyDefinitions,omitempty,omitzero"`
+
+	// PrBodyHeadingDefinitions corresponds to the JSON schema field
+	// "prBodyHeadingDefinitions".
+	PrBodyHeadingDefinitions PrBodyHeadingDefinitions `json:"prBodyHeadingDefinitions,omitempty,omitzero"`
+
+	// PrBodyNotes corresponds to the JSON schema field "prBodyNotes".
+	PrBodyNotes PrBodyNotes `json:"prBodyNotes,omitempty,omitzero"`
+
+	// PrBodyTemplate corresponds to the JSON schema field "prBodyTemplate".
+	PrBodyTemplate *PrBodyTemplate `json:"prBodyTemplate,omitempty,omitzero"`
+
+	// PrConcurrentLimit corresponds to the JSON schema field "prConcurrentLimit".
+	PrConcurrentLimit *PrConcurrentLimit `json:"prConcurrentLimit,omitempty,omitzero"`
+
+	// PrCreation corresponds to the JSON schema field "prCreation".
+	PrCreation *PrCreation `json:"prCreation,omitempty,omitzero"`
+
+	// PrFooter corresponds to the JSON schema field "prFooter".
+	PrFooter *PrFooter `json:"prFooter,omitempty,omitzero"`
+
+	// PrHeader corresponds to the JSON schema field "prHeader".
+	PrHeader *PrHeader `json:"prHeader,omitempty,omitzero"`
+
+	// PrHourlyLimit corresponds to the JSON schema field "prHourlyLimit".
+	PrHourlyLimit *PrHourlyLimit `json:"prHourlyLimit,omitempty,omitzero"`
+
+	// PrNotPendingHours corresponds to the JSON schema field "prNotPendingHours".
+	PrNotPendingHours *PrNotPendingHours `json:"prNotPendingHours,omitempty,omitzero"`
+
+	// PrTitle corresponds to the JSON schema field "prTitle".
+	PrTitle PrTitle `json:"prTitle,omitempty,omitzero"`
+
+	// PrTitleStrict corresponds to the JSON schema field "prTitleStrict".
+	PrTitleStrict *PrTitleStrict `json:"prTitleStrict,omitempty,omitzero"`
+
+	// PruneBranchAfterAutomerge corresponds to the JSON schema field
+	// "pruneBranchAfterAutomerge".
+	PruneBranchAfterAutomerge *PruneBranchAfterAutomerge `json:"pruneBranchAfterAutomerge,omitempty,omitzero"`
+
+	// RangeStrategy corresponds to the JSON schema field "rangeStrategy".
+	RangeStrategy *RangeStrategy `json:"rangeStrategy,omitempty,omitzero"`
+
+	// RebaseLabel corresponds to the JSON schema field "rebaseLabel".
+	RebaseLabel *RebaseLabel `json:"rebaseLabel,omitempty,omitzero"`
+
+	// RebaseWhen corresponds to the JSON schema field "rebaseWhen".
+	RebaseWhen *RebaseWhen `json:"rebaseWhen,omitempty,omitzero"`
+
+	// RecreateWhen corresponds to the JSON schema field "recreateWhen".
+	RecreateWhen *RecreateWhen `json:"recreateWhen,omitempty,omitzero"`
+
+	// RegistryAliases corresponds to the JSON schema field "registryAliases".
+	RegistryAliases RegistryAliases `json:"registryAliases,omitempty,omitzero"`
+
+	// RegistryUrls corresponds to the JSON schema field "registryUrls".
+	RegistryUrls RegistryUrls `json:"registryUrls,omitempty,omitzero"`
+
+	// Replacement corresponds to the JSON schema field "replacement".
+	Replacement *Replacement `json:"replacement,omitempty,omitzero"`
+
+	// ReplacementApproach corresponds to the JSON schema field "replacementApproach".
+	ReplacementApproach *ReplacementApproach `json:"replacementApproach,omitempty,omitzero"`
+
+	// RespectLatest corresponds to the JSON schema field "respectLatest".
+	RespectLatest *RespectLatest `json:"respectLatest,omitempty,omitzero"`
+
+	// Reviewers corresponds to the JSON schema field "reviewers".
+	Reviewers Reviewers `json:"reviewers,omitempty,omitzero"`
+
+	// ReviewersFromCodeOwners corresponds to the JSON schema field
+	// "reviewersFromCodeOwners".
+	ReviewersFromCodeOwners *ReviewersFromCodeOwners `json:"reviewersFromCodeOwners,omitempty,omitzero"`
+
+	// ReviewersSampleSize corresponds to the JSON schema field "reviewersSampleSize".
+	ReviewersSampleSize ReviewersSampleSize `json:"reviewersSampleSize,omitempty,omitzero"`
+
+	// Rollback corresponds to the JSON schema field "rollback".
+	Rollback *Rollback `json:"rollback,omitempty,omitzero"`
+
+	// RollbackPrs corresponds to the JSON schema field "rollbackPrs".
+	RollbackPrs *RollbackPrs `json:"rollbackPrs,omitempty,omitzero"`
+
+	// Schedule corresponds to the JSON schema field "schedule".
+	Schedule Schedule `json:"schedule,omitempty,omitzero"`
+
+	// SemanticCommitScope corresponds to the JSON schema field "semanticCommitScope".
+	SemanticCommitScope SemanticCommitScope `json:"semanticCommitScope,omitempty,omitzero"`
+
+	// SemanticCommitType corresponds to the JSON schema field "semanticCommitType".
+	SemanticCommitType *SemanticCommitType `json:"semanticCommitType,omitempty,omitzero"`
+
+	// SemanticCommits corresponds to the JSON schema field "semanticCommits".
+	SemanticCommits *SemanticCommits `json:"semanticCommits,omitempty,omitzero"`
+
+	// SeparateMajorMinor corresponds to the JSON schema field "separateMajorMinor".
+	SeparateMajorMinor *SeparateMajorMinor `json:"separateMajorMinor,omitempty,omitzero"`
+
+	// SeparateMinorPatch corresponds to the JSON schema field "separateMinorPatch".
+	SeparateMinorPatch *SeparateMinorPatch `json:"separateMinorPatch,omitempty,omitzero"`
+
+	// SeparateMultipleMajor corresponds to the JSON schema field
+	// "separateMultipleMajor".
+	SeparateMultipleMajor *SeparateMultipleMajor `json:"separateMultipleMajor,omitempty,omitzero"`
+
+	// SeparateMultipleMinor corresponds to the JSON schema field
+	// "separateMultipleMinor".
+	SeparateMultipleMinor *SeparateMultipleMinor `json:"separateMultipleMinor,omitempty,omitzero"`
+
+	// SkipArtifactsUpdate corresponds to the JSON schema field "skipArtifactsUpdate".
+	SkipArtifactsUpdate *SkipArtifactsUpdate `json:"skipArtifactsUpdate,omitempty,omitzero"`
+
+	// SkipInstalls corresponds to the JSON schema field "skipInstalls".
+	SkipInstalls SkipInstalls `json:"skipInstalls,omitempty,omitzero"`
+
+	// StatusCheckNames corresponds to the JSON schema field "statusCheckNames".
+	StatusCheckNames *StatusCheckNames `json:"statusCheckNames,omitempty,omitzero"`
+
+	// StatusCheckWhen corresponds to the JSON schema field "statusCheckWhen".
+	StatusCheckWhen *StatusCheckWhen `json:"statusCheckWhen,omitempty,omitzero"`
+
+	// StopUpdatingLabel corresponds to the JSON schema field "stopUpdatingLabel".
+	StopUpdatingLabel *StopUpdatingLabel `json:"stopUpdatingLabel,omitempty,omitzero"`
+
+	// SuppressNotifications corresponds to the JSON schema field
+	// "suppressNotifications".
+	SuppressNotifications SuppressNotifications `json:"suppressNotifications,omitempty,omitzero"`
+
+	// Timezone corresponds to the JSON schema field "timezone".
+	Timezone *Timezone `json:"timezone,omitempty,omitzero"`
+
+	// ToolSettings corresponds to the JSON schema field "toolSettings".
+	ToolSettings *ToolSettings `json:"toolSettings,omitempty,omitzero"`
+
+	// UpdateInternalDeps corresponds to the JSON schema field "updateInternalDeps".
+	UpdateInternalDeps *UpdateInternalDeps `json:"updateInternalDeps,omitempty,omitzero"`
+
+	// UpdateNotScheduled corresponds to the JSON schema field "updateNotScheduled".
+	UpdateNotScheduled *UpdateNotScheduled `json:"updateNotScheduled,omitempty,omitzero"`
+
+	// UpdatePinnedDependencies corresponds to the JSON schema field
+	// "updatePinnedDependencies".
+	UpdatePinnedDependencies *UpdatePinnedDependencies `json:"updatePinnedDependencies,omitempty,omitzero"`
+
+	// UserStrings corresponds to the JSON schema field "userStrings".
+	UserStrings UserStrings `json:"userStrings,omitempty,omitzero"`
+
+	// VersionCompatibility corresponds to the JSON schema field
+	// "versionCompatibility".
+	VersionCompatibility *VersionCompatibility `json:"versionCompatibility,omitempty,omitzero"`
+
+	// Versioning corresponds to the JSON schema field "versioning".
+	Versioning *Versioning `json:"versioning,omitempty,omitzero"`
+}
 
 // Configuration object for the jsonnet-bundler manager
 // See also: https://docs.renovatebot.com/configuration-options/#jsonnet-bundler
@@ -52657,7 +53139,489 @@ func (j *RecreateWhen) UnmarshalJSON(value []byte) error {
 
 // Configuration object for the regex manager
 // See also: https://docs.renovatebot.com/configuration-options/#regex
-type Regex map[string]interface{}
+type Regex struct {
+	// AbandonmentThreshold corresponds to the JSON schema field
+	// "abandonmentThreshold".
+	AbandonmentThreshold AbandonmentThreshold `json:"abandonmentThreshold,omitempty,omitzero"`
+
+	// AddLabels corresponds to the JSON schema field "addLabels".
+	AddLabels AddLabels `json:"addLabels,omitempty,omitzero"`
+
+	// AdditionalBranchPrefix corresponds to the JSON schema field
+	// "additionalBranchPrefix".
+	AdditionalBranchPrefix *AdditionalBranchPrefix `json:"additionalBranchPrefix,omitempty,omitzero"`
+
+	// AdditionalReviewers corresponds to the JSON schema field "additionalReviewers".
+	AdditionalReviewers AdditionalReviewers `json:"additionalReviewers,omitempty,omitzero"`
+
+	// AssignAutomerge corresponds to the JSON schema field "assignAutomerge".
+	AssignAutomerge *AssignAutomerge `json:"assignAutomerge,omitempty,omitzero"`
+
+	// Assignees corresponds to the JSON schema field "assignees".
+	Assignees Assignees `json:"assignees,omitempty,omitzero"`
+
+	// AssigneesFromCodeOwners corresponds to the JSON schema field
+	// "assigneesFromCodeOwners".
+	AssigneesFromCodeOwners *AssigneesFromCodeOwners `json:"assigneesFromCodeOwners,omitempty,omitzero"`
+
+	// AssigneesSampleSize corresponds to the JSON schema field "assigneesSampleSize".
+	AssigneesSampleSize AssigneesSampleSize `json:"assigneesSampleSize,omitempty,omitzero"`
+
+	// AutoApprove corresponds to the JSON schema field "autoApprove".
+	AutoApprove *AutoApprove `json:"autoApprove,omitempty,omitzero"`
+
+	// AutoReplaceGlobalMatch corresponds to the JSON schema field
+	// "autoReplaceGlobalMatch".
+	AutoReplaceGlobalMatch *AutoReplaceGlobalMatch `json:"autoReplaceGlobalMatch,omitempty,omitzero"`
+
+	// Automerge corresponds to the JSON schema field "automerge".
+	Automerge *Automerge `json:"automerge,omitempty,omitzero"`
+
+	// AutomergeComment corresponds to the JSON schema field "automergeComment".
+	AutomergeComment *AutomergeComment `json:"automergeComment,omitempty,omitzero"`
+
+	// AutomergeSchedule corresponds to the JSON schema field "automergeSchedule".
+	AutomergeSchedule AutomergeSchedule `json:"automergeSchedule,omitempty,omitzero"`
+
+	// AutomergeStrategy corresponds to the JSON schema field "automergeStrategy".
+	AutomergeStrategy *AutomergeStrategy `json:"automergeStrategy,omitempty,omitzero"`
+
+	// AutomergeType corresponds to the JSON schema field "automergeType".
+	AutomergeType *AutomergeType `json:"automergeType,omitempty,omitzero"`
+
+	// AzureWorkItemId corresponds to the JSON schema field "azureWorkItemId".
+	AzureWorkItemId *AzureWorkItemId `json:"azureWorkItemId,omitempty,omitzero"`
+
+	// BbAutoResolvePrTasks corresponds to the JSON schema field
+	// "bbAutoResolvePrTasks".
+	BbAutoResolvePrTasks *BbAutoResolvePrTasks `json:"bbAutoResolvePrTasks,omitempty,omitzero"`
+
+	// BbUseDefaultReviewers corresponds to the JSON schema field
+	// "bbUseDefaultReviewers".
+	BbUseDefaultReviewers *BbUseDefaultReviewers `json:"bbUseDefaultReviewers,omitempty,omitzero"`
+
+	// BranchConcurrentLimit corresponds to the JSON schema field
+	// "branchConcurrentLimit".
+	BranchConcurrentLimit BranchConcurrentLimit `json:"branchConcurrentLimit,omitempty,omitzero"`
+
+	// BranchName corresponds to the JSON schema field "branchName".
+	BranchName *BranchName `json:"branchName,omitempty,omitzero"`
+
+	// BranchNameStrict corresponds to the JSON schema field "branchNameStrict".
+	BranchNameStrict *BranchNameStrict `json:"branchNameStrict,omitempty,omitzero"`
+
+	// BranchPrefix corresponds to the JSON schema field "branchPrefix".
+	BranchPrefix *BranchPrefix `json:"branchPrefix,omitempty,omitzero"`
+
+	// BranchPrefixOld corresponds to the JSON schema field "branchPrefixOld".
+	BranchPrefixOld *BranchPrefixOld `json:"branchPrefixOld,omitempty,omitzero"`
+
+	// BranchTopic corresponds to the JSON schema field "branchTopic".
+	BranchTopic *BranchTopic `json:"branchTopic,omitempty,omitzero"`
+
+	// BumpVersion corresponds to the JSON schema field "bumpVersion".
+	BumpVersion *BumpVersion `json:"bumpVersion,omitempty,omitzero"`
+
+	// BumpVersions corresponds to the JSON schema field "bumpVersions".
+	BumpVersions BumpVersions `json:"bumpVersions,omitempty,omitzero"`
+
+	// CommitBody corresponds to the JSON schema field "commitBody".
+	CommitBody *CommitBody `json:"commitBody,omitempty,omitzero"`
+
+	// CommitBodyTable corresponds to the JSON schema field "commitBodyTable".
+	CommitBodyTable *CommitBodyTable `json:"commitBodyTable,omitempty,omitzero"`
+
+	// CommitHourlyLimit corresponds to the JSON schema field "commitHourlyLimit".
+	CommitHourlyLimit *CommitHourlyLimit `json:"commitHourlyLimit,omitempty,omitzero"`
+
+	// CommitMessage corresponds to the JSON schema field "commitMessage".
+	CommitMessage *CommitMessage `json:"commitMessage,omitempty,omitzero"`
+
+	// CommitMessageAction corresponds to the JSON schema field "commitMessageAction".
+	CommitMessageAction *CommitMessageAction `json:"commitMessageAction,omitempty,omitzero"`
+
+	// CommitMessageExtra corresponds to the JSON schema field "commitMessageExtra".
+	CommitMessageExtra *CommitMessageExtra `json:"commitMessageExtra,omitempty,omitzero"`
+
+	// CommitMessageLowerCase corresponds to the JSON schema field
+	// "commitMessageLowerCase".
+	CommitMessageLowerCase *CommitMessageLowerCase `json:"commitMessageLowerCase,omitempty,omitzero"`
+
+	// CommitMessagePrefix corresponds to the JSON schema field "commitMessagePrefix".
+	CommitMessagePrefix *CommitMessagePrefix `json:"commitMessagePrefix,omitempty,omitzero"`
+
+	// CommitMessageSuffix corresponds to the JSON schema field "commitMessageSuffix".
+	CommitMessageSuffix *CommitMessageSuffix `json:"commitMessageSuffix,omitempty,omitzero"`
+
+	// CommitMessageTopic corresponds to the JSON schema field "commitMessageTopic".
+	CommitMessageTopic *CommitMessageTopic `json:"commitMessageTopic,omitempty,omitzero"`
+
+	// CommitTrailers corresponds to the JSON schema field "commitTrailers".
+	CommitTrailers CommitTrailers `json:"commitTrailers,omitempty,omitzero"`
+
+	// ComposerIgnorePlatformReqs corresponds to the JSON schema field
+	// "composerIgnorePlatformReqs".
+	ComposerIgnorePlatformReqs ComposerIgnorePlatformReqs `json:"composerIgnorePlatformReqs,omitempty,omitzero"`
+
+	// Constraints corresponds to the JSON schema field "constraints".
+	Constraints *Constraints `json:"constraints,omitempty,omitzero"`
+
+	// ConstraintsFiltering corresponds to the JSON schema field
+	// "constraintsFiltering".
+	ConstraintsFiltering *ConstraintsFiltering `json:"constraintsFiltering,omitempty,omitzero"`
+
+	// ConstraintsVersioning corresponds to the JSON schema field
+	// "constraintsVersioning".
+	ConstraintsVersioning *ConstraintsVersioning `json:"constraintsVersioning,omitempty,omitzero"`
+
+	// CustomDatasources corresponds to the JSON schema field "customDatasources".
+	CustomDatasources CustomDatasources `json:"customDatasources,omitempty,omitzero"`
+
+	// DefaultRegistryUrls corresponds to the JSON schema field "defaultRegistryUrls".
+	DefaultRegistryUrls DefaultRegistryUrls `json:"defaultRegistryUrls,omitempty,omitzero"`
+
+	// DependencyDashboardApproval corresponds to the JSON schema field
+	// "dependencyDashboardApproval".
+	DependencyDashboardApproval *DependencyDashboardApproval `json:"dependencyDashboardApproval,omitempty,omitzero"`
+
+	// DependencyDashboardCategory corresponds to the JSON schema field
+	// "dependencyDashboardCategory".
+	DependencyDashboardCategory DependencyDashboardCategory `json:"dependencyDashboardCategory,omitempty,omitzero"`
+
+	// Description corresponds to the JSON schema field "description".
+	Description Description `json:"description,omitempty,omitzero"`
+
+	// Digest corresponds to the JSON schema field "digest".
+	Digest *Digest `json:"digest,omitempty,omitzero"`
+
+	// DraftPR corresponds to the JSON schema field "draftPR".
+	DraftPR *DraftPR `json:"draftPR,omitempty,omitzero"`
+
+	// Enabled corresponds to the JSON schema field "enabled".
+	Enabled *Enabled `json:"enabled,omitempty,omitzero"`
+
+	// Encrypted corresponds to the JSON schema field "encrypted".
+	Encrypted Encrypted `json:"encrypted,omitempty,omitzero"`
+
+	// ExcludeCommitPaths corresponds to the JSON schema field "excludeCommitPaths".
+	ExcludeCommitPaths ExcludeCommitPaths `json:"excludeCommitPaths,omitempty,omitzero"`
+
+	// ExpandCodeOwnersGroups corresponds to the JSON schema field
+	// "expandCodeOwnersGroups".
+	ExpandCodeOwnersGroups *ExpandCodeOwnersGroups `json:"expandCodeOwnersGroups,omitempty,omitzero"`
+
+	// Extends corresponds to the JSON schema field "extends".
+	Extends Extends `json:"extends,omitempty,omitzero"`
+
+	// ExtractVersion corresponds to the JSON schema field "extractVersion".
+	ExtractVersion *ExtractVersion `json:"extractVersion,omitempty,omitzero"`
+
+	// FilterUnavailableUsers corresponds to the JSON schema field
+	// "filterUnavailableUsers".
+	FilterUnavailableUsers *FilterUnavailableUsers `json:"filterUnavailableUsers,omitempty,omitzero"`
+
+	// FollowTag corresponds to the JSON schema field "followTag".
+	FollowTag *FollowTag `json:"followTag,omitempty,omitzero"`
+
+	// ForkModeDisallowMaintainerEdits corresponds to the JSON schema field
+	// "forkModeDisallowMaintainerEdits".
+	ForkModeDisallowMaintainerEdits *ForkModeDisallowMaintainerEdits `json:"forkModeDisallowMaintainerEdits,omitempty,omitzero"`
+
+	// GitLabIgnoreApprovals corresponds to the JSON schema field
+	// "gitLabIgnoreApprovals".
+	GitLabIgnoreApprovals *GitLabIgnoreApprovals `json:"gitLabIgnoreApprovals,omitempty,omitzero"`
+
+	// GoGetDirs corresponds to the JSON schema field "goGetDirs".
+	GoGetDirs GoGetDirs `json:"goGetDirs,omitempty,omitzero"`
+
+	// Group corresponds to the JSON schema field "group".
+	Group *Group `json:"group,omitempty,omitzero"`
+
+	// GroupName corresponds to the JSON schema field "groupName".
+	GroupName GroupName `json:"groupName,omitempty,omitzero"`
+
+	// GroupSingleUpdates corresponds to the JSON schema field "groupSingleUpdates".
+	GroupSingleUpdates *GroupSingleUpdates `json:"groupSingleUpdates,omitempty,omitzero"`
+
+	// GroupSlug corresponds to the JSON schema field "groupSlug".
+	GroupSlug GroupSlug `json:"groupSlug,omitempty,omitzero"`
+
+	// HashedBranchLength corresponds to the JSON schema field "hashedBranchLength".
+	HashedBranchLength HashedBranchLength `json:"hashedBranchLength,omitempty,omitzero"`
+
+	// IgnoreDeprecated corresponds to the JSON schema field "ignoreDeprecated".
+	IgnoreDeprecated *IgnoreDeprecated `json:"ignoreDeprecated,omitempty,omitzero"`
+
+	// IgnoreDeps corresponds to the JSON schema field "ignoreDeps".
+	IgnoreDeps IgnoreDeps `json:"ignoreDeps,omitempty,omitzero"`
+
+	// IgnorePaths corresponds to the JSON schema field "ignorePaths".
+	IgnorePaths IgnorePaths `json:"ignorePaths,omitempty,omitzero"`
+
+	// IgnorePlugins corresponds to the JSON schema field "ignorePlugins".
+	IgnorePlugins *IgnorePlugins `json:"ignorePlugins,omitempty,omitzero"`
+
+	// IgnorePresets corresponds to the JSON schema field "ignorePresets".
+	IgnorePresets IgnorePresets `json:"ignorePresets,omitempty,omitzero"`
+
+	// IgnoreReviewers corresponds to the JSON schema field "ignoreReviewers".
+	IgnoreReviewers IgnoreReviewers `json:"ignoreReviewers,omitempty,omitzero"`
+
+	// IgnoreScripts corresponds to the JSON schema field "ignoreScripts".
+	IgnoreScripts *IgnoreScripts `json:"ignoreScripts,omitempty,omitzero"`
+
+	// IgnoreTests corresponds to the JSON schema field "ignoreTests".
+	IgnoreTests *IgnoreTests `json:"ignoreTests,omitempty,omitzero"`
+
+	// IgnoreUnstable corresponds to the JSON schema field "ignoreUnstable".
+	IgnoreUnstable *IgnoreUnstable `json:"ignoreUnstable,omitempty,omitzero"`
+
+	// IncludePaths corresponds to the JSON schema field "includePaths".
+	IncludePaths IncludePaths `json:"includePaths,omitempty,omitzero"`
+
+	// InternalChecksAsSuccess corresponds to the JSON schema field
+	// "internalChecksAsSuccess".
+	InternalChecksAsSuccess *InternalChecksAsSuccess `json:"internalChecksAsSuccess,omitempty,omitzero"`
+
+	// InternalChecksFilter corresponds to the JSON schema field
+	// "internalChecksFilter".
+	InternalChecksFilter *InternalChecksFilter `json:"internalChecksFilter,omitempty,omitzero"`
+
+	// KeepUpdatedLabel corresponds to the JSON schema field "keepUpdatedLabel".
+	KeepUpdatedLabel *KeepUpdatedLabel `json:"keepUpdatedLabel,omitempty,omitzero"`
+
+	// Labels corresponds to the JSON schema field "labels".
+	Labels Labels `json:"labels,omitempty,omitzero"`
+
+	// LockFileMaintenance corresponds to the JSON schema field "lockFileMaintenance".
+	LockFileMaintenance *LockFileMaintenance `json:"lockFileMaintenance,omitempty,omitzero"`
+
+	// Major corresponds to the JSON schema field "major".
+	Major *Major `json:"major,omitempty,omitzero"`
+
+	// ManagerFilePatterns corresponds to the JSON schema field "managerFilePatterns".
+	ManagerFilePatterns ManagerFilePatterns `json:"managerFilePatterns,omitempty,omitzero"`
+
+	// MaxMajorIncrement corresponds to the JSON schema field "maxMajorIncrement".
+	MaxMajorIncrement *MaxMajorIncrement `json:"maxMajorIncrement,omitempty,omitzero"`
+
+	// Milestone corresponds to the JSON schema field "milestone".
+	Milestone Milestone `json:"milestone,omitempty,omitzero"`
+
+	// MinimumGroupSize corresponds to the JSON schema field "minimumGroupSize".
+	MinimumGroupSize *MinimumGroupSize `json:"minimumGroupSize,omitempty,omitzero"`
+
+	// MinimumReleaseAge corresponds to the JSON schema field "minimumReleaseAge".
+	MinimumReleaseAge MinimumReleaseAge `json:"minimumReleaseAge,omitempty,omitzero"`
+
+	// MinimumReleaseAgeBehaviour corresponds to the JSON schema field
+	// "minimumReleaseAgeBehaviour".
+	MinimumReleaseAgeBehaviour *MinimumReleaseAgeBehaviour `json:"minimumReleaseAgeBehaviour,omitempty,omitzero"`
+
+	// MinimumReleaseAgeBuffer corresponds to the JSON schema field
+	// "minimumReleaseAgeBuffer".
+	MinimumReleaseAgeBuffer MinimumReleaseAgeBuffer `json:"minimumReleaseAgeBuffer,omitempty,omitzero"`
+
+	// Minor corresponds to the JSON schema field "minor".
+	Minor *Minor `json:"minor,omitempty,omitzero"`
+
+	// Mode corresponds to the JSON schema field "mode".
+	Mode *Mode `json:"mode,omitempty,omitzero"`
+
+	// Npmrc corresponds to the JSON schema field "npmrc".
+	Npmrc *Npmrc `json:"npmrc,omitempty,omitzero"`
+
+	// NpmrcMerge corresponds to the JSON schema field "npmrcMerge".
+	NpmrcMerge *NpmrcMerge `json:"npmrcMerge,omitempty,omitzero"`
+
+	// OverrideDescription corresponds to the JSON schema field "overrideDescription".
+	OverrideDescription OverrideDescription `json:"overrideDescription,omitempty,omitzero"`
+
+	// PackageRules corresponds to the JSON schema field "packageRules".
+	PackageRules PackageRules `json:"packageRules,omitempty,omitzero"`
+
+	// Patch corresponds to the JSON schema field "patch".
+	Patch *Patch `json:"patch,omitempty,omitzero"`
+
+	// Pin corresponds to the JSON schema field "pin".
+	Pin *Pin `json:"pin,omitempty,omitzero"`
+
+	// PinDigest corresponds to the JSON schema field "pinDigest".
+	PinDigest *PinDigest `json:"pinDigest,omitempty,omitzero"`
+
+	// PinDigests corresponds to the JSON schema field "pinDigests".
+	PinDigests *PinDigests `json:"pinDigests,omitempty,omitzero"`
+
+	// PlatformAutomerge corresponds to the JSON schema field "platformAutomerge".
+	PlatformAutomerge *PlatformAutomerge `json:"platformAutomerge,omitempty,omitzero"`
+
+	// PlatformCommit corresponds to the JSON schema field "platformCommit".
+	PlatformCommit *PlatformCommit `json:"platformCommit,omitempty,omitzero"`
+
+	// PostUpdateOptions corresponds to the JSON schema field "postUpdateOptions".
+	PostUpdateOptions PostUpdateOptions `json:"postUpdateOptions,omitempty,omitzero"`
+
+	// PostUpgradeTasks corresponds to the JSON schema field "postUpgradeTasks".
+	PostUpgradeTasks *PostUpgradeTasks `json:"postUpgradeTasks,omitempty,omitzero"`
+
+	// PrBodyColumns corresponds to the JSON schema field "prBodyColumns".
+	PrBodyColumns PrBodyColumns `json:"prBodyColumns,omitempty,omitzero"`
+
+	// PrBodyDefinitions corresponds to the JSON schema field "prBodyDefinitions".
+	PrBodyDefinitions PrBodyDefinitions `json:"prBodyDefinitions,omitempty,omitzero"`
+
+	// PrBodyHeadingDefinitions corresponds to the JSON schema field
+	// "prBodyHeadingDefinitions".
+	PrBodyHeadingDefinitions PrBodyHeadingDefinitions `json:"prBodyHeadingDefinitions,omitempty,omitzero"`
+
+	// PrBodyNotes corresponds to the JSON schema field "prBodyNotes".
+	PrBodyNotes PrBodyNotes `json:"prBodyNotes,omitempty,omitzero"`
+
+	// PrBodyTemplate corresponds to the JSON schema field "prBodyTemplate".
+	PrBodyTemplate *PrBodyTemplate `json:"prBodyTemplate,omitempty,omitzero"`
+
+	// PrConcurrentLimit corresponds to the JSON schema field "prConcurrentLimit".
+	PrConcurrentLimit *PrConcurrentLimit `json:"prConcurrentLimit,omitempty,omitzero"`
+
+	// PrCreation corresponds to the JSON schema field "prCreation".
+	PrCreation *PrCreation `json:"prCreation,omitempty,omitzero"`
+
+	// PrFooter corresponds to the JSON schema field "prFooter".
+	PrFooter *PrFooter `json:"prFooter,omitempty,omitzero"`
+
+	// PrHeader corresponds to the JSON schema field "prHeader".
+	PrHeader *PrHeader `json:"prHeader,omitempty,omitzero"`
+
+	// PrHourlyLimit corresponds to the JSON schema field "prHourlyLimit".
+	PrHourlyLimit *PrHourlyLimit `json:"prHourlyLimit,omitempty,omitzero"`
+
+	// PrNotPendingHours corresponds to the JSON schema field "prNotPendingHours".
+	PrNotPendingHours *PrNotPendingHours `json:"prNotPendingHours,omitempty,omitzero"`
+
+	// PrTitle corresponds to the JSON schema field "prTitle".
+	PrTitle PrTitle `json:"prTitle,omitempty,omitzero"`
+
+	// PrTitleStrict corresponds to the JSON schema field "prTitleStrict".
+	PrTitleStrict *PrTitleStrict `json:"prTitleStrict,omitempty,omitzero"`
+
+	// PruneBranchAfterAutomerge corresponds to the JSON schema field
+	// "pruneBranchAfterAutomerge".
+	PruneBranchAfterAutomerge *PruneBranchAfterAutomerge `json:"pruneBranchAfterAutomerge,omitempty,omitzero"`
+
+	// RangeStrategy corresponds to the JSON schema field "rangeStrategy".
+	RangeStrategy *RangeStrategy `json:"rangeStrategy,omitempty,omitzero"`
+
+	// RebaseLabel corresponds to the JSON schema field "rebaseLabel".
+	RebaseLabel *RebaseLabel `json:"rebaseLabel,omitempty,omitzero"`
+
+	// RebaseWhen corresponds to the JSON schema field "rebaseWhen".
+	RebaseWhen *RebaseWhen `json:"rebaseWhen,omitempty,omitzero"`
+
+	// RecreateWhen corresponds to the JSON schema field "recreateWhen".
+	RecreateWhen *RecreateWhen `json:"recreateWhen,omitempty,omitzero"`
+
+	// RegistryAliases corresponds to the JSON schema field "registryAliases".
+	RegistryAliases RegistryAliases `json:"registryAliases,omitempty,omitzero"`
+
+	// RegistryUrls corresponds to the JSON schema field "registryUrls".
+	RegistryUrls RegistryUrls `json:"registryUrls,omitempty,omitzero"`
+
+	// Replacement corresponds to the JSON schema field "replacement".
+	Replacement *Replacement `json:"replacement,omitempty,omitzero"`
+
+	// ReplacementApproach corresponds to the JSON schema field "replacementApproach".
+	ReplacementApproach *ReplacementApproach `json:"replacementApproach,omitempty,omitzero"`
+
+	// RespectLatest corresponds to the JSON schema field "respectLatest".
+	RespectLatest *RespectLatest `json:"respectLatest,omitempty,omitzero"`
+
+	// Reviewers corresponds to the JSON schema field "reviewers".
+	Reviewers Reviewers `json:"reviewers,omitempty,omitzero"`
+
+	// ReviewersFromCodeOwners corresponds to the JSON schema field
+	// "reviewersFromCodeOwners".
+	ReviewersFromCodeOwners *ReviewersFromCodeOwners `json:"reviewersFromCodeOwners,omitempty,omitzero"`
+
+	// ReviewersSampleSize corresponds to the JSON schema field "reviewersSampleSize".
+	ReviewersSampleSize ReviewersSampleSize `json:"reviewersSampleSize,omitempty,omitzero"`
+
+	// Rollback corresponds to the JSON schema field "rollback".
+	Rollback *Rollback `json:"rollback,omitempty,omitzero"`
+
+	// RollbackPrs corresponds to the JSON schema field "rollbackPrs".
+	RollbackPrs *RollbackPrs `json:"rollbackPrs,omitempty,omitzero"`
+
+	// Schedule corresponds to the JSON schema field "schedule".
+	Schedule Schedule `json:"schedule,omitempty,omitzero"`
+
+	// SemanticCommitScope corresponds to the JSON schema field "semanticCommitScope".
+	SemanticCommitScope SemanticCommitScope `json:"semanticCommitScope,omitempty,omitzero"`
+
+	// SemanticCommitType corresponds to the JSON schema field "semanticCommitType".
+	SemanticCommitType *SemanticCommitType `json:"semanticCommitType,omitempty,omitzero"`
+
+	// SemanticCommits corresponds to the JSON schema field "semanticCommits".
+	SemanticCommits *SemanticCommits `json:"semanticCommits,omitempty,omitzero"`
+
+	// SeparateMajorMinor corresponds to the JSON schema field "separateMajorMinor".
+	SeparateMajorMinor *SeparateMajorMinor `json:"separateMajorMinor,omitempty,omitzero"`
+
+	// SeparateMinorPatch corresponds to the JSON schema field "separateMinorPatch".
+	SeparateMinorPatch *SeparateMinorPatch `json:"separateMinorPatch,omitempty,omitzero"`
+
+	// SeparateMultipleMajor corresponds to the JSON schema field
+	// "separateMultipleMajor".
+	SeparateMultipleMajor *SeparateMultipleMajor `json:"separateMultipleMajor,omitempty,omitzero"`
+
+	// SeparateMultipleMinor corresponds to the JSON schema field
+	// "separateMultipleMinor".
+	SeparateMultipleMinor *SeparateMultipleMinor `json:"separateMultipleMinor,omitempty,omitzero"`
+
+	// SkipArtifactsUpdate corresponds to the JSON schema field "skipArtifactsUpdate".
+	SkipArtifactsUpdate *SkipArtifactsUpdate `json:"skipArtifactsUpdate,omitempty,omitzero"`
+
+	// SkipInstalls corresponds to the JSON schema field "skipInstalls".
+	SkipInstalls SkipInstalls `json:"skipInstalls,omitempty,omitzero"`
+
+	// StatusCheckNames corresponds to the JSON schema field "statusCheckNames".
+	StatusCheckNames *StatusCheckNames `json:"statusCheckNames,omitempty,omitzero"`
+
+	// StatusCheckWhen corresponds to the JSON schema field "statusCheckWhen".
+	StatusCheckWhen *StatusCheckWhen `json:"statusCheckWhen,omitempty,omitzero"`
+
+	// StopUpdatingLabel corresponds to the JSON schema field "stopUpdatingLabel".
+	StopUpdatingLabel *StopUpdatingLabel `json:"stopUpdatingLabel,omitempty,omitzero"`
+
+	// SuppressNotifications corresponds to the JSON schema field
+	// "suppressNotifications".
+	SuppressNotifications SuppressNotifications `json:"suppressNotifications,omitempty,omitzero"`
+
+	// Timezone corresponds to the JSON schema field "timezone".
+	Timezone *Timezone `json:"timezone,omitempty,omitzero"`
+
+	// ToolSettings corresponds to the JSON schema field "toolSettings".
+	ToolSettings *ToolSettings `json:"toolSettings,omitempty,omitzero"`
+
+	// UpdateInternalDeps corresponds to the JSON schema field "updateInternalDeps".
+	UpdateInternalDeps *UpdateInternalDeps `json:"updateInternalDeps,omitempty,omitzero"`
+
+	// UpdateNotScheduled corresponds to the JSON schema field "updateNotScheduled".
+	UpdateNotScheduled *UpdateNotScheduled `json:"updateNotScheduled,omitempty,omitzero"`
+
+	// UpdatePinnedDependencies corresponds to the JSON schema field
+	// "updatePinnedDependencies".
+	UpdatePinnedDependencies *UpdatePinnedDependencies `json:"updatePinnedDependencies,omitempty,omitzero"`
+
+	// UserStrings corresponds to the JSON schema field "userStrings".
+	UserStrings UserStrings `json:"userStrings,omitempty,omitzero"`
+
+	// VersionCompatibility corresponds to the JSON schema field
+	// "versionCompatibility".
+	VersionCompatibility *VersionCompatibility `json:"versionCompatibility,omitempty,omitzero"`
+
+	// Versioning corresponds to the JSON schema field "versioning".
+	Versioning *Versioning `json:"versioning,omitempty,omitzero"`
+}
 
 // Aliases for registries.
 // See also: https://docs.renovatebot.com/configuration-options/#registryaliases
